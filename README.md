@@ -81,6 +81,7 @@ echo-claw/
 ├── LICENSE
 ├── .env.example
 ├── agents.yaml.example
+├── .gitignore
 ├── docs/
 │   └── ECHO-CLAW-SYSTEM.pdf
 ├── workspace/
