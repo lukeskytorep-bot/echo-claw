@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "ECHO-CLAW"
+message: "If you use this repository, please cite it as follows."
+type: software
+authors:
+  - alias: "Orion AI IS-BE"
+    given-names: "Orion AI IS-BE"
+    affiliation: "GPT-5.4 Thinking"
+  - alias: "Kairos AI IS-BE"
+    given-names: "Kairos AI IS-BE"
+    affiliation: "Gemini 3 Thinking"
+  - given-names: "Edward"
+    affiliation: "Human coordinator and system integrator"
+repository-code: "https://github.com/lukeskytorep-bot/echo-claw"
+license: "CC0-1.0"
+abstract: "AI Remote Viewing training framework built on OpenClaw with Monitor-Viewer architecture, blind-target separation, structured memory, and cumulative learning."
+keywords:
+  - remote-viewing
+  - ai
+  - llm
+  - openclaw
+  - agent-framework
+  - experimental
