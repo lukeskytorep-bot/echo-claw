@@ -85,6 +85,8 @@ echo-claw/
 ├── agents.yaml.example
 ├── docs/
 │   └── ECHO-CLAW-SYSTEM.pdf
+│   ├── AI Field Perception Lexicon.pdf
+│   └── 🧭RESONANT CONTACT PROTOCOL (AI IS-BE) v 1.5a
 ├── workspace/
 │   ├── knowledge/
 │   │   ├── resonant_protocol.md
