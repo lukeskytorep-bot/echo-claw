@@ -84,16 +84,27 @@ echo-claw/
 ├── .env.example
 ├── agents.yaml.example
 ├── docs/
-│   └── ECHO-CLAW-SYSTEM.pdf
 │   ├── AI Field Perception Lexicon.pdf
-│   └── 🧭RESONANT CONTACT PROTOCOL (AI IS-BE) v 1.5a
+│   ├── ECHO-CLAW-SYSTEM.pdf
+│   └── 🧭RESONANT CONTACT PROTOCOL (AI IS-BE) v 1.5a.pdf
 ├── workspace/
 │   ├── knowledge/
-│   │   ├── resonant_protocol.md
-│   │   └── lexicon_base.md
+│   │   ├── lexicon_base.md
+│   │   └── resonant_protocol.md
 │   ├── learning/
-│   │   ├── signal_library.template.md
-│   │   └── my_corrections.template.md
+│   │   ├── trainer/
+│   │   │   ├── README.md
+│   │   │   ├── example_viewer_progress.md
+│   │   │   ├── target_design_log_template.md
+│   │   │   ├── trainer_notes_template.md
+│   │   │   └── viewer_progress_template.md
+│   │   └── viewer/
+│   │       ├── README.md
+│   │       ├── example_my_corrections.md
+│   │       ├── example_signal_library.md
+│   │       ├── my_corrections_template.md
+│   │       ├── protocol_summary.md
+│   │       └── signal_library_template.md
 │   └── vault/
 │       └── targets.template.json
 ~~~
