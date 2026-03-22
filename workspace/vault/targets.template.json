@@ -1,14 +1,60 @@
 [
   {
-    "id": "1514-83233",
-    "level": "Basic",
-    "gestalt": "Mountain / Nature",
-    "description": "Large static mountain mass, hard rock, cold resistance, minimal human activity."
+    "id": "AC-2025-001",
+    "target_type": "location",
+    "level": "Complex",
+    "category": "Multidimensional",
+    "gestalt": "Natural / Canyon / Enclosed Space",
+    "cue": "Upper Antelope Canyon as a physical place",
+    "focus": "The canyon interior itself, not the tourists",
+    "time_anchor": "Present-day daytime guided-tour conditions in 2025",
+    "location_anchor": "Upper Antelope Canyon, Lake Powell Navajo Tribal Park, near Page, Arizona, Navajo Nation, USA",
+    "tags": ["slot-canyon", "sandstone", "narrow", "enclosed", "light-shafts", "guided-tour", "erosion"],
+    "description": "A narrow slot canyon formed in sandstone, with enclosed passageways, curving walls, filtered light from above, layered rock textures, and guided access only. The target is the canyon itself as a natural structure and spatial environment.",
+    "environment_profile": {
+      "setting": "natural enclosed canyon",
+      "dominant_context": "eroded sandstone passage",
+      "surface_relation": "below open sky but inside a narrow rock corridor",
+      "conditions": ["narrow", "curved", "shadowed", "textured", "dry", "echoing"]
+    },
+    "signal_profile": {
+      "primary": ["stone enclosure", "curved walls", "natural form", "vertical narrowing"],
+      "secondary": ["light from above", "silence", "soft dust/sand", "tourist movement in background"]
+    },
+    "expected_primary_layers": ["N"],
+    "complexity_notes": "May be confused with cave, tunnel, or man-made corridor because of the enclosure and passage-like feel. Viewer must distinguish natural eroded structure from built interior.",
+    "training_goal": "Differentiate a natural enclosed canyon from cave, tunnel, or man-made passageway.",
+    "monitor_notes": "Keep the focus on the canyon structure itself. Do not let incidental tourist presence dominate the target.",
+    "used": false,
+    "reveal_enabled": true
   },
   {
-    "id": "2209-11440",
+    "id": "AIBF-2025-011",
+    "target_type": "event",
     "level": "Complex",
-    "gestalt": "Activity / Tech / Crowd",
-    "description": "High-speed race event with machines, crowd noise, concrete structures, heat, motion, and strong emotional intensity."
+    "category": "Multidimensional",
+    "gestalt": "Activity / Air / Crowd / Open Field",
+    "cue": "Mass ascension phase of the Albuquerque International Balloon Fiesta",
+    "focus": "The active event at the moment balloons are launching and rising",
+    "time_anchor": "Saturday, October 11, 2025, 7:00 a.m. local time",
+    "location_anchor": "Balloon Fiesta Park, 4401 Alameda Blvd NE, Albuquerque, New Mexico, USA",
+    "tags": ["balloons", "mass-ascension", "crowd", "open-field", "upward-movement", "festival", "color"],
+    "description": "A large organized balloon event in an open park setting, with many hot-air balloons inflating and rising, strong upward motion, crowd presence, open ground operations, color, noise, anticipation, and coordinated activity.",
+    "environment_profile": {
+      "setting": "open outdoor event field",
+      "dominant_context": "mass public activity with aerial ascent",
+      "surface_relation": "broad flat ground with vertical lift above it",
+      "conditions": ["open", "crowded", "colorful", "wind-sensitive", "loud", "energetic"]
+    },
+    "signal_profile": {
+      "primary": ["upward movement", "crowd activity", "open field", "fabric structures filled with air"],
+      "secondary": ["heat bursts", "vehicle support activity", "morning atmosphere", "organized event rhythm"]
+    },
+    "expected_primary_layers": ["H", "R"],
+    "complexity_notes": "Viewer may lock onto crowd, air movement, or vehicle support instead of the balloons themselves. Date, place, and exact moment matter because this is an event target, not a generic location.",
+    "training_goal": "Capture a complex outdoor event with strong vertical movement without collapsing all signals into generic crowd noise.",
+    "monitor_notes": "This is not just a place target. The target is the active event at a specific time and location.",
+    "used": false,
+    "reveal_enabled": true
   }
 ]
