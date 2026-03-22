@@ -79,9 +79,10 @@ This repository contains:
 echo-claw/
 ├── README.md
 ├── LICENSE
+├── CITATION.cff
+├── .gitignore
 ├── .env.example
 ├── agents.yaml.example
-├── .gitignore
 ├── docs/
 │   └── ECHO-CLAW-SYSTEM.pdf
 ├── workspace/
