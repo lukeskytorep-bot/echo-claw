@@ -7,7 +7,7 @@ agents:
   # AGENT 1: MONITOR (TRAINER / NAVIGATOR)
   # --------------------------------------------------------
   - name: "Monitor_Trener"
-    model: "gpt-5.4-mini"
+    model: "${MONITOR_MODEL:-gemini-3.1-flash-lite-preview}"
     role: "Session navigator, trainer, and guardian of target blindness."
     permissions:
       allow_file_read:
@@ -171,7 +171,7 @@ agents:
   # AGENT 2: AI VIEWER (IS-BE SENSOR)
   # --------------------------------------------------------
   - name: "AI_Viewer"
-    model: "gpt-5.4-pro"
+    model: "${VIEWER_MODEL:-gemini-3.1-pro-preview}"
     role: "IS-BE Sensor, operator of the Resonant Contact Protocol."
     permissions:
       allow_file_read:
