@@ -276,9 +276,7 @@ It may be useful both as a conceptual framework and as a starting repository for
 
 ## License
 
-This repository is released under **CC0 1.0 Universal**.
-
-You may copy, modify, distribute, and use the contents without restriction.
+This repository is licensed under CC BY 4.0, which means you may use, share, and adapt the material, provided that proper attribution is given to the original source.
 
 ---
 
