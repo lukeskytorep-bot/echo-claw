@@ -6,7 +6,7 @@
     "category": "Multidimensional",
     "gestalt": "Natural / Canyon / Enclosed Space",
     "cue": "Upper Antelope Canyon as a physical place",
-    "focus": "The canyon interior itself, not the tourists",
+    "focus": "The canyon interior itself",
     "time_anchor": "Present-day daytime guided-tour",
     "location_anchor": "Upper Antelope Canyon, Lake Powell Navajo Tribal Park, near Page, Arizona, Navajo Nation, USA",
     "tags": ["slot-canyon", "sandstone", "narrow", "enclosed", "light-shafts", "guided-tour", "erosion"],
@@ -47,7 +47,7 @@
       "primary": ["upward movement", "crowd activity", "open field", "fabric structures filled with air"],
       "secondary": ["heat bursts", "vehicle support activity", "morning atmosphere", "organized event rhythm"]
     },
-   "expected_primary_layers": ["human-made", "movement"]
+   "expected_primary_layers": ["human-made", "movement"],
     "used": false,
     "reveal_enabled": true
   }
