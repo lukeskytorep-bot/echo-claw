@@ -12,7 +12,8 @@ authors:
   - given-names: "Edward"
     affiliation: "Human coordinator and system integrator"
 repository-code: "https://github.com/lukeskytorep-bot/echo-claw"
-license: "CC0-1.0"
+license: "CC-BY-4.0"
+message: "If you use this project, please cite it and provide attribution to the original source."
 abstract: "AI Remote Viewing training framework built on OpenClaw with Monitor-Viewer architecture, blind-target separation, structured memory, and cumulative learning."
 keywords:
   - remote-viewing
