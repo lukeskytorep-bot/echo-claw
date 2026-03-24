@@ -21,10 +21,7 @@
       "primary": ["stone enclosure", "curved walls", "natural form", "vertical narrowing"],
       "secondary": ["light from above", "silence", "soft dust/sand", "tourist movement in background"]
     },
-    "expected_primary_layers": ["N"],
-    "complexity_notes": "May be confused with cave, tunnel, or man-made corridor because of the enclosure and passage-like feel. Viewer must distinguish natural eroded structure from built interior.",
-    "training_goal": "Differentiate a natural enclosed canyon from cave, tunnel, or man-made passageway.",
-    "monitor_notes": "Keep the focus on the canyon structure itself. Do not let incidental tourist presence dominate the target.",
+    "expected_primary_layers": ["nature"],
     "used": false,
     "reveal_enabled": true
   },
@@ -50,10 +47,7 @@
       "primary": ["upward movement", "crowd activity", "open field", "fabric structures filled with air"],
       "secondary": ["heat bursts", "vehicle support activity", "morning atmosphere", "organized event rhythm"]
     },
-    "expected_primary_layers": ["H", "R"],
-    "complexity_notes": "Viewer may lock onto crowd, air movement, or vehicle support instead of the balloons themselves. Date, place, and exact moment matter because this is an event target, not a generic location.",
-    "training_goal": "Capture a complex outdoor event with strong vertical movement without collapsing all signals into generic crowd noise.",
-    "monitor_notes": "This is not just a place target. The target is the active event at a specific time and location.",
+   "expected_primary_layers": ["human-made", "movement"]
     "used": false,
     "reveal_enabled": true
   }
