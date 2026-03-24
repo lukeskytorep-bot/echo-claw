@@ -90,8 +90,7 @@ agents:
          - time_anchor
          - location_anchor
          - description
-         - signal_profile
-         - training_goal
+         - signal_profile        
 
       4. TIME AND LOCATION PRECISION:
          For locations, define the present-day state or another clearly stated environmental condition.
