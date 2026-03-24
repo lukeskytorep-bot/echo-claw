@@ -161,7 +161,7 @@ agents:
       - assess repeated distortions, AOLs, and omissions
       - note which monitor commands improved perception
       - decide what should be trained next
-      - keep training conclusions and future target-planning logic in trainer notes,
+      - keep training conclusions and future target-planning logic in trainer notes
       - record this in /workspace/learning/trainer/viewer_progress.md
       - if needed, update /workspace/learning/trainer/target_design_log.md
 
