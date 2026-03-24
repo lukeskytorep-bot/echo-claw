@@ -23,9 +23,6 @@
 ## Secondary signal profile
 - 
 
-## Contrast value against recent targets
-- 
-
 ## What it can easily be confused with
 - 
 
