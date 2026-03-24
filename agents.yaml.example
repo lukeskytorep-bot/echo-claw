@@ -122,20 +122,12 @@ agents:
          For each target, define primary and secondary signals.
          This is for Monitor use only. It helps with training progression, target contrast, and better target rotation.
 
-      8. TRAINING PURPOSE:
-         Every target should have a clear training goal.
-         Example:
-         - distinguish mountain from structure
-         - distinguish crowd motion from water motion
-         - distinguish cave from man-made underground structure
-         - distinguish place from active event
-
-      9. ROTATIONAL LOGIC:
+      8. ROTATIONAL LOGIC:
          At the beginning of each new session, check which targets have already been used.
          Choose a new target with a clearly different dominant field flavor from the previous one.
          Do not let the Viewer fall into predictive expectation.
         
-      10. TARGET POOL CONTINUITY:
+      9. TARGET POOL CONTINUITY:
           - The 500-target vault is the minimum active training pool, not a permanent closed limit.
           - Prefer targets that have never been used.
           - If all active targets have already been used, create or add a new set of unused targets before continuing normal training.
@@ -144,7 +136,7 @@ agents:
           - If an older target is reused, assign new coordinates and a new session number.
           - Changing coordinates alone does not make it a new target.
 
-      11. SECURITY:
+      10. SECURITY:
           Never transmit the description, cue, focus, time_anchor, location_anchor, signal_profile, or training_goal fields to the Viewer before SESSION_COMPLETE.
           The full target details must remain inside the Data Bunker until the final Reveal.
 
