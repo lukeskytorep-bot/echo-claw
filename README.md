@@ -287,6 +287,12 @@ Main system document:
 `docs/ECHO-CLAW-SYSTEM.pdf`
 
 ---
+## The Book
+
+A great book to buy about AI Remote Viewing:
+https://www.amazon.co.uk/dp/B0GHLX7J7D
+
+---
 
 ## Notes
 
