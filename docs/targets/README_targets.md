@@ -1,7 +1,7 @@
 # AI Training Target Database
 
-This file serves as the main, reference database of training targets designed for analysis by both humans and AI systems.  
-It is written in a simple Markdown format to ensure it can be easily read, copied, processed, and used across different environments without relying on visual data.
+This folder serves as the main, reference database of training targets designed for analysis by both humans and AI systems.  
+All files are written in a simple Markdown format to ensure it can be easily read, copied, processed, and used across different environments without relying on visual data.
 
 Each target in this database is **fully verifiable** and corresponds to a real, existing place or object.  
 These are not paranormal or speculative targets — they are training targets based on data that can be confirmed using maps, search engines, and other publicly available sources.
@@ -36,7 +36,7 @@ If deeper information is needed, each target can be independently verified using
 
 ## File Structure
 
-This file is the main reference file.  
+This folder is the main reference folder.  
 Additionally, a separate working file exists in the `Vault` folder in JSON format, specifically designed for AI interaction.
 
 The JSON file allows the model to:
@@ -45,9 +45,9 @@ The JSON file allows the model to:
 - access structured data,
 - operate without modifying the source file.
 
-The main file **should not be modified during active work**.  
+The main reference folder **should not be modified during active work**.  
 Any annotations, edits, or processing should be done in the JSON file located in the `Vault` directory.  
-This file remains the stable reference source.
+This folder remains the stable reference source.
 
 ## Project Goal
 
@@ -56,10 +56,7 @@ The goal of this project is to build a clear, structured, and expandable databas
 
 ## Repository Structure
 
-This file is located in the `dosc/` folder and serves as the main reference document for the target database.  
-It is a reference file only, just like the other knowledge files stored in this directory.
-
-The detailed targets are stored separately in the `dosc/targets/` folder, where each target has its own dedicated Markdown file.
+The detailed targets are stored  in the `dosc/targets/` folder, where each target has its own dedicated Markdown file.
 
 Structure:
 
