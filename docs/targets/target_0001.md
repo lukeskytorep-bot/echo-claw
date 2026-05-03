@@ -81,3 +81,33 @@ Roads are local, low-capacity, and serve primarily as access routes.
 - low building density,
 - strong integration with the natural landscape,
 - absence of high-density urban development.
+
+```
++-----------------------------------------------------------------+
+|                                                                 |
+|  [City / Houses]   ||      [Houses]                      ^^^^^^ |
+|       |            ||      Celna St.    [Villa]          ^^^^^^ |
+|       |            ||        |           |               ^^^^^^ |
+| Wojska Polskiego   ||        |           |     Chapel    ^^^^^^ |
+|      Ave           ||        |      (X) Brzozowa St.     ^MOUNT^|
+|       |            ||     Szkolna St.    |               ^^^^^^ |
+|       |            ||        \           |               ^^^^^^ |
+|  [Industrial]      ||         \_____ Świerkowa St.       ^^^^^^ |
+|  [   Area   ]      ||           [Houses] |               ^^^^^^ |
+|       |            ||                    |               ^^^^^^ |
+|                    ||                                    ^^^^^^ |
+|                  Railway tracks                                 |
++-----------------------------------------------------------------+
+
+Legend:
+
+[ ] – Houses, urban areas, and large industrial structures.
+
+|| – Railway tracks crossing the area from north to south.
+
+(X) – Brzozowa Street.
+
+|, \, _ – Network of main roads (Wojska Polskiego Ave, Celna St., Szkolna St., Świerkowa St.).
+
+^^^ – Mountain and forested area on the right side (eastern part of the map).
+```
