@@ -98,10 +98,10 @@ The analyzed area is part of a large archaeological complex arranged in a valley
 - extreme environment marked by dryness, high temperature, and strong sun exposure,
 - landscape of high historical and visual value.
 ---
-
-                   ASCII Map of Petra Archaeological Sit
+                  
 ```text
-This map shows imagery of the Great Temple and surrounding ruins in Petra.
+         ASCII Map of Petra Archaeological Sit
+Top-down view of the Great Temple and surrounding ruins in Petra.
 
 
 +---------------------------------------------------------+
