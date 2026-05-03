@@ -166,3 +166,150 @@ The core idea of the target is the fusion of:
 **history + music + people**
 
 creating a living festival environment inside a castle.
+
+---
+
+```
+                DETAILED CASTLE MAP (TOP VIEW)
+
+                        [1] TOWER / VIEWPOINT
+                               /\
+                              /  \
+                             /____\
+
+              ___________________________________________
+             /                                           \
+            /   [2] UPPER WALLS / WALKWAY                \
+           /_____________________________________________\
+           |                                             |
+           |     [3] UPPER TERRACE / ELEVATED ZONE       |
+           |                                             |
+           |   ###############################           |
+           |   #                             #           |
+           |   #        [4] STAGE            #           |
+           |   #   (live music / sound)      #           |
+           |   #                             #           |
+           |   ###############################           |
+           |                                             |
+           |      [5] AUDIENCE / MAIN COURTYARD          |
+           |   o  o  o  o  o  o  o  o  o  o              |
+           |   o  o  o  o  o  o  o  o  o  o              |
+           |                                             |
+           |------------------[6]------------------------|
+           |      PASSAGE / FLOW CORRIDOR                |
+           |                                             |
+           |   [7] SIDE ZONES / REST AREAS               |
+           |   (sitting, talking, low activity)          |
+           |                                             |
+           |____________________      ____________________|
+                                |    |
+                                |    |
+                        [8] MAIN GATE / ENTRANCE
+                                |
+                                |
+                        [9] QUEUE / CONTROL POINT
+                                |
+                                |
+                        [10] PATH DOWN TO TOWN
+
+
+**Legend (Castle)**
+
+1. Tower / viewpoint
+Highest vertical structure. Used for observation and spatial orientation.
+
+2. Upper walls / walkway
+Elevated edges of the castle. Used for standing, sitting, and viewing from above.
+
+3. Upper terrace / elevated zone
+Area closer to the stage with better visibility and stronger focus.
+
+4. Stage (core element)
+source of sound
+location of performances
+main attention anchor
+
+5. Audience / main courtyard
+Main concentration of people:
+standing, listening
+subtle crowd movement
+orientation toward stage
+
+6. Passage / flow corridor
+Natural movement channel connecting areas inside the castle.
+
+7. Side zones / rest areas
+Lower intensity spaces:
+sitting along walls
+conversations
+relaxation
+
+8. Main gate / entrance
+Primary transition point between outside and inside.
+
+9. Queue / control point
+Area of slowed movement and organization before entry.
+
+10. Path down to town
+Connection between castle and town below.
+---
+                    AREA MAP (CASTLE + TOWN)
+
+              [A] FOREST / GREEN SLOPE
+           ______________________________________
+          /                                      \
+         /            [B] CASTLE HILL             \
+        /        _________________________         \
+       /        /                         \         \
+      /        /      [C] CASTLE           \         \
+     /        /____________________________\          \
+    /           |        [D] COURTYARD     |           \
+   /            |    [STAGE + AUDIENCE]    |            \
+  /             |                          |             \
+ /______________|______[E] MAIN GATE_______|_______________\
+                        |
+                        |
+                        | [F] PATH / SLOPE DOWN
+                        |
+              ______________________________________
+             /                                      \
+            /            [G] TOWN AREA               \
+           /    streets / buildings / square          \
+          / __________________________________________ \
+                      |
+                      |
+                [H] ROAD / PARKING
+**Legend (Area)**
+
+A. Forest / green slope
+Natural terrain surrounding the hill. Provides enclosure and elevation contrast.
+
+B. Castle hill
+Elevated landform on which the castle is built. Dominates the surroundings.
+
+C. Castle
+Main stone structure and central event location.
+
+D. Courtyard (event zone)
+Primary festival space containing stage and audience.
+
+E. Main gate
+Controlled entry point into the castle.
+
+F. Path / slope down
+Connection route between castle and town. Main movement channel.
+
+G. Town area
+Urban zone with streets, buildings, and infrastructure supporting the event.
+
+H. Road / parking
+Access and logistics area for vehicles and arrivals.
+
+**Spatial Logic (Short Summary)**
+
+The system works as a vertical flow:
+hill → castle → courtyard (stage) → gate → path → town
+
+And functionally:
+structure → sound → people → movement
+```
