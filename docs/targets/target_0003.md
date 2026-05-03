@@ -101,6 +101,8 @@ The analyzed area is an international transport hub centered on the Ambassador B
 - environment heavily transformed by human activity,
 - high traffic intensity and strong economic importance,
 - simultaneous presence of recreational elements on the Windsor side.
+
+## ASCII Map (Top-down)
 ```
   +---------------------------------------------------------+
     |                     USA (Detroit)                       |
