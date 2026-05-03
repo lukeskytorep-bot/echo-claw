@@ -1,7 +1,7 @@
 # Target 0001
 
 **Target coordinates:** 4738 9292  
-**Date:** August 2013
+**Date of the target:** August 2013
 
 **Target:** - A fragment of the built-up area of the town of Lubawka (Lower Silesian Voivodeship), in the vicinity of Brzozowa Street.
 
