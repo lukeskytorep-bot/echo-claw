@@ -97,3 +97,39 @@ The analyzed area forms part of a large forest complex with both natural and man
 - high ecological value,
 - presence of individual users such as pedestrians and cyclists,
 - relatively stable environment with minimal infrastructural interference.
+---
+## ASCII Map (Top-down)
+```
++-------------------------------------------------------------------------+
+|   Wola Batorska   [964]      (B) Bobrowe Rozlewisko                     |
+|               ___---^^^***^^^^****^^^^^^****^^^^^^****^^^---___         |
+| Niepołomice  /   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  \ (R)    |
+|    [75]     /  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ \       |
+|      |     / ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Poszyna ^^^^^^^^\ Bacz-|
+|      |    | ^^^^^^^^^ BŁOTO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | ków |
+|       \   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |     |
+|        \  | ^^^^^   Niepołomice Forest (P)   ^^^^^^^^^^^^^^^^^^^^ |     |
+|         \ | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |     |
+|          \| ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |     |
+| Dąbrowa   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/      |
+|           \   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^/       |
+|  Szarów   \===--------------------------------------------------  Krzyż-|
+|                                                                 anowice |
++-------------------------------------------------------------------------+
+
+Legend:
+
+^^^ / *** – Forested area (Niepołomice Forest).
+
+(B) – Green marker: Bobrowe Rozlewisko in the north.
+
+(P) – Green marker: Niepołomice Forest inside the woods.
+
+(R) – Red marker: Niepołomice Forest in the top right corner.
+
+[75], [964] – Numbers of the main roads visible on the map.
+
+|, \, /, ===, --- – Routes of the main roads surrounding the forest.
+
+Proper names (e.g., Niepołomice, Poszyna, Baczków) indicate the approximate locations of towns and hamlets around the forest.
+```
