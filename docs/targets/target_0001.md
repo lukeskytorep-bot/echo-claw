@@ -81,7 +81,8 @@ Roads are local, low-capacity, and serve primarily as access routes.
 - low building density,
 - strong integration with the natural landscape,
 - absence of high-density urban development.
-
+---
+## ASCII Map (Top-down)
 ```
 +-----------------------------------------------------------------+
 |                                                                 |
