@@ -101,3 +101,63 @@ The analyzed area is an international transport hub centered on the Ambassador B
 - environment heavily transformed by human activity,
 - high traffic intensity and strong economic importance,
 - simultaneous presence of recreational elements on the Windsor side.
+```
+  +---------------------------------------------------------+
+    |                     USA (Detroit)                       |
+    |                                                         |
+    |        W Fort St                     Vinewood St        |
+    |    -------------------|||||-----------------------      |
+    | [Duty Free]           |||||                             |
+    |   Ambassador Duty     |||||  Riverside Skatepark        |
+    |   Free Detroit        |||||       (P)                   |
+    |                       |||||                             |
+    |            Jefferson  |||||     West Side               |
+    |                  Ave  |||||     Industrial              |
+    |          -------------|||||-------------                |
+    |   [J.W. Westcott]     |||||                             |
+    |      (W)              |||||                             |
+    |                       |||||                             |
+    |      Detroit River    |||||    Detroit River            |
+    | . . . . . . . . . . . ||||| . . . . . . . . . . .       |
+    |.~.~.~.~.~.~.~.~.~.~.~.|||||~.~.~.~.~.~.~.~.~.~.~.       |
+    |                       |||||                             |
+    |   _ _ _ _ _ _ _ _ _ _ ||||| _ _ _ _ _ _ _ _ _ _ _       |
+    |  USA / CANADA BORDER  |||||                             |
+    |                      (X) AMBASSADOR BRIDGE              |
+    |                       |||||                             |
+    |     Canada (Windsor)  |||||                             |
+    |          -------------|||||-------------                |
+    |    [King & Queen]     |||||      California Ave         |
+    |      (K)              |||||      Rankin Ave             |
+    |                       |||||      Campbell Ave           |
+    |   Riverside Dr W      |||||                             |
+    |          -------------|||||-------------                |
+    | [Leddy Library]       |||||                             |
+    |      (L)              |||||                             |
+    |                       |||||                             |
+    +---------------------------------------------------------+
+
+  Legend:
+
+[ ] – Name of the main object/building.
+
+( ) – Specific locations marked with a pin.
+
+(P) – Riverside Skatepark.
+
+(W) – J.W. Westcott (marine post office).
+
+(X) – Red pin for Ambassador Bridge (main location).
+
+(K) – King & Queen .
+
+(L) – Leddy Library.
+
+||||| – Ambassador Bridge.
+
+_ _ _ – USA / CANADA border line.
+
+. ~ . – Detroit River (water).
+
+----- – Main roads.
+```
