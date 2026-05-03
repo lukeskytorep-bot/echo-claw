@@ -97,3 +97,48 @@ The analyzed area is part of a large archaeological complex arranged in a valley
 - no modern residential development in the analyzed area,
 - extreme environment marked by dryness, high temperature, and strong sun exposure,
 - landscape of high historical and visual value.
+---
+
+                   ASCII Map of Petra Archaeological Sit
+```text
+This map shows imagery of the Great Temple and surrounding ruins in Petra.
+
+
++---------------------------------------------------------+
+|                                                         |
+|                  [ Great Temple ]         [Temenos Gate]|
+|        .         +--------------+             (T)       |
+|       / \        | ::::  ::::   |____          |        |
+|      |   |       | ::::  ::::   |    \         |        |
+|      |   |       +--------------+     |        |        |
+|     /    |          |        |        |        |        |
+|    |      \          \______/         |        |        |
+|    |       \                          |        |        |
+|     /       \                         |        |        |
+|      \       |                        |        |        |
+|       |      |                        |        |        |
+|       |      |                       /         |        |
+|       |      |     [ Petra ]        /          |        |
+|      /       |        (P)          /           |        |
+|     /        |        ===         /            |        |
+|    /         |        ===        |             |        |
+|   /           \                   \            X        |
+|  /             \                   \---- [Nymphaeum]    |
+|                                                         |
++---------------------------------------------------------+
+
+Legend
+[ ]: Major archaeological structures (Great Temple area).
+
+(T) / (P): Specific marker points (Temenos Gate, Petra marker).
+
+X: Specific location pin (Nymphaeum).
+
+|, /, \\: Main pedestrian paths, Colonnaded Street, and natural wadi contours.
+
+::::: Internal layout or columns within structures.
+
+===: Lower elevation ruins, wall remnants, or rocky outcrops.
+
++---+: Perimeter of major built structures.
+```
