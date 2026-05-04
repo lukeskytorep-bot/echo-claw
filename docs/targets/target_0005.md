@@ -1,6 +1,6 @@
 # Target 0005
 
-**Target coordinates:** Copacabana Beach, Rio de Janeiro, Brazil  
+**Target coordinates:** 5676 9982  
 **Date of the target:** March 2016  
 
 **Target:** A beachfront section of Copacabana, facing the Atlantic Ocean in Rio de Janeiro, Brazil.
