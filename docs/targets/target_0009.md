@@ -1,6 +1,6 @@
 # Target 0009
 
-**Target coordinates:** 70.7260° N, 23.8156° E  
+**Target coordinates:** 1235 8754  
 **Date of the target:** May 2019
 
 **Target:** Ytre Forsøl, Norway - Arctic coastal bay, sandy beach, and surrounding rocky landscape.
