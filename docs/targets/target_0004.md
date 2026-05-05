@@ -122,18 +122,11 @@ The analyzed area forms part of a large forest complex with both natural and man
 +-------------------------------------------------------------------------+
 
 Legend:
-
 ^^^ / *** – Forested area (Niepołomice Forest).
-
 (B) – Green marker: Bobrowe Rozlewisko in the north.
-
 (P) – Green marker: Niepołomice Forest inside the woods.
-
 (R) – Red marker: Niepołomice Forest in the top right corner.
-
 [75], [964] – Numbers of the main roads visible on the map.
-
 |, \, /, ===, --- – Routes of the main roads surrounding the forest.
-
 Proper names (e.g., Niepołomice, Poszyna, Baczków) indicate the approximate locations of towns and hamlets around the forest.
 ```
