@@ -13,6 +13,8 @@ The target is not only the battle reenactment itself, but the full multi-day eve
 
 The event unfolds over several days, beginning on Wednesday and continuing through Sunday. Each day has its own structure, atmosphere, and set of activities, but all of them are connected by the same medieval theme and the same historical setting.
 
+---
+
 ### Spatial and visual characteristics
 
 - **Main event space:** A large open battlefield area used for the central reenactment of the Battle of Grunwald.
