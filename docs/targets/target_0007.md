@@ -225,8 +225,10 @@ The layout is functional, ceremonial, and landscape-based rather than urban.
 
 ---
 
-## ASCII Map (Top-down)
-```
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
+**Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the main elements.
+
+```text
 ~~~~~~~~~~~~~~~~~,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ~~~~~~~~~~~~~~~~~~~~~~,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ~~~~~~~~~~~~~~~~===============-----------------------,,,,,,
