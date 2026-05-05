@@ -81,9 +81,14 @@ Roads are local, low-capacity, and serve primarily as access routes.
 - low building density,
 - strong integration with the natural landscape,
 - absence of high-density urban development.
+  
 ---
-## ASCII Map (Top-down)
-```
+
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
+**Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the main elements.
+
+```text
+
 +-----------------------------------------------------------------+
 |                                                                 |
 |  [City / Houses]   ||      [Houses]                      ^^^^^^ |
@@ -101,14 +106,9 @@ Roads are local, low-capacity, and serve primarily as access routes.
 +-----------------------------------------------------------------+
 
 Legend:
-
 [ ] – Houses, urban areas, and large industrial structures.
-
 || – Railway tracks crossing the area from north to south.
-
 (X) – Brzozowa Street.
-
 |, \, _ – Network of main roads (Wojska Polskiego Ave, Celna St., Szkolna St., Świerkowa St.).
-
 ^^^ – Mountain and forested area on the right side (eastern part of the map).
 ```
