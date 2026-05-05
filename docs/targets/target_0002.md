@@ -133,16 +133,10 @@ Top-down view of the Great Temple and surrounding ruins in Petra.
 
 Legend
 [ ]: Major archaeological structures (Great Temple area).
-
 (T) / (P): Specific marker points (Temenos Gate, Petra marker).
-
 X: Specific location pin (Nymphaeum).
-
 |, /, \\: Main pedestrian paths, Colonnaded Street, and natural wadi contours.
-
 ::::: Internal layout or columns within structures.
-
 ===: Lower elevation ruins, wall remnants, or rocky outcrops.
-
 +---+: Perimeter of major built structures.
 ```
