@@ -1,6 +1,6 @@
 # Target 0007
 
-**Target coordinates:** 5783 8383
+**Target coordinates:** 5783 8383  
 **Date of the target:** 9–13 July 2025  
 
 **Target:**  Grunwald Battle Reconstrucion, including the XXVII Reconstruction of Grunwald Battle and the surrounding medieval activities, tournaments, ceremonies, and camp life.
