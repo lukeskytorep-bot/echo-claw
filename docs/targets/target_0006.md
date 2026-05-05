@@ -169,7 +169,10 @@ creating a living festival environment inside a castle.
 
 ---
 
-```
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
+**Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the main elements.
+
+```text
                 DETAILED CASTLE MAP (TOP VIEW)
 
                         [1] TOWER / VIEWPOINT
