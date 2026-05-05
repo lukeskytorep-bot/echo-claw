@@ -1,4 +1,4 @@
-# Target 0007
+# Target 0009
 
 **Target coordinates:** 5783 8383  
 **Date of the target:** 9–13 July 2025  
