@@ -144,26 +144,15 @@ The analyzed area is an international transport hub centered on the Ambassador B
     +---------------------------------------------------------+
 
   Legend:
-
 [ ] – Name of the main object/building.
-
 ( ) – Specific locations marked with a pin.
-
 (P) – Riverside Skatepark.
-
 (W) – J.W. Westcott (marine post office).
-
 (X) – Red pin for Ambassador Bridge (main location).
-
 (K) – King & Queen .
-
 (L) – Leddy Library.
-
 ||||| – Ambassador Bridge.
-
 _ _ _ – USA / CANADA border line.
-
 . ~ . – Detroit River (water).
-
 ----- – Main roads.
 ```
