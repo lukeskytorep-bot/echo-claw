@@ -97,8 +97,12 @@ The analyzed area is part of a large archaeological complex arranged in a valley
 - no modern residential development in the analyzed area,
 - extreme environment marked by dryness, high temperature, and strong sun exposure,
 - landscape of high historical and visual value.
+  
 ---
-## ASCII Map (Top-down)                  
+
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
+**Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the main elements.
+
 ```text
          ASCII Map of Petra Archaeological Sit
 Top-down view of the Great Temple and surrounding ruins in Petra.
