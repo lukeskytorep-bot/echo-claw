@@ -1,4 +1,4 @@
-# Target 0005
+# Target 0006
 
 **Target coordinates:** 5676 9982  
 **Date of the target:** March 2016  
