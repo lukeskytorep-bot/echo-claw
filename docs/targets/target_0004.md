@@ -98,8 +98,12 @@ The analyzed area forms part of a large forest complex with both natural and man
 - presence of individual users such as pedestrians and cyclists,
 - relatively stable environment with minimal infrastructural interference.
 ---
-## ASCII Map (Top-down)
-```
+
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
+**Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the main elements.
+
+```text
+
 +-------------------------------------------------------------------------+
 |   Wola Batorska   [964]      (B) Bobrowe Rozlewisko                     |
 |               ___---^^^***^^^^****^^^^^^****^^^^^^****^^^---___         |
