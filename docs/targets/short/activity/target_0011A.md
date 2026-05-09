@@ -1,5 +1,6 @@
-target 0011 - activity  
-target coordinates: 8291 4752
+Target 0011 - Activity  
+Date of target - August 2013  
+Target coordinates: 8291 4752  
 
 # Target: "Flying Kung Fu" Stunt Simulation
 
