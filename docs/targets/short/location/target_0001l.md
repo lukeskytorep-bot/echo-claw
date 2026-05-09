@@ -1,4 +1,4 @@
-target 0001 - location  
+Target 0001 - location  
 Date of the target: June 2024  
 Target coordinates: 7492 1835
 
