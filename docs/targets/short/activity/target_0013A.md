@@ -1,5 +1,6 @@
-target 0013 - activity  
-target coordinates: 5928 3140
+Target 0013 - Activity  
+Date of target: 2005  
+Target coordinates: 5928 3140  
 
 # Target: Bingham Canyon Open-Pit Mine
 
