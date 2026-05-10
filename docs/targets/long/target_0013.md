@@ -5,6 +5,8 @@
 
 **Target:** Deepspot (Mszczonów, Poland) - Indoor deep diving pool and training facility.
 
+---
+
 **Description:**
 The target is a massive, highly engineered indoor aquatic facility entirely dedicated to scuba diving and freediving. It consists of a modern, heavy-duty industrial building housing a colossal, artificially maintained body of water. The internal environment is a sharply geometric, multi-tiered basin that transitions from a wide, shallow recreational area near the surface into a dramatic, extremely deep vertical cylindrical shaft plunging down to a maximum depth of over 45 meters. The water is perfectly clear, heavily filtered, and artificially heated (32-34°C), creating a highly controlled, synthetic maritime environment entirely isolated from the natural world outside. The space is populated by human divers suspended at various depths, interacting with several artificial underwater structures and props.
 
@@ -30,6 +32,7 @@ The target is a massive, highly engineered indoor aquatic facility entirely dedi
 
 ---
 
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
 **Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the main architectural elements and depth changes.
 
 ```text
