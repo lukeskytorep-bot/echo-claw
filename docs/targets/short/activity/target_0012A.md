@@ -1,5 +1,5 @@
 Target 0012 - Activity    
-Date of target - 2016  
+Date of target: 2016  
 Target coordinates: 6184 9302  
 
 # Target: Traditional Production of Ojiya Hemp Fabrics (Ojiya Chijimi)
