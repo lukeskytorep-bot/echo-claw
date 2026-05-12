@@ -34,6 +34,8 @@ The primary activity involves human athletes performing daredevil, twisting desc
 
 ---
 
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
+
 **Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general vertical layout and the boundary between the rock formation and the water.
 
 ```text
@@ -54,3 +56,12 @@ The primary activity involves human athletes performing daredevil, twisting desc
 ~ v ~ v ~ | ~ ~ ~ ~ ~ ~ ~ ~ ~|~ ~ ~ ~ ~ ~ ~ v ~ v ~ v ~ ~ ~
 ~ ~ ~ ~ ~ | ~ ~ ~ ~ ~ ~ ~ ~ ~|~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 ~ v ~ v ~ | ~ ~ ~ ~ ~ ~ ~ ~ ~|~ ~ v ~ v ~ ~ ~ v ~ v ~ ~ ~ ~
+
+Legend:
+
+[ CASTLE ] : The Swallow's Nest (compact human structure)
+|, /, \ : The steep mountain/cliff face (Cape of Ai-Todor)
+======== : The Red Bull diving platform
+o : Diver in mid-air
+~ : The Black Sea (cool, synchronized liquid boundary, 5m+ depth)
+v : Spectator boats and yachts (warm, point-like impulses)
