@@ -1,6 +1,6 @@
 Target 0007 - Location  
 Date of target: May 2025  
-Target coordinates: 7391 8402  
+Target coordinates: 739D1 A840d2  
 
 # Target: Cosca Village and Ancient Ruins (Near Volcán Ollagüe)
 
