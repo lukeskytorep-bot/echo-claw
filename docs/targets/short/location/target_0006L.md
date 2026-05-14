@@ -1,6 +1,6 @@
 Target 0006 - Location  
 Date of target: January 2026  
-Target coordinates: 4821 7392  
+Target coordinates: QZ4821V DE7392C  
 
 # Target: Junell Street (Houston, Texas)
 
