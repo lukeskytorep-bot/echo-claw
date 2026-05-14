@@ -1,6 +1,6 @@
 Target 0005 - Location  
 Date of target: June 2017  
-Target coordinates: 9210 3847  
+Target coordinates: RA3847 VF4393  
 
 # Target: Old Windmill and Water Tank (Bulloo Downs, Australia)
 
