@@ -1,4 +1,4 @@
-Target 0011 - Location  
+Target 0012 - Location  
 Date of target: June 2013  
 Target coordinates: 9h82o L431u0  
 
