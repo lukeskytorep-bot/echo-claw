@@ -1,10 +1,10 @@
-Target 0013 - Location  
+Target 0014 - Location  
 Date of target: 15 May 2026, 10:00  
 Target coordinates: 62s81 10lP93  
 
 # Target: Technical Monument - Steam Locomotive Tp4-217 (Świeradów-Zdrój)
 
-The presented target is a historic steam locomotive serving as a static technical monument, located near an active railway station in the town of Świeradów-Zdrój.
+The presented target is a historic steam locomotive serving as a static technical monument, located near an active railway station in the town of Świeradów-Zdrój (Poland).
 
 ## Main Object (Steam Locomotive Tp4-217):
 * **Visual Characteristics:** A massive, black steam locomotive with a raw, steel structure, bearing visible signs of aging and corrosion. The machine is positioned on an isolated, short section of track laid on gravel ballast, separated from the road by a low wire fence.
