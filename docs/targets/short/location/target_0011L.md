@@ -1,4 +1,4 @@
-Target 0010 - Location  
+Target 0011 - Location  
 Date of target: 15 May 2026, 13:00  
 Target coordinates: 51AS23 8901G  
 
