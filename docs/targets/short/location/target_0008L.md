@@ -1,6 +1,6 @@
 Target 0008 - Location  
-Date of target: Present Day 
-Target coordinates: 19D48 2F931A  
+Date of target: Present Day   
+Target coordinates: 19D48 2F931A    
 
 # Target: The Incan Citadel of Machu Picchu
 
