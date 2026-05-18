@@ -1,6 +1,6 @@
 Target 0007 - Activity  
 Date of target: April/May (2025 Edition: April 27 - May 14)  
-Target coordinates:  
+Target coordinates: 4uer84 93iew3
 
 # Target: Koovagam Festival (Viluppuram District, Tamil Nadu, India) - The Aravani Festival
 
