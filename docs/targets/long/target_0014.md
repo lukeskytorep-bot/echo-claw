@@ -1,4 +1,4 @@
-# Target 0014 - Activity  
+# Target 0014  
 Date of target: 27 August 2011  
 Target coordinates: 7864 6453    
 
