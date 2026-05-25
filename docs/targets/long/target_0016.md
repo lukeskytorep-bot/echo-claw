@@ -1,0 +1,68 @@
+# Target 0016
+
+**Target coordinates:** 4737 fr874  
+**Date of the target:** August 25, 2013  
+
+**Target:** Gostra (Greased Pole) Competition - Spinola Bay, St. Julian's, Malta. Traditional aquatic and athletic cultural event.
+
+**Description:**
+The target is a highly kinetic, traditional athletic event set within a Mediterranean harbor environment. The focal point is a massive, angled wooden pole extending directly outwards and upwards from a concrete pier over the sea. The activity is defined by intense, imperfect biological exertion as individuals attempt to sprint up this highly slippery, grease-coated structure to snatch specific flags fixed to its extremity. The environment is dense with energy, surrounded by a closely packed crowd of spectators on the docks and in surrounding boats. The event is characterized by the constant cycle of rapid upward momentum followed immediately by a loss of friction, resulting in uncontrolled, dynamic falls into the calm, liquid boundary of the sea below.
+
+
+### Detailed Scene Breakdown
+
+#### The Infrastructure (The Pole)
+* **The Wooden Structure:** A rigid, heavy wooden log, measuring approximately 10 meters (33 feet) in length. It is anchored securely to a concrete pier or barge at a steep upward angle, projecting entirely over the open water.
+* **The Surface Treatment:** The lower section of the pole remains untreated to allow participants to build initial sprinting momentum. However, the entire upper half is heavily slathered with a thick, visible layer of animal fat and industrial grease, creating an intentionally frictionless surface. 
+* **The Pennants:** Four distinct flags are mounted on short wooden sticks at the very end of the pole. These include a blue-and-white flag, a yellow-and-white flag, and a black-yellow-red tricolor flag, each holding specific cultural or historical significance for the event.
+
+---
+
+#### Activity and Human Pulse
+* **The Sprint:** Participants exert extreme physical effort, utilizing forward momentum to run up the incline before losing traction. The motion is explosive and highly focused.
+* **The Fall:** Gravity and the lack of surface friction inevitably overpower the runners. This results in highly dynamic, acrobatic, or awkward falls—participants are seen slipping backwards, diving forward, or twisting in mid-air as they plunge into the water.
+* **The Capture:** The ultimate goal of the biological exertion is reaching the extremity. In rare instances, participants manage to snatch a flag from its socket, holding it triumphantly as they fall into the sea.
+
+#### The Environment and Spectators
+* **The Harbor:** The event takes place in a sheltered coastal bay (Spinola Bay). The water is deep, calm, and dark blue, acting as a natural, fluid safety cushion for the falling participants. 
+* **The Crowd:** A dense, highly compressed mass of spectators fills the concrete pier and lines the harbor walls. Numerous small vessels, speedboats, and inflatable dinghies are moored directly in the water around the drop zone, filled with onlookers observing the spectacle. 
+* **Atmosphere:** The sky is clear and bright blue, indicating warm summer conditions typical of the Mediterranean. The atmosphere is energetic, loud, and densely populated.
+* **Urban and Human Backdrop:** The concrete pier is exceptionally crowded, creating a compact human wall right up to the edge where the pole is mounted. The crowd consists mostly of young adults dressed in minimal summer attire; many men are shirtless wearing swim trunks, and women are in bikinis, reflecting the extreme heat and beach setting. Immediately behind this dense gathering is a narrow harbor road where various modern cars and vans are parked. Maltese buildings, constructed from traditional limestone and featuring cafes and restaurants, form a tight urban perimeter around the bay.
+* **Marine Views:** While dozens of spectator boats surround the immediate drop zone, the distant horizon shows a sprawl of few more vessels, including yachts and fishing boats, anchored further out in the deep blue water of Spinola Bay, illustrating the massive scale of the holiday *festa*.
+
+---
+
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
+**Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the main architectural and functional elements.
+
+```text
+                                                 [F] (Flags)
+                                                /|
+                                              /
+                                            /
+                                          /
+                                     (o) <--- (Participant falling)
+                                      /|
+                                    /
+                                  /
+                                /
+                              /
+                            /
+==========================/
+[ CROWD / SPECTATORS ]   |
+[ CONCRETE PIER      ]   |
+=========================|
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ [ BOATS ] ~ ~ ~ ~ WATER ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+```
+
+Legend:
+
+- = / | : Concrete pier and harbor boundary
+- / : The 10-meter angled wooden pole (Gostra)
+- [F] : The flags/pennants at the tip of the pole
+- (o) : Participant in mid-air
+- ~ : The Mediterranean Sea (receiving medium)
