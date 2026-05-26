@@ -1,5 +1,5 @@
 Target 0028 - Location  
-Date of target: 24 July 2018 
+Date of target: 24 July 2018   
 Target coordinates: 65rf 6tr3  
 
 # Target: Hanging Temple (Xuankong Temple), Mount Heng, Shanxi Province, China  
