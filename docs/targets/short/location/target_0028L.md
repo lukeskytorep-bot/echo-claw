@@ -1,6 +1,7 @@
 Target 0028 - Location  
 Date of target: 24 July 2018 
-Target coordinates: 
+Target coordinates: 65rf 6tr3  
+
 # Target: Hanging Temple (Xuankong Temple), Mount Heng, Shanxi Province, China  
 
 The presented target is the Hengshan Hanging Temple, an extraordinary architectural marvel built directly into a sheer cliff face near Mount Heng in China. Constructed over 1,500 years ago, the monastery is uniquely significant not only for its gravity-defying location but also for integrating three traditional Chinese philosophies: Buddhism, Taoism, and Confucianism.
