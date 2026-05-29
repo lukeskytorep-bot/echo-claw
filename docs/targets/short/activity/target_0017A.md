@@ -1,6 +1,6 @@
 Target 0017 - Event / Activity  
 Date of target: July 5, 2008  
-Target coordinates: Bend, Oregon to Cambridge, Idaho (USA)  
+Target coordinates: 4536 rt45  
 
 # Target: Cluster Balloon Lawn Chair Flight (Bend, Oregon to Cambridge, Idaho (USA))
 
