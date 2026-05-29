@@ -1,6 +1,6 @@
 Target 0015 - Event  
 Date of target: March 15, 1999  
-Target coordinates: Bourbonnais, Illinois, USA  
+Target coordinates: 4sq6 hd46 
 
 # Target: 1999 Bourbonnais Train Crash (Illinois, USA)
 
