@@ -1,4 +1,4 @@
-Target 0027 - Location / Sculpture  
+Target 0029 - Location / Sculpture  
 Date of target: Contemporary (Sculpture commissioned c. 1990)  
 Target coordinates: 57ry jf57    
 
