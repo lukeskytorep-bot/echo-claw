@@ -32,6 +32,7 @@ The target is a traditional sheep ranch located in a relatively flat valley with
 
 ---
 
+## Appendix: Simplified Spatial Layout (Illustrative ASCII Map)
 **Note:** The following ASCII map is a simplified illustrative sketch. It is not drawn to exact scale and is intended only to show the general spatial layout of the seasonal migration patterns and base camp elements.
 
 ```text
