@@ -46,3 +46,9 @@ TTT   T                                     R            TTT
 TTT   T           [ COURTYARD / PARKING ]   E            TTT
 TTT   T                                     A            TTT
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+
+Legend:
+- T : Dense tropical trees and vegetation
+- ~ : Rectangular reflecting pond / water boundary
+- [ MAIN TEMPLE ] : The central spire structure built of green and brown bottles
+- PAVED AREA : Concrete courtyards and vehicle access routes
