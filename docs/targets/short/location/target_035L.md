@@ -53,3 +53,10 @@ The target is a factual profile of a high-altitude alpine environment and its as
 |                                       [ WOODEN BENCH ]    |
 |                                                           |
 =============================================================
+Legend:
+
+- ^ / \ : Distant mountain ranges.
+- ~ ~ ~ : The highly fractured, uneven light-grey rocky terrain.
+- [ CABLE CAR STATION ] : The Rüfikopf upper terminal and green lodge.
+- ### : The wooden avalanche barriers on the steep slope.
+- o o : Human subjects (hikers) navigating the trail.
