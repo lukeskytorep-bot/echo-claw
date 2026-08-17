@@ -1,4 +1,3 @@
-```markdown
 # Target 0027
 
 **Target ID:** 542F WK19  
@@ -68,7 +67,5 @@ The target is a factual profile of a groundbreaking historical and technological
 * `(o)` : The pilot lying prone on the lower wing next to the engine.
 * `o /|\ / \` : The observer running alongside the aircraft in a dark suit.
 * `\ \ \` : The single wooden launch rail laid across the flat sand.
-
-```
 
 ```
