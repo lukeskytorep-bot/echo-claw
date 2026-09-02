@@ -1,5 +1,5 @@
 Target 0008 - Location  
-Date of target: 02.09.2026 
+Date of target: 02.09.2026  
 Target coordinates: 19D48 2F931A    
 
 # Target: The Incan Citadel of Machu Picchu
