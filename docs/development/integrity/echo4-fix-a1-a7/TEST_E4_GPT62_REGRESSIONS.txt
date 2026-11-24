@@ -1,0 +1,96 @@
+TAP version 13
+# (node:1313534) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E4-FIX-R01 A1 plugin inventory read failure is fail-closed before mutation
+ok 1 - E4-FIX-R01 A1 plugin inventory read failure is fail-closed before mutation
+  ---
+  duration_ms: 38.941909
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R02 A1 config read failure is fail-closed before plugin installation
+ok 2 - E4-FIX-R02 A1 config read failure is fail-closed before plugin installation
+  ---
+  duration_ms: 461.925755
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R03 A2 failed config restore produces ROLLBACK_INCOMPLETE
+ok 3 - E4-FIX-R03 A2 failed config restore produces ROLLBACK_INCOMPLETE
+  ---
+  duration_ms: 2615.044705
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R04 A3 rollback blocks later user config and workspace edits
+ok 4 - E4-FIX-R04 A3 rollback blocks later user config and workspace edits
+  ---
+  duration_ms: 3576.994523
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R05 A4 backup paths are role/path unique for equal workspace basenames
+ok 5 - E4-FIX-R05 A4 backup paths are role/path unique for equal workspace basenames
+  ---
+  duration_ms: 3081.241452
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R06 A5 runtime inspection rejects diagnostic text masquerading as registrations
+ok 6 - E4-FIX-R06 A5 runtime inspection rejects diagnostic text masquerading as registrations
+  ---
+  duration_ms: 0.203076
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R07 A6 strict smoke proof rejects mismatched session and unbound transport
+ok 7 - E4-FIX-R07 A6 strict smoke proof rejects mismatched session and unbound transport
+  ---
+  duration_ms: 22.4672
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R08 A7 pending install intent is reconciled after SIGKILL and rolled back
+ok 8 - E4-FIX-R08 A7 pending install intent is reconciled after SIGKILL and rolled back
+  ---
+  duration_ms: 1841.981168
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R09 overlapping Monitor and Viewer workspaces are rejected before plugin mutation
+ok 9 - E4-FIX-R09 overlapping Monitor and Viewer workspaces are rejected before plugin mutation
+  ---
+  duration_ms: 1.124262
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R10 generic backend not-found error is not mistaken for a missing config key
+ok 10 - E4-FIX-R10 generic backend not-found error is not mistaken for a missing config key
+  ---
+  duration_ms: 32.922621
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R11 strict smoke proof rejects impossible transport chronology
+ok 11 - E4-FIX-R11 strict smoke proof rejects impossible transport chronology
+  ---
+  duration_ms: 18.202965
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R12 automatic rollback preserves a concurrent workspace edit
+ok 12 - E4-FIX-R12 automatic rollback preserves a concurrent workspace edit
+  ---
+  duration_ms: 3329.842842
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R13 automatic rollback preserves a concurrent config edit
+ok 13 - E4-FIX-R13 automatic rollback preserves a concurrent config edit
+  ---
+  duration_ms: 3208.256537
+  type: 'test'
+  ...
+# Subtest: E4-FIX-R14 runtime inspection follows OpenClaw 2026.11 toolNames/typedHooks structure
+ok 14 - E4-FIX-R14 runtime inspection follows OpenClaw 2026.11 toolNames/typedHooks structure
+  ---
+  duration_ms: 0.607043
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 18295.236601

@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: E4-T01 supported Node policy rejects Node 22 and accepts 24.16+/26.1+
+ok 1 - E4-T01 supported Node policy rejects Node 22 and accepts 24.16+/26.1+
+  ---
+  duration_ms: 1.620577
+  type: 'test'
+  ...
+# Subtest: E4-T02 OpenClaw compatibility remains pinned to 2026.11 line
+ok 2 - E4-T02 OpenClaw compatibility remains pinned to 2026.11 line
+  ---
+  duration_ms: 0.200201
+  type: 'test'
+  ...
+# Subtest: E4-T03 preflight validates config and plugin manifest
+ok 3 - E4-T03 preflight validates config and plugin manifest
+  ---
+  duration_ms: 90.846958
+  type: 'test'
+  ...
+# Subtest: E4-T04 preflight can require a live Gateway RPC
+ok 4 - E4-T04 preflight can require a live Gateway RPC
+  ---
+  duration_ms: 128.957643
+  type: 'test'
+  ...
+# Subtest: E4-T05 preflight fails closed when Gateway RPC is required but unavailable
+ok 5 - E4-T05 preflight fails closed when Gateway RPC is required but unavailable
+  ---
+  duration_ms: 151.641581
+  type: 'test'
+  ...
+# Subtest: E4-T06 plan detects clean install
+ok 6 - E4-T06 plan detects clean install
+  ---
+  duration_ms: 135.159954
+  type: 'test'
+  ...
+# Subtest: E4-T07 plan detects an existing Monitor workspace conflict
+ok 7 - E4-T07 plan detects an existing Monitor workspace conflict
+  ---
+  duration_ms: 120.41354
+  type: 'test'
+  ...
+# Subtest: E4-T08 clean local-link install configures plugin and workspaces
+ok 8 - E4-T08 clean local-link install configures plugin and workspaces
+  ---
+  duration_ms: 1555.925548
+  type: 'test'
+  ...
+# Subtest: E4-T09 owner tool is added through alsoAllow when main has no allowlist
+ok 9 - E4-T09 owner tool is added through alsoAllow when main has no allowlist
+  ---
+  duration_ms: 1509.120385
+  type: 'test'
+  ...
+# Subtest: E4-T10 owner tool is merged into an existing main allowlist
+ok 10 - E4-T10 owner tool is merged into an existing main allowlist
+  ---
+  duration_ms: 1494.639515
+  type: 'test'
+  ...
+# Subtest: E4-T11 Monitor receives only echo_monitor_session and Viewer denies all tools
+ok 11 - E4-T11 Monitor receives only echo_monitor_session and Viewer denies all tools
+  ---
+  duration_ms: 1601.02231
+  type: 'test'
+  ...
+# Subtest: E4-T12 installer records a verified config backup before plugin install
+ok 12 - E4-T12 installer records a verified config backup before plugin install
+  ---
+  duration_ms: 1725.829315
+  type: 'test'
+  ...
+# Subtest: E4-T13 runtime registration check requires loaded plugin identity, both tools and all typed transport hooks
+ok 13 - E4-T13 runtime registration check requires loaded plugin identity, both tools and all typed transport hooks
+  ---
+  duration_ms: 0.703748
+  type: 'test'
+  ...
+# Subtest: E4-T14 installer refuses to replace an already tracked plugin automatically
+ok 14 - E4-T14 installer refuses to replace an already tracked plugin automatically
+  ---
+  duration_ms: 231.302428
+  type: 'test'
+  ...
+# Subtest: E4-T15 conflicts abort before plugin installation unless explicitly forced
+ok 15 - E4-T15 conflicts abort before plugin installation unless explicitly forced
+  ---
+  duration_ms: 233.96613
+  type: 'test'
+  ...
+# Subtest: E4-T16 forced workspace replacement is backed up transactionally
+ok 16 - E4-T16 forced workspace replacement is backed up transactionally
+  ---
+  duration_ms: 1785.302733
+  type: 'test'
+  ...
+# Subtest: E4-T17 failed post-install validation rolls back plugin and authored config
+ok 17 - E4-T17 failed post-install validation rolls back plugin and authored config
+  ---
+  duration_ms: 2049.065583
+  type: 'test'
+  ...
+# Subtest: E4-T18 rollback removes workspace files created by a failed install
+ok 18 - E4-T18 rollback removes workspace files created by a failed install
+  ---
+  duration_ms: 2072.939218
+  type: 'test'
+  ...
+# Subtest: E4-T19 git install mode uses the pinned GitHub source when requested
+ok 19 - E4-T19 git install mode uses the pinned GitHub source when requested
+  ---
+  duration_ms: 1591.406083
+  type: 'test'
+  ...
+# Subtest: E4-T20 installer does not require a Gateway to be already running
+ok 20 - E4-T20 installer does not require a Gateway to be already running
+  ---
+  duration_ms: 1594.677034
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 18139.992481

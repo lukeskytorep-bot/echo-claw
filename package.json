@@ -1,20 +1,24 @@
 {
   "name": "@presence-beyond-form/echo-claw",
-  "version": "0.3.4",
+  "version": "0.4.0-rc.4",
   "private": true,
   "type": "module",
-  "description": "ECHO-CLAW ECHO-3: durable Session Core plus native OpenClaw Monitor/Viewer integration.",
+  "description": "ECHO-CLAW ECHO-4 release candidate: durable Session Core, native OpenClaw integration, installer and real-host validation gates.",
   "engines": {
-    "node": ">=22.22.3"
+    "node": ">=24.16.0 <25 || >=26.1.0 <27"
   },
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
-    "test:verbose": "node --test --test-reporter=spec tests/*.test.mjs",
+    "test": "node tools/run-tests.mjs",
+    "test:verbose": "node tools/run-tests.mjs --reporter=spec",
     "verify:package": "node tools/verify-package.mjs",
     "verify:baselines": "node tools/verify-baselines.mjs",
     "check": "npm test && npm run verify:baselines && npm run verify:package",
-    "test:echo3": "node --test tests/echo3-openclaw.test.mjs",
-    "test:echo2": "node --test tests/echo2.test.mjs"
+    "test:echo3": "node tools/run-tests.mjs --scope=echo3",
+    "test:echo2": "node tools/run-tests.mjs --scope=echo2",
+    "test:echo4": "node tools/run-tests.mjs --scope=echo4",
+    "echo4:preflight": "node installer/echo4-install.mjs preflight --require-gateway --json",
+    "echo4:plan": "node installer/echo4-install.mjs plan --json",
+    "echo4:self-test": "node installer/echo4-host-self-test.mjs"
   },
   "license": "MIT",
   "repository": {
@@ -48,6 +52,7 @@
     "targets",
     "agents",
     "docs",
+    "installer",
     "openclaw.plugin.json",
     "README.md",
     "NOTICE.md",

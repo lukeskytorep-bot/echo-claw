@@ -1,0 +1,355 @@
+TAP version 13
+# (node:1283956) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E3-T01 plugin declares exactly owner and monitor tools
+ok 1 - E3-T01 plugin declares exactly owner and monitor tools
+  ---
+  duration_ms: 1.521669
+  type: 'test'
+  ...
+# Subtest: E3-T02 owner tool unavailable without host owner proof
+ok 2 - E3-T02 owner tool unavailable without host owner proof
+  ---
+  duration_ms: 91.577727
+  type: 'test'
+  ...
+# Subtest: E3-T03 monitor tool unavailable to unconfigured agent
+ok 3 - E3-T03 monitor tool unavailable to unconfigured agent
+  ---
+  duration_ms: 83.578463
+  type: 'test'
+  ...
+# Subtest: E3-T04 model parameters contain no authority identity fields
+ok 4 - E3-T04 model parameters contain no authority identity fields
+  ---
+  duration_ms: 91.358497
+  type: 'test'
+  ...
+# Subtest: E3-T05 created session is owner-bound and target identity redacted
+ok 5 - E3-T05 created session is owner-bound and target identity redacted
+  ---
+  duration_ms: 117.334545
+  type: 'test'
+  ...
+# Subtest: E3-T06 blind Viewer prompt contains no target identity/content
+ok 6 - E3-T06 blind Viewer prompt contains no target identity/content
+  ---
+  duration_ms: 102.607841
+  type: 'test'
+  ...
+# Subtest: E3-T07 every normal Viewer provider request gets durable transport proof and accepted response
+ok 7 - E3-T07 every normal Viewer provider request gets durable transport proof and accepted response
+  ---
+  duration_ms: 90.909151
+  type: 'test'
+  ...
+# Subtest: E3-T08 provider retry creates a second physical receipt without losing logical attempt
+ok 8 - E3-T08 provider retry creates a second physical receipt without losing logical attempt
+  ---
+  duration_ms: 103.178158
+  type: 'test'
+  ...
+# Subtest: E3-T09 pre-dispatch receipt failure blocks simulated provider send
+ok 9 - E3-T09 pre-dispatch receipt failure blocks simulated provider send
+  ---
+  duration_ms: 85.506504
+  type: 'test'
+  ...
+# Subtest: E3-T10 Viewer subagent is always launched with tools disabled
+ok 10 - E3-T10 Viewer subagent is always launched with tools disabled
+  ---
+  duration_ms: 94.73725
+  type: 'test'
+  ...
+# Subtest: E3-T11 multiple Viewer steps reuse one persistent sessionKey
+ok 11 - E3-T11 multiple Viewer steps reuse one persistent sessionKey
+  ---
+  duration_ms: 112.830048
+  type: 'test'
+  ...
+# Subtest: E3-T12 Viewer generation reset transitions core to RECOVERING before another provider send
+ok 12 - E3-T12 Viewer generation reset transitions core to RECOVERING before another provider send
+  ---
+  duration_ms: 108.707466
+  type: 'test'
+  ...
+# Subtest: E3-T13 owner B cannot read or control owner A session
+ok 13 - E3-T13 owner B cannot read or control owner A session
+  ---
+  duration_ms: 123.641253
+  type: 'test'
+  ...
+# Subtest: E3-T14 Monitor B cannot read owner A AI-monitor session
+ok 14 - E3-T14 Monitor B cannot read owner A AI-monitor session
+  ---
+  duration_ms: 91.439259
+  type: 'test'
+  ...
+# Subtest: E3-T15 Monitor cannot conduct human_user session
+ok 15 - E3-T15 Monitor cannot conduct human_user session
+  ---
+  duration_ms: 94.231098
+  type: 'test'
+  ...
+# Subtest: E3-T16 Owner cannot substitute for AI Monitor conductor decision
+ok 16 - E3-T16 Owner cannot substitute for AI Monitor conductor decision
+  ---
+  duration_ms: 101.981468
+  type: 'test'
+  ...
+# Subtest: E3-T17 no_code prompt contains approved start and no code placeholder/remnant
+ok 17 - E3-T17 no_code prompt contains approved start and no code placeholder/remnant
+  ---
+  duration_ms: 0.703118
+  type: 'test'
+  ...
+# Subtest: E3-T18 uncontrolled provider request on bound Viewer session is blocked
+ok 18 - E3-T18 uncontrolled provider request on bound Viewer session is blocked
+  ---
+  duration_ms: 108.884043
+  type: 'test'
+  ...
+# Subtest: E3-T19 missing OpenClaw model hook coverage fails closed into RECOVERING
+ok 19 - E3-T19 missing OpenClaw model hook coverage fails closed into RECOVERING
+  ---
+  duration_ms: 105.919215
+  type: 'test'
+  ...
+# Subtest: E3-T20 host invocation assertion is exercised across run launch and terminal commit
+ok 20 - E3-T20 host invocation assertion is exercised across run launch and terminal commit
+  ---
+  duration_ms: 128.398639
+  type: 'test'
+  ...
+# Subtest: E3-T21 Viewer session key contains ECHO session id but no target metadata
+ok 21 - E3-T21 Viewer session key contains ECHO session id but no target metadata
+  ---
+  duration_ms: 111.665397
+  type: 'test'
+  ...
+# Subtest: E3-T22 manifest requests conversation read and both tool contracts
+ok 22 - E3-T22 manifest requests conversation read and both tool contracts
+  ---
+  duration_ms: 0.400813
+  type: 'test'
+  ...
+# Subtest: E3-T23 OpenClaw config example explicitly enables final model-request gate
+ok 23 - E3-T23 OpenClaw config example explicitly enables final model-request gate
+  ---
+  duration_ms: 0.215524
+  type: 'test'
+  ...
+# Subtest: E3-T24 integration store persists generation and active binding across reopen
+ok 24 - E3-T24 integration store persists generation and active binding across reopen
+  ---
+  duration_ms: 134.120241
+  type: 'test'
+  ...
+# Subtest: E3-T25 a second provider request after a COMPLETED transport fails closed
+ok 25 - E3-T25 a second provider request after a COMPLETED transport fails closed
+  ---
+  duration_ms: 96.818758
+  type: 'test'
+  ...
+# Subtest: E3-T26 active logical attempt and run id persist across integration-store reopen
+ok 26 - E3-T26 active logical attempt and run id persist across integration-store reopen
+  ---
+  duration_ms: 130.558728
+  type: 'test'
+  ...
+# Subtest: E3-T27 ECHO-3 package pins the audited OpenClaw compatibility range
+ok 27 - E3-T27 ECHO-3 package pins the audited OpenClaw compatibility range
+  ---
+  duration_ms: 0.67125
+  type: 'test'
+  ...
+# Subtest: E3-T28 owner-authority tool is unavailable inside the AI Monitor agent even for an owner-originated turn
+ok 28 - E3-T28 owner-authority tool is unavailable inside the AI Monitor agent even for an owner-originated turn
+  ---
+  duration_ms: 87.937784
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A1 Monitor cannot run_next or collect a human_user session after access check
+ok 29 - E3-FIX-A1 Monitor cannot run_next or collect a human_user session after access check
+  ---
+  duration_ms: 128.418598
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A2 unknown model callId never completes another physical transport
+ok 30 - E3-FIX-A2 unknown model callId never completes another physical transport
+  ---
+  duration_ms: 116.807493
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A3 T10 support verifier rejects appended novel information
+ok 31 - E3-FIX-A3 T10 support verifier rejects appended novel information
+  ---
+  duration_ms: 0.941377
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A4 recovery Resume rotates Viewer session and replays accepted blind outputs
+ok 32 - E3-FIX-A4 recovery Resume rotates Viewer session and replays accepted blind outputs
+  ---
+  duration_ms: 169.5945
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A5 Telepathy T9 questions and adjunct probes are exposed only through trusted neutrality verification
+ok 33 - E3-FIX-A5 Telepathy T9 questions and adjunct probes are exposed only through trusted neutrality verification
+  ---
+  duration_ms: 250.879154
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A6 first-run data directory is created before either SQLite database and tilde is expanded
+ok 34 - E3-FIX-A6 first-run data directory is created before either SQLite database and tilde is expanded
+  ---
+  duration_ms: 114.125799
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A8 integration store migrates schema v1 to v3 and preserves existing bindings
+ok 35 - E3-FIX-A8 integration store migrates schema v1 to v3 and preserves existing bindings
+  ---
+  duration_ms: 13.343182
+  type: 'test'
+  ...
+# Subtest: E3-FIX-B0 integration store migrates schema v2 to v3 with legacy runtime events left PENDING
+ok 36 - E3-FIX-B0 integration store migrates schema v2 to v3 with legacy runtime events left PENDING
+  ---
+  duration_ms: 14.021553
+  type: 'test'
+  ...
+# Subtest: E3-FIX-B1 PENDING Viewer context-loss event is safely completed after restart
+ok 37 - E3-FIX-B1 PENDING Viewer context-loss event is safely completed after restart
+  ---
+  duration_ms: 105.780314
+  type: 'test'
+  ...
+# Subtest: E3-FIX-B2 Resume saga completes after crash between Session Core resume and Integration Store commit
+ok 38 - E3-FIX-B2 Resume saga completes after crash between Session Core resume and Integration Store commit
+  ---
+  duration_ms: 110.49066
+  type: 'test'
+  ...
+# Subtest: E3-FIX-C1 pending Viewer context-loss after Core RECOVERING is reconciled before Resume and survives a second restart
+ok 39 - E3-FIX-C1 pending Viewer context-loss after Core RECOVERING is reconciled before Resume and survives a second restart
+  ---
+  duration_ms: 153.275761
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A7 Viewer prompt contains canonical methodology, not only ECHO markers
+ok 40 - E3-FIX-A7 Viewer prompt contains canonical methodology, not only ECHO markers
+  ---
+  duration_ms: 0.984241
+  type: 'test'
+  ...
+# Subtest: E3-FIX-E2E all four protocols complete under both conductors and both tasking modes
+    # Subtest: rcp / human_user / neutral_code
+    ok 1 - rcp / human_user / neutral_code
+      ---
+      duration_ms: 201.279487
+      type: 'test'
+      ...
+    # Subtest: rcp / human_user / no_code
+    ok 2 - rcp / human_user / no_code
+      ---
+      duration_ms: 200.943652
+      type: 'test'
+      ...
+    # Subtest: rcp / ai_monitor / neutral_code
+    ok 3 - rcp / ai_monitor / neutral_code
+      ---
+      duration_ms: 225.381721
+      type: 'test'
+      ...
+    # Subtest: rcp / ai_monitor / no_code
+    ok 4 - rcp / ai_monitor / no_code
+      ---
+      duration_ms: 187.666695
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / human_user / neutral_code
+    ok 5 - rv-lite-core / human_user / neutral_code
+      ---
+      duration_ms: 164.835545
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / human_user / no_code
+    ok 6 - rv-lite-core / human_user / no_code
+      ---
+      duration_ms: 155.521603
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / ai_monitor / neutral_code
+    ok 7 - rv-lite-core / ai_monitor / neutral_code
+      ---
+      duration_ms: 147.994732
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / ai_monitor / no_code
+    ok 8 - rv-lite-core / ai_monitor / no_code
+      ---
+      duration_ms: 155.170016
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / human_user / neutral_code
+    ok 9 - rv-lite-extended / human_user / neutral_code
+      ---
+      duration_ms: 161.511785
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / human_user / no_code
+    ok 10 - rv-lite-extended / human_user / no_code
+      ---
+      duration_ms: 177.689983
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / ai_monitor / neutral_code
+    ok 11 - rv-lite-extended / ai_monitor / neutral_code
+      ---
+      duration_ms: 181.751351
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / ai_monitor / no_code
+    ok 12 - rv-lite-extended / ai_monitor / no_code
+      ---
+      duration_ms: 141.719838
+      type: 'test'
+      ...
+    # Subtest: telepathy / human_user / neutral_code
+    ok 13 - telepathy / human_user / neutral_code
+      ---
+      duration_ms: 234.67434
+      type: 'test'
+      ...
+    # Subtest: telepathy / human_user / no_code
+    ok 14 - telepathy / human_user / no_code
+      ---
+      duration_ms: 250.029954
+      type: 'test'
+      ...
+    # Subtest: telepathy / ai_monitor / neutral_code
+    ok 15 - telepathy / ai_monitor / neutral_code
+      ---
+      duration_ms: 268.655605
+      type: 'test'
+      ...
+    # Subtest: telepathy / ai_monitor / no_code
+    ok 16 - telepathy / ai_monitor / no_code
+      ---
+      duration_ms: 253.595433
+      type: 'test'
+      ...
+    1..16
+ok 41 - E3-FIX-E2E all four protocols complete under both conductors and both tasking modes
+  ---
+  duration_ms: 3111.330094
+  type: 'test'
+  ...
+1..41
+# tests 57
+# suites 0
+# pass 57
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6920.189993

@@ -2,9 +2,9 @@
 
 **ECHO-CLAW** is an experimental AI Remote Viewing framework built around strict blind-target separation, a Monitor-Viewer architecture, durable session state, explicit protocol contracts, controlled Reveal, and cumulative post-session learning.
 
-This repository is the active clean-source baseline after **ECHO-2 final acceptance** and now contains the **ECHO-3 OpenClaw integration FIX candidate**. It replaces the old prompt-driven repository as the active development base.
+This repository is the active clean-source baseline after **ECHO-3 final offline acceptance** and now contains the **ECHO-4 release/installation candidate**. It replaces the old prompt-driven repository as the active development base.
 
-> Current status: ECHO-2 accepted. ECHO-3 FIX addresses the independent A1–A8 findings plus B1–B2 and C1 crash-recovery findings, and is awaiting final independent audit. Real-Gateway smoke validation remains an ECHO-4 release gate.
+> Current status: ECHO-3 0.3.4 accepted offline. ECHO-4 adds safe installation, rollback, active-Gateway self-tests and opt-in live provider/session evidence capture. A real OpenClaw Gateway run is still required before ECHO-4 can receive final release PASS.
 
 ## What changed from the original ECHO-CLAW
 
@@ -114,6 +114,7 @@ ECHO-CLAW/
 ├── targets/source/                 # 126 active bundled target source files
 ├── tests/                          # executable tests
 ├── tools/                          # verification and developer tooling
+├── installer/                      # ECHO-4 preflight/install/rollback/live-host gates
 └── docs/
     ├── architecture/
     ├── security/
@@ -126,8 +127,8 @@ ECHO-CLAW/
 
 ## Requirements
 
-- Node.js **22.22.3+** on the supported Node 22 line; Node 24 is recommended by OpenClaw
-- OpenClaw **2026.11.7** for the audited ECHO-3 compatibility target
+- ECHO-4 validated host range: Node.js **24.16.0+ on 24.x, or 26.1.0+ on 26.x**. OpenClaw currently also accepts Node 27 as a development line, but ECHO rejects it until that line is explicitly audited with this plugin
+- OpenClaw **2026.11.7** for the pinned ECHO-3/ECHO-4 compatibility target
 - no production npm dependencies for the host-independent Session Core
 
 ## Verify the clean source
@@ -140,7 +141,9 @@ npm run verify:baselines
 npm run verify:package
 ```
 
-The ECHO-3 FIX candidate preserves all 76 ECHO-2 tests and the original 28 ECHO-3 tests, retains the A1–A8 regressions, adds B1–B2 plus C1 crash/restart regressions and v1/v2→v3 store migration coverage, and keeps the 16-scenario full-session matrix. Local expected total: **133/133 PASS**. This is contract/mock-host evidence, not a substitute for the real Gateway smoke gate in ECHO-4.
+The accepted ECHO-3 suite remains intact, including the 16-scenario protocol/conductor/tasking matrix. ECHO-4 adds a separate installer/release suite covering supported-runtime preflight, plugin validation, conflict detection, config backup, workspace backup, local-link/Git installation, runtime registration checks, automatic rollback and explicit transaction rollback. These offline tests do **not** replace the real Gateway/provider gate.
+
+ECHO-4 deliberately does not auto-consent to third-party plugin capabilities. Before installation, review `openclaw.plugin.json`; the installer then requires an explicit `--accept-capabilities` flag. This is separate from `--force`, which acknowledges a local/Git source.
 
 ## OpenClaw integration status
 
@@ -158,7 +161,7 @@ ECHO-3 now contains a native OpenClaw plugin candidate with:
 - canonical protocol methodology embedded into each Viewer step, with ECHO markers used only as the output envelope;
 - Telepathy T9 neutral question freezing and checkpoint adjunct probes.
 
-The implementation is pinned to OpenClaw 2026.11.7 and is **not yet claimed as production-ready**. Local executable tests use a contract-faithful mock host because the supported OpenClaw Gateway/CLI is not installed in this build environment. Real-host plugin validation, Gateway smoke tests, installer work, and full end-to-end sessions remain ECHO-4 gates.
+The implementation is pinned to OpenClaw 2026.11.7 and is **not yet claimed as production-ready**. ECHO-4 now supplies the installer and real-host test commands, but this build environment still cannot run the supported OpenClaw Gateway because its system Node runtime is outside OpenClaw's current support range and the OpenClaw CLI is not installed. Final ECHO-4 acceptance therefore requires running the host gates on a supported real installation.
 
 Do not recreate the old behavior by giving a model direct access to target files or by moving Reveal/ownership decisions back into prompts.
 
@@ -209,4 +212,4 @@ https://www.amazon.co.uk/dp/B0GHLX7J7D
 
 See `docs/ROADMAP.md`.
 
-The current implementation stage is **ECHO-3 FIX 0.3.4: OpenClaw integration candidate after A1–A8 remediation, B1–B2 cross-store saga hardening, and C1 orphaned-Recovery reconciliation**. After independent ECHO-3 acceptance, ECHO-4 will perform real-host installation and release validation on a real Gateway.
+The current implementation stage is **ECHO-4 0.4.0-rc.4: installer/security hardening candidate after the GPT-6.2 audit**. ECHO-3 0.3.4 is accepted offline. The ECHO-4 offline suite currently passes **196/196 tests** (76 ECHO-2, 57 ECHO-3 including 16 full-session scenarios, and 63 ECHO-4 including 14 focused GPT-6.2 regressions). Final ECHO-4 PASS still requires H1-H6 installation and live Gateway/provider evidence on a supported OpenClaw 2026.11.7 host.

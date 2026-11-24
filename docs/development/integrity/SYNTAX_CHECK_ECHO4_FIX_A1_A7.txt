@@ -1,0 +1,37 @@
+ECHO-4 FIX A1-A7 syntax check
+generated_utc=2026-11-24T14:19:22Z
+PASS dist/index.js
+PASS installer/echo4-host-self-test.mjs
+PASS installer/echo4-install.mjs
+PASS installer/echo4-live-gateway-smoke.mjs
+PASS installer/host-ops.mjs
+PASS src/canonical.mjs
+PASS src/database.mjs
+PASS src/errors.mjs
+PASS src/execution-profile.mjs
+PASS src/index.mjs
+PASS src/openclaw/adapter.mjs
+PASS src/openclaw/integration-store.mjs
+PASS src/openclaw/neutrality-verifier.mjs
+PASS src/openclaw/plugin-definition.mjs
+PASS src/openclaw/prompt-renderer.mjs
+PASS src/openclaw/viewer-methodology.mjs
+PASS src/protocol-runtime.mjs
+PASS src/response-validator.mjs
+PASS src/security.mjs
+PASS src/session-engine.mjs
+PASS src/target-library.mjs
+PASS tests/echo2.test.mjs
+PASS tests/echo3-openclaw.test.mjs
+PASS tests/echo4-audit-regressions.test.mjs
+PASS tests/echo4-installer-host1.test.mjs
+PASS tests/echo4-installer-host2.test.mjs
+PASS tests/echo4-installer-host3a.test.mjs
+PASS tests/echo4-installer-host3b.test.mjs
+PASS tests/echo4-installer.test.mjs
+PASS tests/fixtures/fake-openclaw.mjs
+PASS tests/fixtures/installer-crash-recovery.mjs
+PASS tools/run-tests.mjs
+PASS tools/verify-baselines.mjs
+PASS tools/verify-package.mjs
+PASS syntax 34/34

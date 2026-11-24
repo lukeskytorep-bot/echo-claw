@@ -1,0 +1,72 @@
+TAP version 13
+# (node:1292240) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E4-T21 installation never invokes gateway restart implicitly
+ok 1 - E4-T21 installation never invokes gateway restart implicitly
+  ---
+  duration_ms: 2145.11463
+  type: 'test'
+  ...
+# Subtest: E4-T22 package declares the deliberately narrow ECHO-4 validated Node host range
+ok 2 - E4-T22 package declares the deliberately narrow ECHO-4 validated Node host range
+  ---
+  duration_ms: 0.270978
+  type: 'test'
+  ...
+# Subtest: E4-T23 a completed installation can be explicitly rolled back from its transaction record
+ok 3 - E4-T23 a completed installation can be explicitly rolled back from its transaction record
+  ---
+  duration_ms: 2903.818748
+  type: 'test'
+  ...
+# Subtest: E4-T24 git installation refuses an unpinned source
+ok 4 - E4-T24 git installation refuses an unpinned source
+  ---
+  duration_ms: 1.174287
+  type: 'test'
+  ...
+# Subtest: E4-T25 host self-test requires the owner tool policy as well as Monitor and Viewer policies
+ok 5 - E4-T25 host self-test requires the owner tool policy as well as Monitor and Viewer policies
+  ---
+  duration_ms: 714.902209
+  type: 'test'
+  ...
+# Subtest: E4-T26 host self-test accepts owner tool through alsoAllow
+ok 6 - E4-T26 host self-test accepts owner tool through alsoAllow
+  ---
+  duration_ms: 620.984104
+  type: 'test'
+  ...
+# Subtest: E4-T27 installer requires explicit capability consent before any mutation
+ok 7 - E4-T27 installer requires explicit capability consent before any mutation
+  ---
+  duration_ms: 0.94417
+  type: 'test'
+  ...
+# Subtest: E4-T28 local and Git installs pass both source acknowledgement and capability consent to OpenClaw
+ok 8 - E4-T28 local and Git installs pass both source acknowledgement and capability consent to OpenClaw
+  ---
+  duration_ms: 3976.946159
+  type: 'test'
+  ...
+# Subtest: E4-T29 preflight validates the built plugin entry from the project root
+ok 9 - E4-T29 preflight validates the built plugin entry from the project root
+  ---
+  duration_ms: 111.688465
+  type: 'test'
+  ...
+# Subtest: E4-T30 reachable Gateway makes plugin reload a required install gate
+ok 10 - E4-T30 reachable Gateway makes plugin reload a required install gate
+  ---
+  duration_ms: 2417.696256
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12988.608124

@@ -1,0 +1,35 @@
+A6 synthetic negative verifier case: 1 {
+  "ok": false,
+  "mode": "one-step",
+  "startedAt": "2026-11-24T14:07:32.724Z",
+  "agentSessionKey": "echo4-smoke-2026-11-24T14-07-32-724Z",
+  "openclawExit": 0,
+  "stdout": "{}\n",
+  "stderr": "(node:1223739) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+  "newSessionIds": [
+    "other-session"
+  ],
+  "evidence": [
+    {
+      "ok": false,
+      "sessionId": "other-session",
+      "assertions": {
+        "schema:sessions": false
+      },
+      "errors": [
+        "schema missing required columns for sessions"
+      ]
+    }
+  ],
+  "verifierError": null,
+  "assertions": {
+    "exactlyOneNewSession": true,
+    "strictSessionEvidence": false
+  },
+  "evidenceFile": "/tmp/e4proof-7pc2Mt/echo4-live-smoke-2026-11-24T14-07-32-759Z.json"
+}
+ (node:1223717) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+(node:1223706) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

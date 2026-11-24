@@ -1,0 +1,1029 @@
+ECHO-4 0.4.0-rc.3 offline test run
+generated_utc=2026-11-24T12:45:08Z
+
+> @presence-beyond-form/echo-claw@0.4.0-rc.3 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# (node:169496) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E2-T01 bundled target catalog is 126 and bytes match catalog hashes
+ok 1 - E2-T01 bundled target catalog is 126 and bytes match catalog hashes
+  ---
+  duration_ms: 50.541005
+  type: 'test'
+  ...
+# Subtest: E2-T02 approved protocol pins resolve exactly
+ok 2 - E2-T02 approved protocol pins resolve exactly
+  ---
+  duration_ms: 0.763379
+  type: 'test'
+  ...
+# Subtest: E2-T03 unknown protocol/version fails closed before session creation
+ok 3 - E2-T03 unknown protocol/version fails closed before session creation
+  ---
+  duration_ms: 21.438393
+  type: 'test'
+  ...
+# Subtest: E2-T04 trusted caller identity is capability-bound to the engine authority, not model-authored
+ok 4 - E2-T04 trusted caller identity is capability-bound to the engine authority, not model-authored
+  ---
+  duration_ms: 1.891916
+  type: 'test'
+  ...
+# Subtest: E2-T05 no-code exposes no substitute code; neutral-code is independent and stable
+ok 5 - E2-T05 no-code exposes no substitute code; neutral-code is independent and stable
+  ---
+  duration_ms: 28.493227
+  type: 'test'
+  ...
+# Subtest: E2-T06 target commit is immutable through legal API
+ok 6 - E2-T06 target commit is immutable through legal API
+  ---
+  duration_ms: 26.892459
+  type: 'test'
+  ...
+# Subtest: E2-T07 Viewer and Monitor cannot read full target before Reveal
+ok 7 - E2-T07 Viewer and Monitor cannot read full target before Reveal
+  ---
+  duration_ms: 28.892437
+  type: 'test'
+  ...
+# Subtest: E2-T08 human conductor cannot be silently replaced by AI Monitor
+ok 8 - E2-T08 human conductor cannot be silently replaced by AI Monitor
+  ---
+  duration_ms: 25.634715
+  type: 'test'
+  ...
+# Subtest: E2-T09 logical step acceptance advances atomically when no checkpoint exists
+ok 9 - E2-T09 logical step acceptance advances atomically when no checkpoint exists
+  ---
+  duration_ms: 33.968884
+  type: 'test'
+  ...
+# Subtest: E2-T10 checkpoint cannot be bypassed by creating next attempt
+ok 10 - E2-T10 checkpoint cannot be bypassed by creating next attempt
+  ---
+  duration_ms: 39.606936
+  type: 'test'
+  ...
+# Subtest: E2-T11 physical transport receipt is persisted before dispatch
+ok 11 - E2-T11 physical transport receipt is persisted before dispatch
+  ---
+  duration_ms: 22.298847
+  type: 'test'
+  ...
+# Subtest: E2-T12 failed receipt persistence blocks physical dispatch authorization
+ok 12 - E2-T12 failed receipt persistence blocks physical dispatch authorization
+  ---
+  duration_ms: 26.54165
+  type: 'test'
+  ...
+# Subtest: E2-T13 multiple physical provider retries remain under one logical attempt
+ok 13 - E2-T13 multiple physical provider retries remain under one logical attempt
+  ---
+  duration_ms: 29.265258
+  type: 'test'
+  ...
+# Subtest: E2-T14 interrupted/failed logical attempt does not complete a step
+ok 14 - E2-T14 interrupted/failed logical attempt does not complete a step
+  ---
+  duration_ms: 29.028863
+  type: 'test'
+  ...
+# Subtest: E2-T15 invalid response is REJECTED and retry can be accepted only once for the same step instance
+ok 15 - E2-T15 invalid response is REJECTED and retry can be accepted only once for the same step instance
+  ---
+  duration_ms: 24.056492
+  type: 'test'
+  ...
+# Subtest: E2-T16 complete RV Lite Core reaches BLIND_COMPLETE only after final checkpoint
+ok 16 - E2-T16 complete RV Lite Core reaches BLIND_COMPLETE only after final checkpoint
+  ---
+  duration_ms: 45.955427
+  type: 'test'
+  ...
+# Subtest: E2-T17 Reveal before formal BLIND_COMPLETE is denied
+ok 17 - E2-T17 Reveal before formal BLIND_COMPLETE is denied
+  ---
+  duration_ms: 31.629975
+  type: 'test'
+  ...
+# Subtest: E2-T18 unresolved physical/logical attempt blocks Reveal authorization
+ok 18 - E2-T18 unresolved physical/logical attempt blocks Reveal authorization
+  ---
+  duration_ms: 47.528439
+  type: 'test'
+  ...
+# Subtest: E2-T19 Reveal is idempotent and returns exactly committed target
+ok 19 - E2-T19 Reveal is idempotent and returns exactly committed target
+  ---
+  duration_ms: 38.48293
+  type: 'test'
+  ...
+# Subtest: E2-T20 crash after durable Reveal commit recovers same Reveal without second disclosure state
+ok 20 - E2-T20 crash after durable Reveal commit recovers same Reveal without second disclosure state
+  ---
+  duration_ms: 173.236224
+  type: 'test'
+  ...
+# Subtest: E2-T21 Reveal persistence failure exposes nothing and leaves authorization retryable
+ok 21 - E2-T21 Reveal persistence failure exposes nothing and leaves authorization retryable
+  ---
+  duration_ms: 37.188448
+  type: 'test'
+  ...
+# Subtest: E2-T22 after Reveal bound Viewer receives durable feedback
+ok 22 - E2-T22 after Reveal bound Viewer receives durable feedback
+  ---
+  duration_ms: 44.978598
+  type: 'test'
+  ...
+# Subtest: E2-T23 revealed target becomes KNOWN_TO_VIEWER and is excluded from future blind session
+ok 23 - E2-T23 revealed target becomes KNOWN_TO_VIEWER and is excluded from future blind session
+  ---
+  duration_ms: 49.351586
+  type: 'test'
+  ...
+# Subtest: E2-T24 known-target training may deliberately reuse a revealed target
+ok 24 - E2-T24 known-target training may deliberately reuse a revealed target
+  ---
+  duration_ms: 39.801369
+  type: 'test'
+  ...
+# Subtest: E2-T25 same target remains eligible for a different Viewer without recorded exposure
+ok 25 - E2-T25 same target remains eligible for a different Viewer without recorded exposure
+  ---
+  duration_ms: 46.885366
+  type: 'test'
+  ...
+# Subtest: E2-T26 pause/resume keeps accepted progress and current step
+ok 26 - E2-T26 pause/resume keeps accepted progress and current step
+  ---
+  duration_ms: 30.719555
+  type: 'test'
+  ...
+# Subtest: E2-T27 viewer context loss enters RECOVERING only from trusted runtime evidence and Resume never changes target commit
+ok 27 - E2-T27 viewer context loss enters RECOVERING only from trusted runtime evidence and Resume never changes target commit
+  ---
+  duration_ms: 25.081002
+  type: 'test'
+  ...
+# Subtest: E2-T28 Cancel is terminal for Resume
+ok 28 - E2-T28 Cancel is terminal for Resume
+  ---
+  duration_ms: 16.722498
+  type: 'test'
+  ...
+# Subtest: E2-T29 RCP Phase 6 NEW_SIGNAL opens independent cycle and preserves parent step instance
+ok 29 - E2-T29 RCP Phase 6 NEW_SIGNAL opens independent cycle and preserves parent step instance
+  ---
+  duration_ms: 39.957273
+  type: 'test'
+  ...
+# Subtest: E2-T30 RCP extension limit pauses for explicit decision instead of auto-Reveal
+ok 30 - E2-T30 RCP extension limit pauses for explicit decision instead of auto-Reveal
+  ---
+  duration_ms: 102.916972
+  type: 'test'
+  ...
+# Subtest: E2-T31 RCP extension-limit conductor may finish blind explicitly, with reason recorded
+ok 31 - E2-T31 RCP extension-limit conductor may finish blind explicitly, with reason recorded
+  ---
+  duration_ms: 31.915636
+  type: 'test'
+  ...
+# Subtest: E2-T32 adjunct neutrality is verified, never declared by model/caller params
+ok 32 - E2-T32 adjunct neutrality is verified, never declared by model/caller params
+  ---
+  duration_ms: 19.796372
+  type: 'test'
+  ...
+# Subtest: E2-T33 audit trail is hash chained and tampering is detectable
+ok 33 - E2-T33 audit trail is hash chained and tampering is detectable
+  ---
+  duration_ms: 17.902122
+  type: 'test'
+  ...
+# Subtest: E2-T34 durable restart restores current step, accepted result and target commit
+ok 34 - E2-T34 durable restart restores current step, accepted result and target commit
+  ---
+  duration_ms: 157.166037
+  type: 'test'
+  ...
+# Subtest: E2-T35 target revision collision with different bytes fails closed
+ok 35 - E2-T35 target revision collision with different bytes fails closed
+  ---
+  duration_ms: 13.651769
+  type: 'test'
+  ...
+# Subtest: E2-T36 post-Reveal lifecycle closes only through REVEALED -> POST_REVEAL -> CLOSED
+ok 36 - E2-T36 post-Reveal lifecycle closes only through REVEALED -> POST_REVEAL -> CLOSED
+  ---
+  duration_ms: 31.13473
+  type: 'test'
+  ...
+# Subtest: E2-T37 pre-Reveal session views redact target identity from Monitor, Viewer and blind human owner
+ok 37 - E2-T37 pre-Reveal session views redact target identity from Monitor, Viewer and blind human owner
+  ---
+  duration_ms: 15.275902
+  type: 'test'
+  ...
+# Subtest: E2-T38 blind AI Monitor cannot choose a specific target and reservation response never discloses selected identity
+ok 38 - E2-T38 blind AI Monitor cannot choose a specific target and reservation response never discloses selected identity
+  ---
+  duration_ms: 21.925125
+  type: 'test'
+  ...
+# Subtest: E2-T39 full audit payload is sealed from conductors pre-Reveal but audit integrity may still be checked
+ok 39 - E2-T39 full audit payload is sealed from conductors pre-Reveal but audit integrity may still be checked
+  ---
+  duration_ms: 20.553712
+  type: 'test'
+  ...
+# Subtest: E2-T40 Reveal authorization is idempotent, target-redacted for conductor and rejects a second key
+ok 40 - E2-T40 Reveal authorization is idempotent, target-redacted for conductor and rejects a second key
+  ---
+  duration_ms: 25.735237
+  type: 'test'
+  ...
+# Subtest: E2-T41 restart recovery marks dispatched physical outcome UNKNOWN, preserves logical attempt and resumes same step
+ok 41 - E2-T41 restart recovery marks dispatched physical outcome UNKNOWN, preserves logical attempt and resumes same step
+  ---
+  duration_ms: 126.000229
+  type: 'test'
+  ...
+# Subtest: E2-T42 recovery treats persisted pre-dispatch authorization as UNKNOWN when external dispatch cannot be proven absent
+ok 42 - E2-T42 recovery treats persisted pre-dispatch authorization as UNKNOWN when external dispatch cannot be proven absent
+  ---
+  duration_ms: 13.477065
+  type: 'test'
+  ...
+# Subtest: E2-T43 Viewer cannot inspect a session bound to a different Viewer identity
+ok 43 - E2-T43 Viewer cannot inspect a session bound to a different Viewer identity
+  ---
+  duration_ms: 20.500632
+  type: 'test'
+  ...
+# Subtest: E2-T44 Reveal is the first point where target identity becomes visible to Monitor and bound Viewer
+ok 44 - E2-T44 Reveal is the first point where target identity becomes visible to Monitor and bound Viewer
+  ---
+  duration_ms: 35.023711
+  type: 'test'
+  ...
+# Subtest: E2-T45 RV Lite Extended executes its distinct Step 3 deepening and reaches BLIND_COMPLETE
+ok 45 - E2-T45 RV Lite Extended executes its distinct Step 3 deepening and reaches BLIND_COMPLETE
+  ---
+  duration_ms: 32.433234
+  type: 'test'
+  ...
+# Subtest: E2-T46 Telepathy T0-T10 runs end-to-end with durable neutral T9 tasking and reaches BLIND_COMPLETE
+ok 46 - E2-T46 Telepathy T0-T10 runs end-to-end with durable neutral T9 tasking and reaches BLIND_COMPLETE
+  ---
+  duration_ms: 48.016798
+  type: 'test'
+  ...
+# Subtest: E2-T47 Telepathy cannot enter T9 until at least one neutral tasking question is durably frozen
+ok 47 - E2-T47 Telepathy cannot enter T9 until at least one neutral tasking question is durably frozen
+  ---
+  duration_ms: 37.656461
+  type: 'test'
+  ...
+# Subtest: E2-T48 Telepathy T9 validation uses durable frozen question count, not caller-supplied runtime count
+ok 48 - E2-T48 Telepathy T9 validation uses durable frozen question count, not caller-supplied runtime count
+  ---
+  duration_ms: 35.272896
+  type: 'test'
+  ...
+# Subtest: E2-T49 Telepathy tasking neutrality is fail-closed and the frozen set is immutable
+ok 49 - E2-T49 Telepathy tasking neutrality is fail-closed and the frozen set is immutable
+  ---
+  duration_ms: 22.407682
+  type: 'test'
+  ...
+# Subtest: E2-T50 RCP Phase 6 NO_NEW_SIGNAL closes blind phase without opening another cycle
+ok 50 - E2-T50 RCP Phase 6 NO_NEW_SIGNAL closes blind phase without opening another cycle
+  ---
+  duration_ms: 32.690971
+  type: 'test'
+  ...
+# Subtest: E2-T51 full audit becomes available to Monitor only after Reveal
+ok 51 - E2-T51 full audit becomes available to Monitor only after Reveal
+  ---
+  duration_ms: 36.150997
+  type: 'test'
+  ...
+# Subtest: E2-T52 Reveal execution rejects an idempotency key that does not match its authorization
+ok 52 - E2-T52 Reveal execution rejects an idempotency key that does not match its authorization
+  ---
+  duration_ms: 27.894465
+  type: 'test'
+  ...
+# Subtest: E2-T53 duplicate target import with identical bytes is idempotent and does not duplicate library rows
+ok 53 - E2-T53 duplicate target import with identical bytes is idempotent and does not duplicate library rows
+  ---
+  duration_ms: 20.609345
+  type: 'test'
+  ...
+# Subtest: E2-T54 human USER_KNOWN target selection remains explicitly marked and Monitor stays target-redacted before Reveal
+ok 54 - E2-T54 human USER_KNOWN target selection remains explicitly marked and Monitor stays target-redacted before Reveal
+  ---
+  duration_ms: 14.534386
+  type: 'test'
+  ...
+# Subtest: E2-T55 private unpublished target pool is supported while target identity remains sealed from Monitor and Viewer
+ok 55 - E2-T55 private unpublished target pool is supported while target identity remains sealed from Monitor and Viewer
+  ---
+  duration_ms: 13.496495
+  type: 'test'
+  ...
+# Subtest: E2-T56 committed target identity is protected by a database trigger, not only by public API checks
+ok 56 - E2-T56 committed target identity is protected by a database trigger, not only by public API checks
+  ---
+  duration_ms: 16.732252
+  type: 'test'
+  ...
+# Subtest: E2-T57 execution overlay and language are pinned in durable session state and invalid language fails closed
+ok 57 - E2-T57 execution overlay and language are pinned in durable session state and invalid language fails closed
+  ---
+  duration_ms: 12.764995
+  type: 'test'
+  ...
+# Subtest: E2-T58 Reveal authorization and Reveal result are idempotent across two database connections
+ok 58 - E2-T58 Reveal authorization and Reveal result are idempotent across two database connections
+  ---
+  duration_ms: 179.614009
+  type: 'test'
+  ...
+# Subtest: E2-T59 Viewer cannot read revealed feedback from a session bound to another Viewer
+ok 59 - E2-T59 Viewer cannot read revealed feedback from a session bound to another Viewer
+  ---
+  duration_ms: 28.073185
+  type: 'test'
+  ...
+# Subtest: E2-T60 exact execution-overlay pin is durable and target commit timestamp is database-immutable
+ok 60 - E2-T60 exact execution-overlay pin is durable and target commit timestamp is database-immutable
+  ---
+  duration_ms: 11.63215
+  type: 'test'
+  ...
+# Subtest: E2-T61 runtime protocol pins match the exact packaged ECHO-1 manifest bytes
+ok 61 - E2-T61 runtime protocol pins match the exact packaged ECHO-1 manifest bytes
+  ---
+  duration_ms: 0.806383
+  type: 'test'
+  ...
+# Subtest: E2-T62 the same blind Viewer cannot have the same target active in two concurrent sessions
+ok 62 - E2-T62 the same blind Viewer cannot have the same target active in two concurrent sessions
+  ---
+  duration_ms: 14.461727
+  type: 'test'
+  ...
+# Subtest: E2-T63 session creation rejects a Viewer identity not mapped by the bound authority
+ok 63 - E2-T63 session creation rejects a Viewer identity not mapped by the bound authority
+  ---
+  duration_ms: 10.910835
+  type: 'test'
+  ...
+# Subtest: E2-T64 an accepted model response is provenance-bound to one completed physical transport
+ok 64 - E2-T64 an accepted model response is provenance-bound to one completed physical transport
+  ---
+  duration_ms: 13.716024
+  type: 'test'
+  ...
+# Subtest: E2-T65 only one physical transport may be in flight and a completed call cannot be silently retried under the same logical attempt
+ok 65 - E2-T65 only one physical transport may be in flight and a completed call cannot be silently retried under the same logical attempt
+  ---
+  duration_ms: 13.81914
+  type: 'test'
+  ...
+# Subtest: E2-T66 Pause blocks both new physical authorization and dispatch of a receipt that has not yet left the host
+ok 66 - E2-T66 Pause blocks both new physical authorization and dispatch of a receipt that has not yet left the host
+  ---
+  duration_ms: 16.388195
+  type: 'test'
+  ...
+# Subtest: E2-T67 human BLIND session cannot manually select a concrete target_id
+ok 67 - E2-T67 human BLIND session cannot manually select a concrete target_id
+  ---
+  duration_ms: 19.071552
+  type: 'test'
+  ...
+# Subtest: E2-T68 Reveal execution rechecks the session conductor even with a valid authorization
+ok 68 - E2-T68 Reveal execution rechecks the session conductor even with a valid authorization
+  ---
+  duration_ms: 39.127274
+  type: 'test'
+  ...
+# Subtest: E2-T69 neutrality verifier receives authoritative durable blind context, never caller-supplied target context
+ok 69 - E2-T69 neutrality verifier receives authoritative durable blind context, never caller-supplied target context
+  ---
+  duration_ms: 26.002539
+  type: 'test'
+  ...
+# Subtest: E2-T70 session owner principal prevents another human user from reading, cancelling, resuming or revealing the session
+ok 70 - E2-T70 session owner principal prevents another human user from reading, cancelling, resuming or revealing the session
+  ---
+  duration_ms: 22.215172
+  type: 'test'
+  ...
+# Subtest: E2-T71 VIEWER_CONTEXT_LOST requires a trusted host runtime event bound to the exact session and Viewer session
+ok 71 - E2-T71 VIEWER_CONTEXT_LOST requires a trusted host runtime event bound to the exact session and Viewer session
+  ---
+  duration_ms: 25.068213
+  type: 'test'
+  ...
+# Subtest: E2-T72 same Monitor and Viewer agent IDs cannot cross owner-principal boundaries
+ok 72 - E2-T72 same Monitor and Viewer agent IDs cannot cross owner-principal boundaries
+  ---
+  duration_ms: 25.339012
+  type: 'test'
+  ...
+# Subtest: E2-T73 owner binding is durable across restart and remains redacted from non-internal session views
+ok 73 - E2-T73 owner binding is durable across restart and remains redacted from non-internal session views
+  ---
+  duration_ms: 141.024183
+  type: 'test'
+  ...
+# Subtest: E2-T74 owner contexts require a trusted principalId and runtime events require host evidence fields
+ok 74 - E2-T74 owner contexts require a trusted principalId and runtime events require host evidence fields
+  ---
+  duration_ms: 1.56858
+  type: 'test'
+  ...
+# Subtest: E2-T75 owner principal is protected by SQLite immutability and schema is version 4
+ok 75 - E2-T75 owner principal is protected by SQLite immutability and schema is version 4
+  ---
+  duration_ms: 15.124704
+  type: 'test'
+  ...
+# Subtest: E2-T76 unbound legacy sessions fail closed for ordinary actors and new sessions require an explicit owner principal
+ok 76 - E2-T76 unbound legacy sessions fail closed for ordinary actors and new sessions require an explicit owner principal
+  ---
+  duration_ms: 41.853186
+  type: 'test'
+  ...
+# (node:169497) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E3-T01 plugin declares exactly owner and monitor tools
+ok 77 - E3-T01 plugin declares exactly owner and monitor tools
+  ---
+  duration_ms: 2.478959
+  type: 'test'
+  ...
+# Subtest: E3-T02 owner tool unavailable without host owner proof
+ok 78 - E3-T02 owner tool unavailable without host owner proof
+  ---
+  duration_ms: 138.484031
+  type: 'test'
+  ...
+# Subtest: E3-T03 monitor tool unavailable to unconfigured agent
+ok 79 - E3-T03 monitor tool unavailable to unconfigured agent
+  ---
+  duration_ms: 166.911122
+  type: 'test'
+  ...
+# Subtest: E3-T04 model parameters contain no authority identity fields
+ok 80 - E3-T04 model parameters contain no authority identity fields
+  ---
+  duration_ms: 214.090291
+  type: 'test'
+  ...
+# Subtest: E3-T05 created session is owner-bound and target identity redacted
+ok 81 - E3-T05 created session is owner-bound and target identity redacted
+  ---
+  duration_ms: 137.366124
+  type: 'test'
+  ...
+# Subtest: E3-T06 blind Viewer prompt contains no target identity/content
+ok 82 - E3-T06 blind Viewer prompt contains no target identity/content
+  ---
+  duration_ms: 202.887667
+  type: 'test'
+  ...
+# Subtest: E3-T07 every normal Viewer provider request gets durable transport proof and accepted response
+ok 83 - E3-T07 every normal Viewer provider request gets durable transport proof and accepted response
+  ---
+  duration_ms: 192.74921
+  type: 'test'
+  ...
+# Subtest: E3-T08 provider retry creates a second physical receipt without losing logical attempt
+ok 84 - E3-T08 provider retry creates a second physical receipt without losing logical attempt
+  ---
+  duration_ms: 160.78711
+  type: 'test'
+  ...
+# Subtest: E3-T09 pre-dispatch receipt failure blocks simulated provider send
+ok 85 - E3-T09 pre-dispatch receipt failure blocks simulated provider send
+  ---
+  duration_ms: 193.112456
+  type: 'test'
+  ...
+# Subtest: E3-T10 Viewer subagent is always launched with tools disabled
+ok 86 - E3-T10 Viewer subagent is always launched with tools disabled
+  ---
+  duration_ms: 145.304017
+  type: 'test'
+  ...
+# Subtest: E3-T11 multiple Viewer steps reuse one persistent sessionKey
+ok 87 - E3-T11 multiple Viewer steps reuse one persistent sessionKey
+  ---
+  duration_ms: 173.079187
+  type: 'test'
+  ...
+# Subtest: E3-T12 Viewer generation reset transitions core to RECOVERING before another provider send
+ok 88 - E3-T12 Viewer generation reset transitions core to RECOVERING before another provider send
+  ---
+  duration_ms: 157.406298
+  type: 'test'
+  ...
+# Subtest: E3-T13 owner B cannot read or control owner A session
+ok 89 - E3-T13 owner B cannot read or control owner A session
+  ---
+  duration_ms: 194.320574
+  type: 'test'
+  ...
+# Subtest: E3-T14 Monitor B cannot read owner A AI-monitor session
+ok 90 - E3-T14 Monitor B cannot read owner A AI-monitor session
+  ---
+  duration_ms: 154.64986
+  type: 'test'
+  ...
+# Subtest: E3-T15 Monitor cannot conduct human_user session
+ok 91 - E3-T15 Monitor cannot conduct human_user session
+  ---
+  duration_ms: 97.191749
+  type: 'test'
+  ...
+# Subtest: E3-T16 Owner cannot substitute for AI Monitor conductor decision
+ok 92 - E3-T16 Owner cannot substitute for AI Monitor conductor decision
+  ---
+  duration_ms: 98.766579
+  type: 'test'
+  ...
+# Subtest: E3-T17 no_code prompt contains approved start and no code placeholder/remnant
+ok 93 - E3-T17 no_code prompt contains approved start and no code placeholder/remnant
+  ---
+  duration_ms: 0.843779
+  type: 'test'
+  ...
+# Subtest: E3-T18 uncontrolled provider request on bound Viewer session is blocked
+ok 94 - E3-T18 uncontrolled provider request on bound Viewer session is blocked
+  ---
+  duration_ms: 130.378317
+  type: 'test'
+  ...
+# Subtest: E3-T19 missing OpenClaw model hook coverage fails closed into RECOVERING
+ok 95 - E3-T19 missing OpenClaw model hook coverage fails closed into RECOVERING
+  ---
+  duration_ms: 150.548951
+  type: 'test'
+  ...
+# Subtest: E3-T20 host invocation assertion is exercised across run launch and terminal commit
+ok 96 - E3-T20 host invocation assertion is exercised across run launch and terminal commit
+  ---
+  duration_ms: 151.388565
+  type: 'test'
+  ...
+# Subtest: E3-T21 Viewer session key contains ECHO session id but no target metadata
+ok 97 - E3-T21 Viewer session key contains ECHO session id but no target metadata
+  ---
+  duration_ms: 159.399257
+  type: 'test'
+  ...
+# Subtest: E3-T22 manifest requests conversation read and both tool contracts
+ok 98 - E3-T22 manifest requests conversation read and both tool contracts
+  ---
+  duration_ms: 0.320903
+  type: 'test'
+  ...
+# Subtest: E3-T23 OpenClaw config example explicitly enables final model-request gate
+ok 99 - E3-T23 OpenClaw config example explicitly enables final model-request gate
+  ---
+  duration_ms: 0.194032
+  type: 'test'
+  ...
+# Subtest: E3-T24 integration store persists generation and active binding across reopen
+ok 100 - E3-T24 integration store persists generation and active binding across reopen
+  ---
+  duration_ms: 146.043102
+  type: 'test'
+  ...
+# Subtest: E3-T25 a second provider request after a COMPLETED transport fails closed
+ok 101 - E3-T25 a second provider request after a COMPLETED transport fails closed
+  ---
+  duration_ms: 106.746362
+  type: 'test'
+  ...
+# Subtest: E3-T26 active logical attempt and run id persist across integration-store reopen
+ok 102 - E3-T26 active logical attempt and run id persist across integration-store reopen
+  ---
+  duration_ms: 165.812264
+  type: 'test'
+  ...
+# Subtest: E3-T27 ECHO-3 package pins the audited OpenClaw compatibility range
+ok 103 - E3-T27 ECHO-3 package pins the audited OpenClaw compatibility range
+  ---
+  duration_ms: 0.297488
+  type: 'test'
+  ...
+# Subtest: E3-T28 owner-authority tool is unavailable inside the AI Monitor agent even for an owner-originated turn
+ok 104 - E3-T28 owner-authority tool is unavailable inside the AI Monitor agent even for an owner-originated turn
+  ---
+  duration_ms: 98.863093
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A1 Monitor cannot run_next or collect a human_user session after access check
+ok 105 - E3-FIX-A1 Monitor cannot run_next or collect a human_user session after access check
+  ---
+  duration_ms: 142.053941
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A2 unknown model callId never completes another physical transport
+ok 106 - E3-FIX-A2 unknown model callId never completes another physical transport
+  ---
+  duration_ms: 171.029954
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A3 T10 support verifier rejects appended novel information
+ok 107 - E3-FIX-A3 T10 support verifier rejects appended novel information
+  ---
+  duration_ms: 0.81122
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A4 recovery Resume rotates Viewer session and replays accepted blind outputs
+ok 108 - E3-FIX-A4 recovery Resume rotates Viewer session and replays accepted blind outputs
+  ---
+  duration_ms: 163.898705
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A5 Telepathy T9 questions and adjunct probes are exposed only through trusted neutrality verification
+ok 109 - E3-FIX-A5 Telepathy T9 questions and adjunct probes are exposed only through trusted neutrality verification
+  ---
+  duration_ms: 272.32903
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A6 first-run data directory is created before either SQLite database and tilde is expanded
+ok 110 - E3-FIX-A6 first-run data directory is created before either SQLite database and tilde is expanded
+  ---
+  duration_ms: 128.568262
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A8 integration store migrates schema v1 to v3 and preserves existing bindings
+ok 111 - E3-FIX-A8 integration store migrates schema v1 to v3 and preserves existing bindings
+  ---
+  duration_ms: 15.830335
+  type: 'test'
+  ...
+# Subtest: E3-FIX-B0 integration store migrates schema v2 to v3 with legacy runtime events left PENDING
+ok 112 - E3-FIX-B0 integration store migrates schema v2 to v3 with legacy runtime events left PENDING
+  ---
+  duration_ms: 21.429109
+  type: 'test'
+  ...
+# Subtest: E3-FIX-B1 PENDING Viewer context-loss event is safely completed after restart
+ok 113 - E3-FIX-B1 PENDING Viewer context-loss event is safely completed after restart
+  ---
+  duration_ms: 126.811198
+  type: 'test'
+  ...
+# Subtest: E3-FIX-B2 Resume saga completes after crash between Session Core resume and Integration Store commit
+ok 114 - E3-FIX-B2 Resume saga completes after crash between Session Core resume and Integration Store commit
+  ---
+  duration_ms: 123.249061
+  type: 'test'
+  ...
+# Subtest: E3-FIX-C1 pending Viewer context-loss after Core RECOVERING is reconciled before Resume and survives a second restart
+ok 115 - E3-FIX-C1 pending Viewer context-loss after Core RECOVERING is reconciled before Resume and survives a second restart
+  ---
+  duration_ms: 126.729537
+  type: 'test'
+  ...
+# Subtest: E3-FIX-A7 Viewer prompt contains canonical methodology, not only ECHO markers
+ok 116 - E3-FIX-A7 Viewer prompt contains canonical methodology, not only ECHO markers
+  ---
+  duration_ms: 0.89051
+  type: 'test'
+  ...
+# Subtest: E3-FIX-E2E all four protocols complete under both conductors and both tasking modes
+    # Subtest: rcp / human_user / neutral_code
+    ok 1 - rcp / human_user / neutral_code
+      ---
+      duration_ms: 183.889269
+      type: 'test'
+      ...
+    # Subtest: rcp / human_user / no_code
+    ok 2 - rcp / human_user / no_code
+      ---
+      duration_ms: 248.420853
+      type: 'test'
+      ...
+    # Subtest: rcp / ai_monitor / neutral_code
+    ok 3 - rcp / ai_monitor / neutral_code
+      ---
+      duration_ms: 182.110153
+      type: 'test'
+      ...
+    # Subtest: rcp / ai_monitor / no_code
+    ok 4 - rcp / ai_monitor / no_code
+      ---
+      duration_ms: 284.14711
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / human_user / neutral_code
+    ok 5 - rv-lite-core / human_user / neutral_code
+      ---
+      duration_ms: 202.568
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / human_user / no_code
+    ok 6 - rv-lite-core / human_user / no_code
+      ---
+      duration_ms: 186.976624
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / ai_monitor / neutral_code
+    ok 7 - rv-lite-core / ai_monitor / neutral_code
+      ---
+      duration_ms: 238.453047
+      type: 'test'
+      ...
+    # Subtest: rv-lite-core / ai_monitor / no_code
+    ok 8 - rv-lite-core / ai_monitor / no_code
+      ---
+      duration_ms: 207.782846
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / human_user / neutral_code
+    ok 9 - rv-lite-extended / human_user / neutral_code
+      ---
+      duration_ms: 172.968099
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / human_user / no_code
+    ok 10 - rv-lite-extended / human_user / no_code
+      ---
+      duration_ms: 185.982619
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / ai_monitor / neutral_code
+    ok 11 - rv-lite-extended / ai_monitor / neutral_code
+      ---
+      duration_ms: 173.520991
+      type: 'test'
+      ...
+    # Subtest: rv-lite-extended / ai_monitor / no_code
+    ok 12 - rv-lite-extended / ai_monitor / no_code
+      ---
+      duration_ms: 216.412538
+      type: 'test'
+      ...
+    # Subtest: telepathy / human_user / neutral_code
+    ok 13 - telepathy / human_user / neutral_code
+      ---
+      duration_ms: 282.041824
+      type: 'test'
+      ...
+    # Subtest: telepathy / human_user / no_code
+    ok 14 - telepathy / human_user / no_code
+      ---
+      duration_ms: 308.867691
+      type: 'test'
+      ...
+    # Subtest: telepathy / ai_monitor / neutral_code
+    ok 15 - telepathy / ai_monitor / neutral_code
+      ---
+      duration_ms: 259.455535
+      type: 'test'
+      ...
+    # Subtest: telepathy / ai_monitor / no_code
+    ok 16 - telepathy / ai_monitor / no_code
+      ---
+      duration_ms: 291.318779
+      type: 'test'
+      ...
+    1..16
+ok 117 - E3-FIX-E2E all four protocols complete under both conductors and both tasking modes
+  ---
+  duration_ms: 3627.502779
+  type: 'test'
+  ...
+# Subtest: E4-T01 supported Node policy rejects Node 22 and accepts 24.16+/26.1+
+ok 118 - E4-T01 supported Node policy rejects Node 22 and accepts 24.16+/26.1+
+  ---
+  duration_ms: 1.565125
+  type: 'test'
+  ...
+# Subtest: E4-T02 OpenClaw compatibility remains pinned to 2026.11 line
+ok 119 - E4-T02 OpenClaw compatibility remains pinned to 2026.11 line
+  ---
+  duration_ms: 1.575561
+  type: 'test'
+  ...
+# Subtest: E4-T03 preflight validates config and plugin manifest
+ok 120 - E4-T03 preflight validates config and plugin manifest
+  ---
+  duration_ms: 144.862206
+  type: 'test'
+  ...
+# Subtest: E4-T04 preflight can require a live Gateway RPC
+ok 121 - E4-T04 preflight can require a live Gateway RPC
+  ---
+  duration_ms: 210.331971
+  type: 'test'
+  ...
+# Subtest: E4-T05 preflight fails closed when Gateway RPC is required but unavailable
+ok 122 - E4-T05 preflight fails closed when Gateway RPC is required but unavailable
+  ---
+  duration_ms: 188.467158
+  type: 'test'
+  ...
+# Subtest: E4-T06 plan detects clean install
+ok 123 - E4-T06 plan detects clean install
+  ---
+  duration_ms: 184.202923
+  type: 'test'
+  ...
+# Subtest: E4-T07 plan detects an existing Monitor workspace conflict
+ok 124 - E4-T07 plan detects an existing Monitor workspace conflict
+  ---
+  duration_ms: 162.723262
+  type: 'test'
+  ...
+# Subtest: E4-T08 clean local-link install configures plugin and workspaces
+ok 125 - E4-T08 clean local-link install configures plugin and workspaces
+  ---
+  duration_ms: 1584.988024
+  type: 'test'
+  ...
+# Subtest: E4-T09 owner tool is added through alsoAllow when main has no allowlist
+ok 126 - E4-T09 owner tool is added through alsoAllow when main has no allowlist
+  ---
+  duration_ms: 1351.324833
+  type: 'test'
+  ...
+# Subtest: E4-T10 owner tool is merged into an existing main allowlist
+ok 127 - E4-T10 owner tool is merged into an existing main allowlist
+  ---
+  duration_ms: 1273.351614
+  type: 'test'
+  ...
+# Subtest: E4-T11 Monitor receives only echo_monitor_session and Viewer denies all tools
+ok 128 - E4-T11 Monitor receives only echo_monitor_session and Viewer denies all tools
+  ---
+  duration_ms: 1250.1215
+  type: 'test'
+  ...
+# Subtest: E4-T12 installer records a verified config backup before plugin install
+ok 129 - E4-T12 installer records a verified config backup before plugin install
+  ---
+  duration_ms: 1297.004563
+  type: 'test'
+  ...
+# Subtest: E4-T13 runtime registration check requires both tools and all transport hooks
+ok 130 - E4-T13 runtime registration check requires both tools and all transport hooks
+  ---
+  duration_ms: 0.48494
+  type: 'test'
+  ...
+# Subtest: E4-T14 installer refuses to replace an already tracked plugin automatically
+ok 131 - E4-T14 installer refuses to replace an already tracked plugin automatically
+  ---
+  duration_ms: 257.699322
+  type: 'test'
+  ...
+# Subtest: E4-T15 conflicts abort before plugin installation unless explicitly forced
+ok 132 - E4-T15 conflicts abort before plugin installation unless explicitly forced
+  ---
+  duration_ms: 260.765574
+  type: 'test'
+  ...
+# Subtest: E4-T16 forced workspace replacement is backed up transactionally
+ok 133 - E4-T16 forced workspace replacement is backed up transactionally
+  ---
+  duration_ms: 1326.807505
+  type: 'test'
+  ...
+# Subtest: E4-T17 failed post-install validation rolls back plugin and authored config
+ok 134 - E4-T17 failed post-install validation rolls back plugin and authored config
+  ---
+  duration_ms: 1523.563891
+  type: 'test'
+  ...
+# Subtest: E4-T18 rollback removes workspace files created by a failed install
+ok 135 - E4-T18 rollback removes workspace files created by a failed install
+  ---
+  duration_ms: 1722.499275
+  type: 'test'
+  ...
+# Subtest: E4-T19 git install mode uses the pinned GitHub source when requested
+ok 136 - E4-T19 git install mode uses the pinned GitHub source when requested
+  ---
+  duration_ms: 1280.619475
+  type: 'test'
+  ...
+# Subtest: E4-T20 installer does not require a Gateway to be already running
+ok 137 - E4-T20 installer does not require a Gateway to be already running
+  ---
+  duration_ms: 1505.203457
+  type: 'test'
+  ...
+# Subtest: E4-T21 installation never invokes gateway restart implicitly
+ok 138 - E4-T21 installation never invokes gateway restart implicitly
+  ---
+  duration_ms: 1618.188025
+  type: 'test'
+  ...
+# Subtest: E4-T22 package declares the deliberately narrow ECHO-4 validated Node host range
+ok 139 - E4-T22 package declares the deliberately narrow ECHO-4 validated Node host range
+  ---
+  duration_ms: 0.350097
+  type: 'test'
+  ...
+# Subtest: E4-T23 a completed installation can be explicitly rolled back from its transaction record
+ok 140 - E4-T23 a completed installation can be explicitly rolled back from its transaction record
+  ---
+  duration_ms: 1487.813805
+  type: 'test'
+  ...
+# Subtest: E4-T24 git installation refuses an unpinned source
+ok 141 - E4-T24 git installation refuses an unpinned source
+  ---
+  duration_ms: 0.426061
+  type: 'test'
+  ...
+# Subtest: E4-T25 host self-test requires the owner tool policy as well as Monitor and Viewer policies
+ok 142 - E4-T25 host self-test requires the owner tool policy as well as Monitor and Viewer policies
+  ---
+  duration_ms: 583.048659
+  type: 'test'
+  ...
+# Subtest: E4-T26 host self-test accepts owner tool through alsoAllow
+ok 143 - E4-T26 host self-test accepts owner tool through alsoAllow
+  ---
+  duration_ms: 622.442829
+  type: 'test'
+  ...
+# Subtest: E4-T27 installer requires explicit capability consent before any mutation
+ok 144 - E4-T27 installer requires explicit capability consent before any mutation
+  ---
+  duration_ms: 0.694045
+  type: 'test'
+  ...
+# Subtest: E4-T28 local and Git installs pass both source acknowledgement and capability consent to OpenClaw
+ok 145 - E4-T28 local and Git installs pass both source acknowledgement and capability consent to OpenClaw
+  ---
+  duration_ms: 2649.070115
+  type: 'test'
+  ...
+# Subtest: E4-T29 preflight validates the built plugin entry from the project root
+ok 146 - E4-T29 preflight validates the built plugin entry from the project root
+  ---
+  duration_ms: 121.719335
+  type: 'test'
+  ...
+# Subtest: E4-T30 reachable Gateway makes plugin reload a required install gate
+ok 147 - E4-T30 reachable Gateway makes plugin reload a required install gate
+  ---
+  duration_ms: 1414.126588
+  type: 'test'
+  ...
+# Subtest: E4-T31 manual rollback restores pre-existing ECHO config after uninstall
+ok 148 - E4-T31 manual rollback restores pre-existing ECHO config after uninstall
+  ---
+  duration_ms: 1510.081979
+  type: 'test'
+  ...
+# Subtest: E4-T32 host self-test applies a real Gateway plugin reload gate before runtime inspection
+ok 149 - E4-T32 host self-test applies a real Gateway plugin reload gate before runtime inspection
+  ---
+  duration_ms: 530.37255
+  type: 'test'
+  ...
+# Subtest: E4-T33 existing incompatible Monitor or Viewer policy is a plan conflict, not silently overwritten
+ok 150 - E4-T33 existing incompatible Monitor or Viewer policy is a plan conflict, not silently overwritten
+  ---
+  duration_ms: 126.776669
+  type: 'test'
+  ...
+# Subtest: E4-T34 failed workspace conflict does not create or modify the destination directory
+ok 151 - E4-T34 failed workspace conflict does not create or modify the destination directory
+  ---
+  duration_ms: 1010.701759
+  type: 'test'
+  ...
+# Subtest: E4-T35 existing incompatible plugin hook policy is detected before installation
+ok 152 - E4-T35 existing incompatible plugin hook policy is detected before installation
+  ---
+  duration_ms: 132.756791
+  type: 'test'
+  ...
+1..152
+# tests 168
+# suites 0
+# pass 168
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 27427.585511

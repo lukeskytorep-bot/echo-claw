@@ -1,0 +1,53 @@
+{
+  "candidate": "0.4.0-rc.4",
+  "generated_at": "2026-11-24",
+  "offline_environment": {
+    "node": "v22.16.0",
+    "node_in_echo4_validated_profile": false,
+    "openclaw_cli_present": false,
+    "openclaw_cli_path": null
+  },
+  "offline_results": {
+    "node_tests": {
+      "passed": 196,
+      "failed": 0
+    },
+    "echo2_tests": {
+      "passed": 76,
+      "failed": 0
+    },
+    "echo3_tests_including_e2e_subtests": {
+      "passed": 57,
+      "failed": 0
+    },
+    "echo4_baseline_tests": {
+      "passed": 49,
+      "failed": 0
+    },
+    "gpt62_fix_regressions": {
+      "passed": 14,
+      "failed": 0
+    },
+    "simulated_full_sessions": {
+      "passed": 16,
+      "failed": 0
+    },
+    "protocol_baselines": {
+      "passed": 4,
+      "failed": 0
+    },
+    "execution_overlay": {
+      "passed": 1,
+      "failed": 0
+    },
+    "target_files": 126,
+    "syntax_check": {
+      "passed": 34,
+      "failed": 0
+    }
+  },
+  "real_host_gate": {
+    "status": "NOT_RUN",
+    "reason": "Build container has Node 22.16.0 and no OpenClaw CLI/Gateway. H1-H6 must be executed on a supported real host."
+  }
+}

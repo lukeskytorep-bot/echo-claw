@@ -1,20 +1,16 @@
 {
   "project": "ECHO-CLAW",
-  "clean_source_version": "0.3.4",
-  "stage": "ECHO-3_FIX_C1_AUDIT_CANDIDATE",
+  "clean_source_version": "0.4.0-rc.4",
+  "stage": "ECHO-4_FIX_A1_A7_OFFLINE_CANDIDATE",
   "frozen_date": "2026-11-24",
-  "next_stage": "ECHO-3_INDEPENDENT_AUDIT_THEN_ECHO-4_REAL_HOST_VALIDATION",
+  "next_stage": "ECHO-4_INDEPENDENT_AUDIT_THEN_REAL_HOST_H1_H6",
   "tests": {
-    "echo2_executable": 76,
-    "echo3_original_mock_host_integration": 28,
-    "fix_a1_a8_regressions": 8,
-    "recovery_b0_b2_regressions": 3,
-    "full_session_e2e_scenarios": 16,
-    "e2e_group_wrapper": 1,
-    "node_test_runner_total": 133,
-    "passed": 133,
+    "node_test_runner_total": 196,
+    "passed": 196,
     "failed": 0,
-    "recovery_c1_regressions": 1
+    "echo4_baseline_tests": 49,
+    "gpt62_fix_regressions": 14,
+    "full_session_e2e_scenarios": 16
   },
   "baselines": {
     "protocols": 4,
@@ -35,7 +31,8 @@
     "compat_range": ">=2026.11.7 <2026.12.0",
     "real_gateway_validated": false,
     "local_node_version": "22.16.0",
-    "supported_host_node_floor": "22.22.3",
-    "integration_store_schema": 3
+    "integration_store_schema": 3,
+    "supported_host_node_policy": ">=24.16.0 <25 || >=26.1.0 <27",
+    "latest_stable_seen": "2026.11.7"
   }
 }

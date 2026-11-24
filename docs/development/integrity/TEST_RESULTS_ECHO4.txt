@@ -1,0 +1,23 @@
+ECHO-4 FIX A1-A7 0.4.0-rc.4 offline test result
+Date: 2026-11-24
+
+ECHO-2: 76/76 PASS
+ECHO-3: 57/57 PASS (includes 16 full-session E2E subtests)
+ECHO-4 baseline/host tests: 49/49 PASS
+GPT-6.2 focused A1-A7 regressions: 14/14 PASS
+TOTAL: 196/196 PASS
+
+Per-file evidence is stored beside this file:
+- TEST_E2.txt
+- TEST_E3.txt
+- TEST_E4_BASE_01_20.txt
+- TEST_E4_BASE_21_30.txt
+- TEST_E4_BASE_31_40.txt
+- TEST_E4_BASE_41_44.txt
+- TEST_E4_BASE_45_49.txt
+- TEST_E4_GPT62_REGRESSIONS.txt
+
+Original GPT-6.2 reproductions against the repaired tree:
+- A1: old reproduction now terminates fail-closed with PLUGIN_LIST_FAILED.
+- A6: old synthetic invalid evidence case now returns ok=false.
+- A7: crash reproduction now rolls back with pluginStillInstalled=false.

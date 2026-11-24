@@ -1,0 +1,36 @@
+TAP version 13
+# (node:1308755) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E4-T41 runtime diagnostic text cannot masquerade as tool or hook registration
+ok 1 - E4-T41 runtime diagnostic text cannot masquerade as tool or hook registration
+  ---
+  duration_ms: 0.969058
+  type: 'test'
+  ...
+# Subtest: E4-T42 live smoke proof rejects wrong protocol conductor tasking and unbound transport
+ok 2 - E4-T42 live smoke proof rejects wrong protocol conductor tasking and unbound transport
+  ---
+  duration_ms: 22.344917
+  type: 'test'
+  ...
+# Subtest: E4-T43 SIGKILL after plugin installation is reconciled from durable install intent
+ok 3 - E4-T43 SIGKILL after plugin installation is reconciled from durable install intent
+  ---
+  duration_ms: 1914.589315
+  type: 'test'
+  ...
+# Subtest: E4-T44 overlapping Monitor and Viewer workspaces are rejected before plugin mutation
+ok 4 - E4-T44 overlapping Monitor and Viewer workspaces are rejected before plugin mutation
+  ---
+  duration_ms: 1.383732
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2013.765813

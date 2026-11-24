@@ -1,0 +1,72 @@
+TAP version 13
+# (node:1300762) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E4-T31 manual rollback restores pre-existing ECHO config after uninstall
+ok 1 - E4-T31 manual rollback restores pre-existing ECHO config after uninstall
+  ---
+  duration_ms: 3064.15416
+  type: 'test'
+  ...
+# Subtest: E4-T32 host self-test applies a real Gateway plugin reload gate before runtime inspection
+ok 2 - E4-T32 host self-test applies a real Gateway plugin reload gate before runtime inspection
+  ---
+  duration_ms: 557.218382
+  type: 'test'
+  ...
+# Subtest: E4-T33 existing incompatible Monitor or Viewer policy is a plan conflict, not silently overwritten
+ok 3 - E4-T33 existing incompatible Monitor or Viewer policy is a plan conflict, not silently overwritten
+  ---
+  duration_ms: 146.593034
+  type: 'test'
+  ...
+# Subtest: E4-T34 failed workspace conflict does not create or modify the destination directory
+ok 4 - E4-T34 failed workspace conflict does not create or modify the destination directory
+  ---
+  duration_ms: 1376.416768
+  type: 'test'
+  ...
+# Subtest: E4-T35 existing incompatible plugin hook policy is detected before installation
+ok 5 - E4-T35 existing incompatible plugin hook policy is detected before installation
+  ---
+  duration_ms: 143.189949
+  type: 'test'
+  ...
+# Subtest: E4-T36 plugin inventory read failure is fail-closed before mutation
+ok 6 - E4-T36 plugin inventory read failure is fail-closed before mutation
+  ---
+  duration_ms: 39.636106
+  type: 'test'
+  ...
+# Subtest: E4-T37 config read failure is fail-closed before plugin installation
+ok 7 - E4-T37 config read failure is fail-closed before plugin installation
+  ---
+  duration_ms: 504.051536
+  type: 'test'
+  ...
+# Subtest: E4-T38 failed config restore reports ROLLBACK_INCOMPLETE
+ok 8 - E4-T38 failed config restore reports ROLLBACK_INCOMPLETE
+  ---
+  duration_ms: 2772.857176
+  type: 'test'
+  ...
+# Subtest: E4-T39 manual rollback blocks later user configuration and workspace edits
+ok 9 - E4-T39 manual rollback blocks later user configuration and workspace edits
+  ---
+  duration_ms: 2425.515475
+  type: 'test'
+  ...
+# Subtest: E4-T40 backup paths are unique by role and full workspace path
+ok 10 - E4-T40 backup paths are unique by role and full workspace path
+  ---
+  duration_ms: 2880.152451
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13988.666888

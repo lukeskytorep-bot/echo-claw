@@ -1,0 +1,1 @@
+A7 crash: {"killed":"SIGKILL","phase":"PLUGIN_INSTALL_PENDING","installedByTransaction":false,"rollback":true,"pluginStillInstalled":false}

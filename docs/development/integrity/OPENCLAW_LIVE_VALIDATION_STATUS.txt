@@ -1,5 +1,9 @@
+candidate=0.4.0-rc.4
 openclaw_cli_present=no
 local_node=v22.16.0
-required_node_22_floor=22.22.3
+echo4_validated_node_profile=>=24.16.0 <25 || >=26.1.0 <27
 target_openclaw=2026.11.7
 real_gateway_smoke=NOT_RUN_ECHO4_GATE
+real_provider_smoke=NOT_RUN_ECHO4_GATE
+real_full_session=NOT_RUN_ECHO4_GATE
+reason=Build container does not provide the required real OpenClaw CLI/Gateway host. H1-H6 require a supported real host.

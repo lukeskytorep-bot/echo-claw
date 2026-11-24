@@ -1,6 +1,6 @@
 # OpenClaw 2026.11.7 compatibility baseline
 
-Status: ECHO-3 implementation candidate, independent audit pending.
+Status: ECHO-4 0.4.0-rc.4 FIX A1–A7 offline candidate, independent re-audit pending.
 
 Verified on 2026-11-24 against the public OpenClaw documentation and stable release information.
 
@@ -9,8 +9,9 @@ Verified on 2026-11-24 against the public OpenClaw documentation and stable rele
 - OpenClaw stable target: `2026.11.7`
 - plugin API/package compatibility: `>=2026.11.7 <2026.12.0`
 - minimum Gateway version: `2026.11.7`
-- supported Node 22 floor used by this package: `22.22.3`
-- Node 24 is the recommended OpenClaw runtime line
+- ECHO-4 validated Node host range: `>=24.16.0 <25 || >=26.1.0 <27`
+- Node 26 is recommended and Node 24 remains supported by OpenClaw
+- current OpenClaw documentation also accepts Node 27 as a development line; ECHO-4 rc.4 intentionally keeps Node 27 outside the validated ECHO host profile until that development line receives a separate ECHO plugin/Gateway compatibility audit
 
 The Plugin SDK is experimental. Do not widen the declared compatibility range merely because a newer OpenClaw version exists. Test the new host first.
 
@@ -38,7 +39,7 @@ The ECHO-2 invariant also remains stronger than a permissive host retry policy: 
 
 ## Local validation limitation
 
-The build container used for ECHO-3 has Node `22.16.0` and does not have the supported OpenClaw CLI/package installed. It can execute the host-independent Session Core and mock-host integration suite, but it cannot honestly prove live Gateway loading or real-provider hook behavior.
+The build container used for ECHO-4 has Node `22.16.0`, which current OpenClaw documentation marks unsupported, and it does not have the OpenClaw CLI/package installed. It can execute the host-independent Session Core and mock-host integration suite, but it cannot honestly prove live Gateway loading or real-provider hook behavior.
 
 Therefore ECHO-3 audit evidence separates:
 

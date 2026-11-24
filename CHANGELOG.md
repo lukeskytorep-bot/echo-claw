@@ -1,5 +1,55 @@
 # Changelog
 
+## 0.4.0-rc.4 - ECHO-4 FIX A1-A7 after GPT-6.2 audit
+
+- fail closed when plugin inventory or existing OpenClaw configuration cannot be read reliably before mutation;
+- verify every rollback mutation and report `ROLLBACK_INCOMPLETE` instead of false success;
+- protect user configuration/workspace edits made after installation or concurrently with automatic rollback;
+- use role/path-unique workspace backups and reject overlapping Monitor/Viewer workspaces;
+- validate `plugins inspect --runtime --json` structurally using `inspectionScope: cli`, top-level `imported`, plugin `toolNames`, and top-level `typedHooks`; diagnostic text can never substitute for registrations;
+- strengthen live-smoke evidence to bind session, protocol/version, conductor/tasking, accepted attempt, step result, physical receipt, chronology, exact step sequence, and Reveal boundary;
+- persist crash-safe `PLUGIN_INSTALL_PENDING` intent before the external install effect and reconcile it after restart;
+- preserve the original GPT-6.2 reproduction ZIP and add 14 focused A1-A7 regression tests while retaining 49 baseline ECHO-4 tests;
+- split installer tests into isolated Node processes and use a deterministic sequential test runner to avoid fake-CLI/process-state interference;
+- retain the deliberately narrow ECHO-4 validated Node profile (24.x/26.x) even though current OpenClaw documentation also accepts Node 27 as a development line.
+
+## 0.4.0-rc.3 - ECHO-4 installer security hardening
+
+- require explicit operator `--accept-capabilities` before ECHO performs any plugin-install mutation;
+- pass both `--force` (source acknowledgement) and `--accept-capabilities` to local/Git OpenClaw installs;
+- validate the actual built entry with `plugins validate --root <repo> --entry ./dist/index.js --json`;
+- keep the ECHO-4 validated host range deliberately narrower than OpenClaw's full runtime acceptance: Node 24.16+ on 24.x or Node 26.1+ on 26.x; OpenClaw's Node 27 development line remains outside this RC until separately audited;
+- when Gateway RPC is reachable, require a successful `plugins reload echo-claw --wait --json` before installation is accepted;
+- host self-test now performs the same Gateway reload gate before runtime inspection;
+- rollback uninstalls the transaction-owned plugin before restoring the exact pre-install plugin/agent policy snapshots;
+- live provider smoke uses a unique dedicated OpenClaw agent session key instead of contaminating the normal `main` session;
+- detect incompatible pre-existing Monitor/Viewer and ECHO hook policy before mutation;
+- keep workspace planning read-only until the install transaction actually applies changes;
+- extend installer regressions through E4-T35.
+
+## 0.4.0-rc.2 - ECHO-4 offline hardening
+
+- dokładny floor Node: 24.16+ albo 26.1+; Node 26.0 jest odrzucany;
+- prerelease OpenClaw nie jest traktowany jako zweryfikowany stabilny host;
+- instalacja z Git wymaga jawnego `gitRef`, preferencyjnie SHA commita;
+- host self-test potwierdza także obecność `echo_owner_session` dla agenta `main`;
+- live smoke wykrywa nową sesję przez różnicę identyfikatorów, bez zależności od porównania zegarów;
+- rozszerzono testy instalatora do E4-T01–E4-T26.
+
+## 0.4.0-rc.1 - ECHO-4 installation/release candidate
+
+- add OpenClaw 2026.11.7 host preflight and plugin-manifest validation
+- update Node compatibility to the current OpenClaw policy: `>=24.16.0 <25 || >=26.1.0`
+- add transactional installer with config backup, conflict detection, local-link/Git modes and explicit rollback records
+- preserve existing main-agent tool allowlists while adding `echo_owner_session`
+- create/reconcile Monitor and Viewer workspaces with backup-before-overwrite behavior
+- enforce Monitor-only `echo_monitor_session` and Viewer `deny: ["*"]` defense in depth
+- add active-Gateway self-test for RPC reachability, runtime registrations and required hook permissions
+- add opt-in one-step real provider smoke evidence and opt-in full RV Lite Core session gate
+- add Windows PowerShell and POSIX install wrappers
+- add 23 ECHO-4 installer/release regressions while preserving all accepted ECHO-3 tests
+- keep real OpenClaw Gateway/provider execution as an explicit final release gate rather than claiming it from mock-host evidence
+
 ## 0.3.4 - ECHO-3 FIX C1 candidate
 
 - reconcile orphaned `VIEWER_CONTEXT_LOST` events when Session Core is already durably `RECOVERING` but Integration Store still records the event as `PENDING`

@@ -31,3 +31,12 @@ The ECHO-2 core remains host-independent. The ECHO-3 native plugin maps trusted 
 - a missing receipt, lost Viewer generation, or unsupported transport path fails closed rather than silently accepting a Viewer answer.
 
 Native OpenClaw plugins run inside the Gateway process and therefore belong to the host trust boundary. ECHO-3 is pinned to a tested OpenClaw compatibility line; do not widen that range without compatibility testing. Real Gateway validation is still required before a production release.
+
+
+## ECHO-4 installation boundary
+
+The ECHO-4 installer treats installation as an auditable transaction. It validates the supported runtime, captures the pre-change config values, requests an OpenClaw config backup, records workspace changes before applying them, and rolls back its own mutations if a later install step fails.
+
+The installer intentionally refuses to auto-replace an already tracked `echo-claw` plugin. Upgrade/source replacement must remain an explicit operator action. Existing Monitor/Viewer workspace conflicts fail closed unless the operator explicitly requests conflict replacement; overwritten ECHO-managed bootstrap files are backed up inside the transaction record first.
+
+A successful offline install is not proof of provider-hook coverage. Final release validation requires a real Gateway plus a live ECHO Viewer provider call whose accepted Session Core result is bound to a durably `COMPLETED` physical transport receipt.

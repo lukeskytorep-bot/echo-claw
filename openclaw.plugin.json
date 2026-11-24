@@ -2,7 +2,7 @@
   "id": "echo-claw",
   "name": "ECHO-CLAW",
   "description": "Blind Remote Viewing session orchestration with durable Session Core, Vault, Reveal Gate, and persistent OpenClaw Viewer sessions.",
-  "version": "0.3.4",
+  "version": "0.4.0-rc.4",
   "categories": [
     "other"
   ],

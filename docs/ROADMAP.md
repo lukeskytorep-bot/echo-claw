@@ -20,35 +20,29 @@ Includes durable Session Engine, SQLite persistence, Vault semantics, ownership 
 
 ## ECHO-3 - OpenClaw integration
 
-ECHO-3 FIX 0.3.4 implementation candidate complete after A1–A8 remediation, B1–B2 crash-safe Recovery coordination and C1 orphaned-Recovery reconciliation; final independent audit pending.
+Complete and accepted offline at version 0.3.4.
 
-Implemented scope:
-
-- native OpenClaw plugin/adapter and manifest
-- trusted requester/agent binding from host context
-- separated owner-facing and blind Monitor tool surfaces
-- persistent tool-free Viewer session contract
-- Viewer generation continuity plus explicit recovery rebind/replay
-- crash-safe `PENDING → APPLIED` runtime-event handling, orphaned-event reconciliation from durable Session Core audit/state, and idempotent cross-store Resume saga
-- final supported provider-request gate with physical transport receipts
-- strict model-call correlation (`runId + callId`) and fail-closed missing-proof handling
-- canonical per-step protocol methodology rendering
-- Telepathy T9 neutral tasking and neutral adjunct probes
-- per-agent workspace/tool configuration example
-- executable mock-host integration tests preserving all ECHO-2 guarantees
-- 16 full-session scenarios across all 4 protocols, both conductors and both tasking modes
-
-Real supported-Gateway smoke/E2E validation remains an ECHO-4 gate because the current build container does not have a compatible OpenClaw CLI/runtime installed.
+Includes native plugin integration, trusted owner/Monitor surfaces, persistent tool-free Viewer sessions, physical provider-call receipts, strict call correlation, canonical protocol rendering, T9/adjunct neutrality gates and crash-safe cross-store Recovery/Resume coordination.
 
 ## ECHO-4 - installation and end-to-end release
 
-Planned scope:
+Implementation candidate 0.4.0-rc.4 after GPT-6.2 installer/security hardening.
 
-- installer / self-test
-- clean setup and upgrade tests
-- conflict detection and rollback
-- full blind session tests
-- public GitHub installation instructions
+Implemented offline scope:
+
+- installer preflight and dry planning
+- OpenClaw plugin manifest validation
+- supported Node/OpenClaw version checks
+- verified config backup before mutation
+- conflict detection for existing ECHO agent workspaces/config
+- local-link and pinned Git installation modes
+- transactional workspace/config changes with rollback
+- active runtime registration self-test
+- opt-in one-step real provider smoke capture
+- opt-in full RV Lite Core session capture through Reveal and CLOSED
+- Windows PowerShell and POSIX wrappers
+
+Final ECHO-4 gate still requires a real OpenClaw 2026.11.7 Gateway on a supported Node runtime.
 
 ## ECHO-5 - autonomous training and learning
 

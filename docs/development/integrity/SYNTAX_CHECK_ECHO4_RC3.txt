@@ -1,0 +1,31 @@
+ECHO-4 syntax check
+generated_utc=2026-11-24T12:45:36Z
+files=27
+PASS dist/index.js
+PASS installer/echo4-host-self-test.mjs
+PASS installer/echo4-install.mjs
+PASS installer/echo4-live-gateway-smoke.mjs
+PASS installer/host-ops.mjs
+PASS src/canonical.mjs
+PASS src/database.mjs
+PASS src/errors.mjs
+PASS src/execution-profile.mjs
+PASS src/index.mjs
+PASS src/openclaw/adapter.mjs
+PASS src/openclaw/integration-store.mjs
+PASS src/openclaw/neutrality-verifier.mjs
+PASS src/openclaw/plugin-definition.mjs
+PASS src/openclaw/prompt-renderer.mjs
+PASS src/openclaw/viewer-methodology.mjs
+PASS src/protocol-runtime.mjs
+PASS src/response-validator.mjs
+PASS src/security.mjs
+PASS src/session-engine.mjs
+PASS src/target-library.mjs
+PASS tests/echo2.test.mjs
+PASS tests/echo3-openclaw.test.mjs
+PASS tests/echo4-installer.test.mjs
+PASS tests/fixtures/fake-openclaw.mjs
+PASS tools/verify-baselines.mjs
+PASS tools/verify-package.mjs
+PASS syntax 27/27

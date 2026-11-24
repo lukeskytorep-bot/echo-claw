@@ -1,0 +1,3 @@
+ECHO-4 shell wrapper syntax check
+PASS installer/install-echo4.sh
+NOT_RUN installer/install-echo4.ps1 (pwsh not installed in build container)

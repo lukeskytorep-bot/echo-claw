@@ -1,5 +1,8 @@
 > **HISTORYCZNY RAPORT ECHO-3 0.3.0.** Ten dokument opisuje stan przed audytem GPT-6.2. Aktualny kandydat do audytu znajduje się w `ECHO_3_FIX_A1_A8_AUDIT_PL.md`.
 
+> **Nota historyczna ECHO-4:** ten dokument opisuje stan ECHO-3 w momencie jego budowy. Wzmianka niżej o Node 22.22.3 została zastąpiona w ECHO-4 bieżącą polityką hosta: Node `>=24.16.0 <25 || >=26.1.0 <27`. Bieżącym źródłem wymagań jest `docs/openclaw/ECHO_4_INSTALLATION_PL.md`.
+
+
 # ECHO-CLAW ECHO-3 - raport implementacji do audytu
 
 Status: **implementation candidate / independent audit pending**  

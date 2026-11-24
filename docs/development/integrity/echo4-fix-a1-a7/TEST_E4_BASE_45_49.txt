@@ -1,0 +1,42 @@
+TAP version 13
+# (node:1309298) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: E4-T45 generic backend not-found error is not mistaken for a missing config key
+ok 1 - E4-T45 generic backend not-found error is not mistaken for a missing config key
+  ---
+  duration_ms: 35.849357
+  type: 'test'
+  ...
+# Subtest: E4-T46 live smoke proof rejects impossible transport chronology
+ok 2 - E4-T46 live smoke proof rejects impossible transport chronology
+  ---
+  duration_ms: 16.674047
+  type: 'test'
+  ...
+# Subtest: E4-T47 automatic rollback preserves a concurrent workspace edit and reports blocked rollback
+ok 3 - E4-T47 automatic rollback preserves a concurrent workspace edit and reports blocked rollback
+  ---
+  duration_ms: 3795.423435
+  type: 'test'
+  ...
+# Subtest: E4-T48 automatic rollback preserves a concurrent config edit and reports blocked rollback
+ok 4 - E4-T48 automatic rollback preserves a concurrent config edit and reports blocked rollback
+  ---
+  duration_ms: 3374.123433
+  type: 'test'
+  ...
+# Subtest: E4-T49 runtime inspection follows OpenClaw 2026.11 structured toolNames/typedHooks and rejects unloaded or non-imported plugins
+ok 5 - E4-T49 runtime inspection follows OpenClaw 2026.11 structured toolNames/typedHooks and rejects unloaded or non-imported plugins
+  ---
+  duration_ms: 0.956058
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7292.774373
