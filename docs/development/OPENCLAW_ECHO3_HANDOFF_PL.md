@@ -1,5 +1,7 @@
 # Handoff ECHO-2 -> ECHO-3 OpenClaw Integration
 
+> Status 2026-11-24: zakres poniżej został zaimplementowany jako kandydat ECHO-3. Aktualny raport odbiorczy: `ECHO_3_IMPLEMENTATION_AUDIT_PL.md`. Real Gateway smoke pozostaje gate ECHO-4.
+
 ## Cel
 
 ECHO-3 ma podłączyć zatwierdzony ECHO-2 Session Core do realnego OpenClaw bez przenoszenia decyzji bezpieczeństwa z kodu do promptów.

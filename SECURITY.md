@@ -20,6 +20,14 @@ Do not publish an exploit containing private target material or real user sessio
 
 For public bug reports, use synthetic targets and synthetic session identifiers.
 
-## ECHO-3 note
+## ECHO-3 OpenClaw boundary
 
-The ECHO-2 core is host-independent. OpenClaw tool exposure, trusted runtime facts, plugin permissions and user identity binding are implemented in the ECHO-3 integration stage. An adapter must not weaken the core invariants listed above.
+The ECHO-2 core remains host-independent. The ECHO-3 native plugin maps trusted OpenClaw facts into that core and adds these integration invariants:
+
+- the human-owner surface is limited to the configured owner-facing agent and requires host-proven owner/requester identity;
+- the AI Monitor surface is separate and cannot borrow the human-owner tool;
+- the Viewer is launched with an exact empty client-tool surface;
+- supported Viewer provider calls must pass the enabled `before_model_request` gate and receive durable ECHO transport evidence before dispatch;
+- a missing receipt, lost Viewer generation, or unsupported transport path fails closed rather than silently accepting a Viewer answer.
+
+Native OpenClaw plugins run inside the Gateway process and therefore belong to the host trust boundary. ECHO-3 is pinned to a tested OpenClaw compatibility line; do not widen that range without compatibility testing. Real Gateway validation is still required before a production release.

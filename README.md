@@ -2,9 +2,9 @@
 
 **ECHO-CLAW** is an experimental AI Remote Viewing framework built around strict blind-target separation, a Monitor-Viewer architecture, durable session state, explicit protocol contracts, controlled Reveal, and cumulative post-session learning.
 
-This repository is the **clean-source baseline after ECHO-2 final acceptance**. It replaces the old prompt-driven repository as the active development base.
+This repository is the active clean-source baseline after **ECHO-2 final acceptance** and now contains the **ECHO-3 OpenClaw integration FIX candidate**. It replaces the old prompt-driven repository as the active development base.
 
-> Current status: ECHO-2 Session Core complete. OpenClaw integration is the next stage, ECHO-3.
+> Current status: ECHO-2 accepted. ECHO-3 FIX addresses the independent A1–A8 findings plus B1–B2 and C1 crash-recovery findings, and is awaiting final independent audit. Real-Gateway smoke validation remains an ECHO-4 release gate.
 
 ## What changed from the original ECHO-CLAW
 
@@ -25,6 +25,13 @@ The active core now provides:
 - target exposure history per Viewer
 - trusted runtime-event contract for Viewer context loss
 - bundled target library with 126 preserved targets
+- native OpenClaw plugin entry and manifest
+- owner-facing and blind Monitor tool surfaces separated by host agent identity
+- persistent tool-free Viewer subagent sessions
+- final provider-request gate with per-physical-call receipts
+- OpenClaw Viewer generation continuity, explicit rebind/replay recovery and fail-closed resume
+- canonical per-step Viewer methodology loaded from the approved protocol source files
+- Telepathy T9 tasking freeze and neutral adjunct probes exposed through the adapter
 
 ## Protocols
 
@@ -98,7 +105,10 @@ ECHO-CLAW/
 ├── CONTRIBUTING.md
 ├── CHANGELOG.md
 ├── package.json
-├── src/                            # ECHO-2 Session Core
+├── openclaw.plugin.json            # native OpenClaw plugin manifest
+├── dist/                           # OpenClaw runtime entry
+├── agents/                         # Monitor/Viewer workspace templates
+├── src/                            # Session Core + OpenClaw adapter
 ├── runtime/                        # compiled protocol/target registries
 ├── protocol-pack/                  # approved executable protocol contracts
 ├── targets/source/                 # 126 active bundled target source files
@@ -116,8 +126,9 @@ ECHO-CLAW/
 
 ## Requirements
 
-- Node.js 22.13 or newer
-- no production npm dependencies for the ECHO-2 core
+- Node.js **22.22.3+** on the supported Node 22 line; Node 24 is recommended by OpenClaw
+- OpenClaw **2026.11.7** for the audited ECHO-3 compatibility target
+- no production npm dependencies for the host-independent Session Core
 
 ## Verify the clean source
 
@@ -129,13 +140,25 @@ npm run verify:baselines
 npm run verify:package
 ```
 
-The clean-source baseline is expected to pass all ECHO-2 executable tests before ECHO-3 changes are introduced.
+The ECHO-3 FIX candidate preserves all 76 ECHO-2 tests and the original 28 ECHO-3 tests, retains the A1–A8 regressions, adds B1–B2 plus C1 crash/restart regressions and v1/v2→v3 store migration coverage, and keeps the 16-scenario full-session matrix. Local expected total: **133/133 PASS**. This is contract/mock-host evidence, not a substitute for the real Gateway smoke gate in ECHO-4.
 
-## Important ECHO-3 boundary
+## OpenClaw integration status
 
-This repository **does not yet expose the Session Core as a production OpenClaw plugin**. That is intentional.
+ECHO-3 now contains a native OpenClaw plugin candidate with:
 
-ECHO-3 will connect the approved core to OpenClaw and must provide trusted host facts for user ownership, agent identity, Viewer session identity and runtime events. Model-supplied parameters must not be accepted as substitutes for trusted host identity.
+- `echo_owner_session`, available only to the configured owner-facing agent when OpenClaw proves the sender is the owner;
+- `echo_monitor_session`, available only to the configured blind Monitor and bound requester principal;
+- a persistent Viewer subagent launched with `promptMode: "minimal"`, `disableTools: true`, and `deliver: false`;
+- `before_model_request` as the final supported provider-request gate for durable physical transport evidence;
+- `model_call_started` / `model_call_ended` correlation;
+- fail-closed recovery when the Viewer session generation changes or a completed Viewer answer has no provable transport receipt;
+- crash-safe Viewer Recovery coordination: runtime events remain `PENDING` until Session Core recovery is proven applied, and Resume is a durable idempotent saga across the two SQLite stores;
+- explicit Viewer rebind on Resume from RECOVERING, with replay of only previously accepted blind outputs;
+- strict runId/callId transport settlement with no fallback to an unrelated open call;
+- canonical protocol methodology embedded into each Viewer step, with ECHO markers used only as the output envelope;
+- Telepathy T9 neutral question freezing and checkpoint adjunct probes.
+
+The implementation is pinned to OpenClaw 2026.11.7 and is **not yet claimed as production-ready**. Local executable tests use a contract-faithful mock host because the supported OpenClaw Gateway/CLI is not installed in this build environment. Real-host plugin validation, Gateway smoke tests, installer work, and full end-to-end sessions remain ECHO-4 gates.
 
 Do not recreate the old behavior by giving a model direct access to target files or by moving Reveal/ownership decisions back into prompts.
 
@@ -186,4 +209,4 @@ https://www.amazon.co.uk/dp/B0GHLX7J7D
 
 See `docs/ROADMAP.md`.
 
-The next implementation stage is **ECHO-3: OpenClaw integration**.
+The current implementation stage is **ECHO-3 FIX 0.3.4: OpenClaw integration candidate after A1–A8 remediation, B1–B2 cross-store saga hardening, and C1 orphaned-Recovery reconciliation**. After independent ECHO-3 acceptance, ECHO-4 will perform real-host installation and release validation on a real Gateway.

@@ -1,0 +1,2 @@
+Node v22.16.0
+PASS syntax 20 files; failures=0

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use ECHO-CLAW, please cite the project and preserve source-specific attribution for CC BY content."
 title: "ECHO-CLAW"
 type: software
-version: "0.2.3"
+version: "0.3.4"
 date-released: "2026-11-24"
 authors:
   - name: "Edward"
@@ -17,7 +17,7 @@ license: "MIT"
 abstract: >-
   ECHO-CLAW is an experimental AI Remote Viewing framework with a durable
   Session Engine, blind-target isolation, protocol validation, Reveal gating,
-  target exposure history, and a Monitor-Viewer architecture. Software code is
+  target exposure history, a Monitor-Viewer architecture, and an OpenClaw integration candidate with persistent blind Viewer sessions and durable provider-call evidence. Software code is
   MIT licensed. Original protocols, targets and project content are separately
   licensed under CC BY 4.0 as described in NOTICE.md.
 keywords:

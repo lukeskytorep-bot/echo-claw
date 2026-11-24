@@ -119,6 +119,35 @@ export class EchoSessionEngine {
     });
   }
 
+
+  assertConductor(ctx, sessionId) {
+    const session = this.#getSessionRaw(sessionId);
+    this.#assertSessionAccess(ctx, session);
+    this.authority.requireConductor(ctx, session);
+    return this.#sessionView(ctx, session);
+  }
+
+  getBlindRecoveryContext(ctx, sessionId) {
+    this.authority.requireRole(ctx, ['session_core', 'admin']);
+    const session = this.#getSessionRaw(sessionId);
+    const accepted = this.db.listStepResults(sessionId).map((row) => ({
+      step_id: row.step_id, step_instance_id: row.step_instance_id, cycle_index: row.cycle_index,
+      result_text: row.result_text, result_sha256: row.result_sha256, accepted_at: row.accepted_at,
+    }));
+    return {
+      session_id: sessionId, protocol_id: session.protocol_id, protocol_version: session.protocol_version,
+      current_step_id: session.current_step_id, current_step_instance_id: session.current_step_instance_id,
+      last_accepted_step_id: session.last_accepted_step_id, last_accepted_step_instance_id: session.last_accepted_step_instance_id,
+      accepted_results: accepted,
+    };
+  }
+
+  getFrozenAdjuncts(ctx, sessionId) {
+    this.authority.requireRole(ctx, ['session_core', 'admin']);
+    const session = this.#getSessionRaw(sessionId);
+    return this.db.listAdjuncts(sessionId).map((row) => ({ adjunct_id: row.adjunct_id, step_instance_id: row.step_instance_id, instruction_text: row.instruction_text, instruction_sha256: row.instruction_sha256, issued_by: row.issued_by, frozen_at: row.frozen_at }));
+  }
+
   importTarget(ctx, target) {
     this.authority.requireRole(ctx, ['session_core', 'admin', 'human_user']);
     invariant(target?.target_id && target?.revision && target?.sha256 && typeof target?.content === 'string', 'INVALID_TARGET', 'target identity, hash and content required');
@@ -367,6 +396,18 @@ export class EchoSessionEngine {
       this.db.updateTransport(transportAttemptId, { status: 'COMPLETED', completed_at: now, provider_request_id });
       if (provider_request_id) this.db.updateAttempt(attempt.attempt_id, { provider_request_id });
       this.db.appendAudit(attempt.session_id, 'TRANSPORT_COMPLETED', { transport_attempt_id: transportAttemptId, provider_request_id }, ctx, now);
+    });
+    return this.db.getTransport(transportAttemptId);
+  }
+
+  markTransportUnknown(ctx, transportAttemptId, reason = 'transport outcome unknown') {
+    this.authority.requireRole(ctx, ['session_core', 'admin']);
+    const receipt = this.db.getTransport(transportAttemptId);
+    invariant(receipt && ['AUTHORIZED', 'DISPATCHED'].includes(receipt.status), 'ILLEGAL_TRANSPORT_STATE', 'transport cannot become UNKNOWN from current state');
+    const attempt = this.db.getAttempt(receipt.attempt_id); const now = this.now();
+    this.db.transaction(() => {
+      this.db.updateTransport(transportAttemptId, { status: 'UNKNOWN', completed_at: now, error_text: String(reason) });
+      this.db.appendAudit(attempt.session_id, 'TRANSPORT_OUTCOME_UNKNOWN', { transport_attempt_id: transportAttemptId, reason: String(reason) }, ctx, now);
     });
     return this.db.getTransport(transportAttemptId);
   }

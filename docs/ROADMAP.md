@@ -20,17 +20,25 @@ Includes durable Session Engine, SQLite persistence, Vault semantics, ownership 
 
 ## ECHO-3 - OpenClaw integration
 
-Next stage.
+ECHO-3 FIX 0.3.4 implementation candidate complete after A1–A8 remediation, B1–B2 crash-safe Recovery coordination and C1 orphaned-Recovery reconciliation; final independent audit pending.
 
-Planned scope:
+Implemented scope:
 
-- OpenClaw plugin/adapter
-- trusted host principal and runtime-fact binding
-- Monitor and Viewer tool surfaces
-- Viewer session continuity contract
-- per-agent tool permissions
-- actual OpenClaw transport integration and recovery tests
-- human-user conductor mode in the real host
+- native OpenClaw plugin/adapter and manifest
+- trusted requester/agent binding from host context
+- separated owner-facing and blind Monitor tool surfaces
+- persistent tool-free Viewer session contract
+- Viewer generation continuity plus explicit recovery rebind/replay
+- crash-safe `PENDING → APPLIED` runtime-event handling, orphaned-event reconciliation from durable Session Core audit/state, and idempotent cross-store Resume saga
+- final supported provider-request gate with physical transport receipts
+- strict model-call correlation (`runId + callId`) and fail-closed missing-proof handling
+- canonical per-step protocol methodology rendering
+- Telepathy T9 neutral tasking and neutral adjunct probes
+- per-agent workspace/tool configuration example
+- executable mock-host integration tests preserving all ECHO-2 guarantees
+- 16 full-session scenarios across all 4 protocols, both conductors and both tasking modes
+
+Real supported-Gateway smoke/E2E validation remains an ECHO-4 gate because the current build container does not have a compatible OpenClaw CLI/runtime installed.
 
 ## ECHO-4 - installation and end-to-end release
 

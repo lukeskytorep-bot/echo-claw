@@ -21,6 +21,7 @@ Contribution areas include:
 - ECHO-2 Session Core implementation
 - Session Engine, SQLite persistence, ownership isolation, Sealed Target Vault semantics, Reveal Gate, retry/transport evidence, Recovery, protocol/runtime validation, tests and packaging
 - preparation of the clean-source repository for the ECHO-3 integration stage
+- ECHO-3 native OpenClaw adapter, plugin tool boundaries, persistent Viewer integration, provider-call evidence hooks, compatibility tests and audit packaging
 
 ### Sol 6
 

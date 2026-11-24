@@ -412,6 +412,7 @@ export class EchoDatabase {
     const keys = Object.keys(row);
     this.db.prepare(`INSERT INTO adjuncts(${keys.join(',')}) VALUES (${keys.map(() => '?').join(',')})`).run(...keys.map((k) => row[k]));
   }
+  listAdjuncts(sessionId) { return this.db.prepare('SELECT * FROM adjuncts WHERE session_id=? ORDER BY frozen_at, adjunct_id').all(sessionId); }
 
   appendAudit(sessionId, eventType, payload, actor, now) {
     const last = this.db.prepare('SELECT event_hash FROM audit_events WHERE session_id IS ? ORDER BY event_id DESC LIMIT 1').get(sessionId ?? null);

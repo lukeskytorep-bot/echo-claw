@@ -1,0 +1,5 @@
+openclaw_cli_present=no
+local_node=v22.16.0
+required_node_22_floor=22.22.3
+target_openclaw=2026.11.7
+real_gateway_smoke=NOT_RUN_ECHO4_GATE

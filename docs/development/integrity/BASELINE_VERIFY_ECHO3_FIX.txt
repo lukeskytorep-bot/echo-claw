@@ -1,0 +1,5 @@
+
+> @presence-beyond-form/echo-claw@0.3.2 verify:baselines
+> node tools/verify-baselines.mjs
+
+PASS baselines: 4 protocols, overlay, 126 target files

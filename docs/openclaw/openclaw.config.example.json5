@@ -1,0 +1,47 @@
+{
+  plugins: {
+    entries: {
+      "echo-claw": {
+        enabled: true,
+        config: {
+          dataDir: "~/.openclaw/echo-claw",
+          ownerAgentId: "main",
+          monitorAgentId: "echo-monitor",
+          viewerAgentId: "echo-viewer",
+        },
+        hooks: {
+          // REQUIRED. ECHO uses this final provider-request gate to persist
+          // one physical transport receipt before every supported provider call/retry.
+          allowModelRequest: true,
+          allowConversationAccess: true,
+          allowPromptModification: true,
+        },
+      },
+    },
+  },
+
+  agents: {
+    entries: {
+      main: {
+        // Human-owner-facing agent. It may operate the owner surface only when
+        // OpenClaw also proves senderIsOwner + requesterSenderId.
+        tools: { allow: ["echo_owner_session"] },
+      },
+      "echo-monitor": {
+        workspace: "~/.openclaw/workspace-echo-monitor",
+        skills: [],
+        tools: {
+          // The blind Monitor never receives the human-owner tool.
+          allow: ["echo_monitor_session"],
+        },
+      },
+      "echo-viewer": {
+        workspace: "~/.openclaw/workspace-echo-viewer",
+        skills: [],
+        // ECHO launches Viewer turns with disableTools:true. This agent-level deny
+        // is defense in depth and should remain restrictive.
+        tools: { deny: ["*"] },
+      },
+    },
+  },
+}

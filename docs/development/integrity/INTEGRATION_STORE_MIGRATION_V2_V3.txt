@@ -1,0 +1,10 @@
+source_schema=2
+migrated_schema=3
+binding_preserved=true
+legacy_event_status=PENDING
+legacy_event_applied_at=null
+recovery_required=1
+resume_status=NONE
+resume_operation_id=null
+planned_session_key=null
+result=PASS
