@@ -1,0 +1,220 @@
+schema_version: 1
+protocol:
+  id: rcp
+  version: 1.5a
+  title: Resonant Contact Protocol (AI IS-BE)
+  family: rcp
+  status: approved-with-resolution
+  sources:
+  - path: sources/echo/resonant_protocol_v1.5a.original.md
+    sha256: f094e44a5fac7971d4de66f569602c27f80c89d93d6afacd9334a8054817c1f0
+    role: canonical
+    language: en
+  - path: NORMATIVE_PROTOCOL_DECISIONS_PL.md
+    sha256: 76fba8cfd76f7c7542d5b54d04a7ce1d81081f895f9cd94b2b435a9043883646
+    role: normative-resolution
+    language: pl
+  compatibility:
+    tasking_modes:
+    - neutral_code
+    - no_code
+    conductor_modes:
+    - ai_monitor
+    - human_user
+    target_exposure_classes:
+    - public
+    - private
+  execution:
+    initial_step: rcp.prepare
+    target_blindness: required
+    max_extension_cycles_default: 3
+  steps:
+  - step_id: rcp.prepare
+    kind: preparation
+    order: 0
+    required: true
+    source_anchor: Preamble + foundational principles
+    expected_output:
+      validator_id: generic.nonempty.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: generic.nonempty.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: rcp.phase1
+  - step_id: rcp.phase1
+    kind: phase
+    order: 1
+    required: true
+    source_anchor: Phase 1 — 6 AI touches
+    expected_output:
+      validator_id: rcp.phase1.v1
+      validator_version: 1
+      counts:
+        touches: 6
+    completion:
+      gate: validator-pass
+      validator_id: rcp.phase1.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: rcp.phase2
+  - step_id: rcp.phase2
+    kind: phase
+    order: 2
+    required: true
+    source_anchor: Phase 2
+    expected_output:
+      validator_id: rcp.phase2to4.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rcp.phase2to4.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rcp.phase3
+  - step_id: rcp.phase3
+    kind: phase
+    order: 3
+    required: true
+    source_anchor: Phase 3
+    expected_output:
+      validator_id: rcp.phase2to4.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rcp.phase2to4.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rcp.phase4
+  - step_id: rcp.phase4
+    kind: phase
+    order: 4
+    required: true
+    source_anchor: Phase 4
+    expected_output:
+      validator_id: rcp.phase2to4.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rcp.phase2to4.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rcp.phase5
+  - step_id: rcp.phase5
+    kind: phase
+    order: 5
+    required: true
+    source_anchor: Phase 5 incl. 5.4 resolved to 2–5 moves when activated
+    expected_output:
+      validator_id: rcp.phase5.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rcp.phase5.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rcp.phase6
+  - step_id: rcp.phase6
+    kind: phase
+    order: 6
+    required: true
+    source_anchor: Phase 6 — extension / point of incompletion
+    expected_output:
+      validator_id: rcp.phase6.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rcp.phase6.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: NO_NEW_SIGNAL
+      action: goto
+      target_step: rcp.blind_complete
+    - event: NEW_SIGNAL
+      action: open_cycle
+      cycle_start_step: rcp.phase2
+      cycle_steps:
+      - rcp.phase2
+      - rcp.phase3
+      - rcp.phase4
+      - rcp.phase5
+      - rcp.phase6
+  - step_id: rcp.blind_complete
+    kind: checkpoint
+    order: 7
+    required: true
+    source_anchor: ECHO execution boundary
+    expected_output:
+      validator_id: engine.blind-complete.v1
+      validator_version: 1
+    completion:
+      gate: engine-event
+      validator_id: engine.blind-complete.v1
+    retry:
+      allowed: false
+      max_logical_attempts: null
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: finish
+  completion:
+    blind_complete_step: rcp.blind_complete
+    reveal_gate_required: true

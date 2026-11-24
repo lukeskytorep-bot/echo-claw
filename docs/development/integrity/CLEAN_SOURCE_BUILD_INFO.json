@@ -1,0 +1,26 @@
+{
+  "project": "ECHO-CLAW",
+  "clean_source_version": "0.2.3",
+  "stage": "ECHO-2_FINAL_PASS",
+  "frozen_date": "2026-11-24",
+  "next_stage": "ECHO-3_OPENCLAW_INTEGRATION",
+  "tests": {
+    "echo2_executable": 76,
+    "passed": 76,
+    "failed": 0
+  },
+  "baselines": {
+    "protocols": 4,
+    "execution_overlay": 1,
+    "bundled_targets": 126
+  },
+  "source_provenance": {
+    "legacy_echo_claw_zip_sha256": "99168f917bc163c0ae9eb2cf8f4656c339bc541cb8c5069f871b428bba5a27ab",
+    "ai_rv_harness_reference_zip_sha256": "3adb4ed918dfbbf4607587bb347d6f949012c785ceaf1854f38372eac6002615",
+    "echo1_fix3_audit_package_sha256": "90652ddfccc726f4c9257855980da331f5483458a2d392b9daf0ca4be646befa"
+  },
+  "license_model": {
+    "software": "MIT",
+    "protocols_targets_and_project_content": "CC-BY-4.0"
+  }
+}

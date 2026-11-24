@@ -1,0 +1,147 @@
+schema_version: 1
+protocol:
+  id: rv-lite-extended
+  version: 1.1.0
+  title: RV Lite Extended
+  family: rv-lite
+  status: approved
+  sources:
+  - path: sources/harness/RV_Lite_v1.pl.md
+    sha256: 7118fa26eca259e8da3320ca7e6298e2699bb280d9b0363711ba30dec337c1f1
+    role: canonical
+    language: pl
+  - path: sources/harness/RV_Lite_v1.en.md
+    sha256: d178a1b59ba8aba3e5c6cf70bfa1886c0629bb3143ed8b4ac67399c491489fbb
+    role: canonical
+    language: en
+  compatibility:
+    tasking_modes:
+    - neutral_code
+    - no_code
+    conductor_modes:
+    - ai_monitor
+    - human_user
+    target_exposure_classes:
+    - public
+    - private
+  execution:
+    initial_step: rv-lite-extended.prepare
+    target_blindness: required
+    max_extension_cycles_default: 0
+  steps:
+  - step_id: rv-lite-extended.prepare
+    kind: viewer-call
+    order: 1
+    required: true
+    source_anchor: Prompt 1
+    expected_output:
+      validator_id: generic.nonempty.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: generic.nonempty.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: rv-lite-extended.steps1-2
+  - step_id: rv-lite-extended.steps1-2
+    kind: viewer-call
+    order: 2
+    required: true
+    source_anchor: Prompt 2 / Steps 1–2
+    expected_output:
+      validator_id: rv-lite.steps1-2.v1
+      validator_version: 1
+      counts:
+        touches: 6
+        vectors: 3
+        sketches: 3
+    completion:
+      gate: validator-pass
+      validator_id: rv-lite.steps1-2.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rv-lite-extended.step3
+  - step_id: rv-lite-extended.step3
+    kind: viewer-call
+    order: 3
+    required: true
+    source_anchor: Prompt 3
+    expected_output:
+      validator_id: rv-lite.step3-extended.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rv-lite.step3-extended.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rv-lite-extended.step4
+  - step_id: rv-lite-extended.step4
+    kind: viewer-call
+    order: 4
+    required: true
+    source_anchor: Prompt 4
+    expected_output:
+      validator_id: rv-lite.step4.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rv-lite.step4.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rv-lite-extended.blind_complete
+  - step_id: rv-lite-extended.blind_complete
+    kind: checkpoint
+    order: 5
+    required: true
+    source_anchor: Reveal boundary after Prompt 4
+    expected_output:
+      validator_id: engine.blind-complete.v1
+      validator_version: 1
+    completion:
+      gate: engine-event
+      validator_id: engine.blind-complete.v1
+    retry:
+      allowed: false
+      max_logical_attempts: null
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: finish
+  completion:
+    blind_complete_step: rv-lite-extended.blind_complete
+    reveal_gate_required: true

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "legacy_echo_claw_source_zip": {
+    "filename": "echo-claw-main.zip",
+    "sha256": "99168f917bc163c0ae9eb2cf8f4656c339bc541cb8c5069f871b428bba5a27ab",
+    "file_count": 156,
+    "target_count": 126
+  },
+  "ai_rv_harness_baseline": {
+    "filename": "AI-RV-Harness-ai-rv-2 (1).zip",
+    "version": "0.7.14",
+    "sha256": "3adb4ed918dfbbf4607587bb347d6f949012c785ceaf1854f38372eac6002615"
+  },
+  "echo1_fix3": {
+    "audit_package_sha256": "90652ddfccc726f4c9257855980da331f5483458a2d392b9daf0ca4be646befa",
+    "package_manifest_sha256": "f3caac6253f58a68cfab0193125b2393e6d64e09b27b325724f50d1ed68897ed"
+  },
+  "execution_overlay": {
+    "id": "echo-tasking-v1",
+    "sha256": "261e835bb76704ff6f4e966616284b3e1bd51e905cfb7207015d046f48e9bb3d"
+  },
+  "protocol_manifests": {
+    "rcp@1.5a": "f2830af887ad01f4082357914f554e633d5ef2b56748af0ffca5f05d4cfd01d6",
+    "rv-lite-core@1.1.0": "70438184e56b36cfc2cff1bf37070c9f91e64780f8abb23a74940b9ddefff3f4",
+    "rv-lite-extended@1.1.0": "0dd2ebd697ae3c96bb7b27a67ffecf57d9fb08b9cfe4b9465cc1dea310883919",
+    "telepathy@1.1": "1a09d2efacbf69a11ef90ec9508fcfef3328ff4d0088e83901937e33c0947ea5"
+  },
+  "compiled_runtime": {
+    "protocols_json_sha256": "c031d2a3f0784187aab1f8abcea9bb581a6f1055045070e22e678a6e914062e5",
+    "target_catalog_json_sha256": "7ece924cbc53830284e17239714af44585435b9a08ac876afb8a3b36180ef976"
+  },
+  "target_source_tree": {
+    "file_count": 126,
+    "combined_path_hash_sha256": "aa5f93029a75d3b54a69dfb552121655225cb2c21e5f970e6dea7e59c5c11783",
+    "algorithm": "SHA256(concat(sorted(relative_path + TAB + file_sha256 + LF)))"
+  }
+}

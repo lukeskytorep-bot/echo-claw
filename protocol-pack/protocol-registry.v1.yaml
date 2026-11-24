@@ -1,0 +1,14 @@
+schema_version: 1
+protocols:
+  rcp:
+    version: 1.5a
+    manifest: protocols/rcp_v1.5a.yaml
+  rv-lite-core:
+    version: 1.1.0
+    manifest: protocols/rv_lite_core_v1.1.0.yaml
+  rv-lite-extended:
+    version: 1.1.0
+    manifest: protocols/rv_lite_extended_v1.1.0.yaml
+  telepathy:
+    version: '1.1'
+    manifest: protocols/telepathy_v1.1.yaml

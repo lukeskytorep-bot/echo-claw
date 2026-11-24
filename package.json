@@ -1,0 +1,22 @@
+{
+  "name": "@presence-beyond-form/echo-claw",
+  "version": "0.2.3",
+  "private": true,
+  "type": "module",
+  "description": "ECHO-CLAW durable Session Core. ECHO-2 accepted; OpenClaw integration follows in ECHO-3.",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:verbose": "node --test --test-reporter=spec tests/*.test.mjs",
+    "verify:package": "node tools/verify-package.mjs",
+    "verify:baselines": "node tools/verify-baselines.mjs",
+    "check": "npm test && npm run verify:baselines && npm run verify:package"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukeskytorep-bot/echo-claw.git"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "overlay_id": "echo-tasking-v1",
+  "rv_lite": {
+    "source_template_policy": "target-code-presence-v1",
+    "source_sha256": "1d59a832e34956dd9743c7d81d81b597449b1c8e6b3f428a2e66517ef9d0e9ff",
+    "mode_mapping": {
+      "neutral_code": "with_code",
+      "no_code": "without_code"
+    },
+    "rules": {
+      "neutral_code": [
+        "render approved Prompt 1 and Prompt 2 with neutral code",
+        "code must not encode target semantics"
+      ],
+      "no_code": [
+        "replace waitingWithCode with waitingWithoutCode exactly once",
+        "replace Prompt 2 exactly with secondWithoutCode",
+        "Prompts 3 and 4 byte-identical to neutral-code base",
+        "no internal session identifiers exposed as cue"
+      ]
+    }
+  },
+  "conductor_modes": {
+    "ai_monitor": {
+      "checkpoint_authority": "monitor"
+    },
+    "human_user": {
+      "checkpoint_authority": "user",
+      "monitor_role": "technical_orchestrator_only"
+    }
+  },
+  "adjunct_probe": {
+    "required_fields": [
+      "adjunct_step_id",
+      "issued_by",
+      "issued_at_step_instance_id",
+      "instruction_text",
+      "instruction_sha256",
+      "blindness_classification",
+      "neutrality_verifier_id",
+      "execution_revision_sha256"
+    ],
+    "blindness_classification_allowed": [
+      "neutral-verified"
+    ],
+    "neutrality_gate": {
+      "trusted_runtime_verifier_required": true,
+      "caller_or_model_self_classification_forbidden": true,
+      "verifier_outcomes": [
+        "NEUTRAL",
+        "TARGET_AWARE",
+        "UNCERTAIN"
+      ],
+      "dispatch_allowed_only_when": "NEUTRAL",
+      "on_target_aware": "BLOCK",
+      "on_uncertain": "BLOCK"
+    }
+  },
+  "target_exposure_class": [
+    "public",
+    "private"
+  ]
+}

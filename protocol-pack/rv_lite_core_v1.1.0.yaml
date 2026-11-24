@@ -1,0 +1,151 @@
+schema_version: 1
+protocol:
+  id: rv-lite-core
+  version: 1.1.0
+  title: RV Lite Core
+  family: rv-lite
+  status: approved
+  sources:
+  - path: sources/harness/RV_Lite_Core_v1.1.0.pl.md
+    sha256: 80a417f17029d3fe4f10a0b3af3d5fe65658ff3ce43ae23bda0d8864551377bd
+    role: derived-runtime
+    language: pl
+    derived_by: AI RV Harness 0.7.14 makeCoreResource()
+    derived_by_sha256: 3b3e44529dfa07098c116621b147fb8c1652a6106e4cd450b857afcfde1fed5b
+  - path: sources/harness/RV_Lite_Core_v1.1.0.en.md
+    sha256: 740cebe1d2c18ef14fb66203289edf4e39dcd5cf5a5a08dbb6c9324632e8a5a2
+    role: derived-runtime
+    language: en
+    derived_by: AI RV Harness 0.7.14 makeCoreResource()
+    derived_by_sha256: 3b3e44529dfa07098c116621b147fb8c1652a6106e4cd450b857afcfde1fed5b
+  compatibility:
+    tasking_modes:
+    - neutral_code
+    - no_code
+    conductor_modes:
+    - ai_monitor
+    - human_user
+    target_exposure_classes:
+    - public
+    - private
+  execution:
+    initial_step: rv-lite-core.prepare
+    target_blindness: required
+    max_extension_cycles_default: 0
+  steps:
+  - step_id: rv-lite-core.prepare
+    kind: viewer-call
+    order: 1
+    required: true
+    source_anchor: Prompt 1
+    expected_output:
+      validator_id: generic.nonempty.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: generic.nonempty.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: rv-lite-core.steps1-2
+  - step_id: rv-lite-core.steps1-2
+    kind: viewer-call
+    order: 2
+    required: true
+    source_anchor: Prompt 2 / Steps 1–2
+    expected_output:
+      validator_id: rv-lite.steps1-2.v1
+      validator_version: 1
+      counts:
+        touches: 6
+        vectors: 3
+        sketches: 3
+    completion:
+      gate: validator-pass
+      validator_id: rv-lite.steps1-2.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rv-lite-core.step3
+  - step_id: rv-lite-core.step3
+    kind: viewer-call
+    order: 3
+    required: true
+    source_anchor: Prompt 3
+    expected_output:
+      validator_id: rv-lite.step3-core.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rv-lite.step3-core.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rv-lite-core.step4
+  - step_id: rv-lite-core.step4
+    kind: viewer-call
+    order: 4
+    required: true
+    source_anchor: Prompt 4
+    expected_output:
+      validator_id: rv-lite.step4.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: rv-lite.step4.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: rv-lite-core.blind_complete
+  - step_id: rv-lite-core.blind_complete
+    kind: checkpoint
+    order: 5
+    required: true
+    source_anchor: Reveal boundary after Prompt 4
+    expected_output:
+      validator_id: engine.blind-complete.v1
+      validator_version: 1
+    completion:
+      gate: engine-event
+      validator_id: engine.blind-complete.v1
+    retry:
+      allowed: false
+      max_logical_attempts: null
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: finish
+  completion:
+    blind_complete_step: rv-lite-core.blind_complete
+    reveal_gate_required: true

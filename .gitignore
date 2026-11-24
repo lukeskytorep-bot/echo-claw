@@ -1,38 +1,34 @@
-# ==========================================================
-# ECHO-CLAW - .gitignore
-# ==========================================================
+# Dependencies
+node_modules/
 
-# --- SECURITY & API KEYS ---
-# Never upload real environment files or local secrets.
+# Local runtime state
+.echo-claw/
+state/
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-wal
+*.sqlite-shm
+*.db-wal
+*.db-shm
+
+# Secrets and local configuration
 .env
-.env.local
+.env.*
+!.env.example
 
-# --- TARGET BLINDNESS (THE VAULT) ---
-# Keep real target data local to preserve blind-target conditions.
-workspace/vault/
-!workspace/vault/targets.template.json
-
-# --- ACTIVE SESSION DATA ---
-# Active sessions and logs are generated locally during work.
-workspace/sessions/active_session.md
-workspace/sessions/session_log.json
-logs/
+# Logs and test output
 *.log
+coverage/
+.nyc_output/
 
-# --- OPTIONAL LOCAL ARCHIVE ---
-# Uncomment this if you want completed session archives to remain local only.
-# workspace/archive/
-
-# --- SYSTEM & OS FILES ---
+# Editors / OS
 .DS_Store
 Thumbs.db
-
-# --- PYTHON / TEMP FILES ---
-__pycache__/
-*.py[cod]
-*$py.class
-
-# --- EDITOR FILES (OPTIONAL) ---
 .vscode/
 .idea/
+
+# Temporary files
+*.tmp
+*.bak
 *.swp

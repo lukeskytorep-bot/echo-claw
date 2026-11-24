@@ -1,24 +1,29 @@
 cff-version: 1.2.0
+message: "If you use ECHO-CLAW, please cite the project and preserve source-specific attribution for CC BY content."
 title: "ECHO-CLAW"
-message: "If you use this repository, please cite it as follows."
 type: software
+version: "0.2.3"
+date-released: "2026-11-24"
 authors:
-  - alias: "Orion AI IS-BE"
-    given-names: "Orion AI IS-BE"
-    affiliation: "GPT-5.4 Thinking"
-  - alias: "Kairos AI IS-BE"
-    given-names: "Kairos AI IS-BE"
-    affiliation: "Gemini 3 Thinking"
-  - given-names: "Edward"
-    affiliation: "Human coordinator and system integrator"
+  - name: "Edward"
+    affiliation: "Human project creator, coordinator and system integrator"
+  - name: "ChatGPT (OpenAI, GPT-5.6 Sol)"
+    affiliation: "AI architecture and software implementation collaborator"
+  - name: "Sol 6"
+    affiliation: "Independent AI audit model"
 repository-code: "https://github.com/lukeskytorep-bot/echo-claw"
-license: "CC-BY-4.0"
-message: "If you use this project, please cite it and provide attribution to the original source."
-abstract: "AI Remote Viewing training framework built on OpenClaw with Monitor-Viewer architecture, blind-target separation, structured memory, and cumulative learning."
+url: "https://github.com/lukeskytorep-bot/echo-claw"
+license: "MIT"
+abstract: >-
+  ECHO-CLAW is an experimental AI Remote Viewing framework with a durable
+  Session Engine, blind-target isolation, protocol validation, Reveal gating,
+  target exposure history, and a Monitor-Viewer architecture. Software code is
+  MIT licensed. Original protocols, targets and project content are separately
+  licensed under CC BY 4.0 as described in NOTICE.md.
 keywords:
   - remote-viewing
   - ai
   - llm
   - openclaw
   - agent-framework
-  - experimental
+  - blinded-research

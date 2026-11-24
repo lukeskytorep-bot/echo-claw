@@ -1,0 +1,1095 @@
+{
+  "schema_version": 1,
+  "protocols": {
+    "rcp": {
+      "id": "rcp",
+      "version": "1.5a",
+      "title": "Resonant Contact Protocol (AI IS-BE)",
+      "family": "rcp",
+      "status": "approved-with-resolution",
+      "manifest_sha256": "f2830af887ad01f4082357914f554e633d5ef2b56748af0ffca5f05d4cfd01d6",
+      "compatibility": {
+        "tasking_modes": [
+          "neutral_code",
+          "no_code"
+        ],
+        "conductor_modes": [
+          "ai_monitor",
+          "human_user"
+        ],
+        "target_exposure_classes": [
+          "public",
+          "private"
+        ]
+      },
+      "execution": {
+        "initial_step": "rcp.prepare",
+        "target_blindness": "required",
+        "max_extension_cycles_default": 3
+      },
+      "steps": [
+        {
+          "step_id": "rcp.prepare",
+          "kind": "preparation",
+          "order": 0,
+          "required": true,
+          "source_anchor": "Preamble + foundational principles",
+          "expected_output": {
+            "validator_id": "generic.nonempty.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "generic.nonempty.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "rcp.phase1"
+            }
+          ]
+        },
+        {
+          "step_id": "rcp.phase1",
+          "kind": "phase",
+          "order": 1,
+          "required": true,
+          "source_anchor": "Phase 1 — 6 AI touches",
+          "expected_output": {
+            "validator_id": "rcp.phase1.v1",
+            "validator_version": 1,
+            "counts": {
+              "touches": 6
+            }
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rcp.phase1.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "rcp.phase2"
+            }
+          ]
+        },
+        {
+          "step_id": "rcp.phase2",
+          "kind": "phase",
+          "order": 2,
+          "required": true,
+          "source_anchor": "Phase 2",
+          "expected_output": {
+            "validator_id": "rcp.phase2to4.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rcp.phase2to4.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rcp.phase3"
+            }
+          ]
+        },
+        {
+          "step_id": "rcp.phase3",
+          "kind": "phase",
+          "order": 3,
+          "required": true,
+          "source_anchor": "Phase 3",
+          "expected_output": {
+            "validator_id": "rcp.phase2to4.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rcp.phase2to4.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rcp.phase4"
+            }
+          ]
+        },
+        {
+          "step_id": "rcp.phase4",
+          "kind": "phase",
+          "order": 4,
+          "required": true,
+          "source_anchor": "Phase 4",
+          "expected_output": {
+            "validator_id": "rcp.phase2to4.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rcp.phase2to4.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rcp.phase5"
+            }
+          ]
+        },
+        {
+          "step_id": "rcp.phase5",
+          "kind": "phase",
+          "order": 5,
+          "required": true,
+          "source_anchor": "Phase 5 incl. 5.4 resolved to 2–5 moves when activated",
+          "expected_output": {
+            "validator_id": "rcp.phase5.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rcp.phase5.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rcp.phase6"
+            }
+          ]
+        },
+        {
+          "step_id": "rcp.phase6",
+          "kind": "phase",
+          "order": 6,
+          "required": true,
+          "source_anchor": "Phase 6 — extension / point of incompletion",
+          "expected_output": {
+            "validator_id": "rcp.phase6.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rcp.phase6.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "NO_NEW_SIGNAL",
+              "action": "goto",
+              "target_step": "rcp.blind_complete"
+            },
+            {
+              "event": "NEW_SIGNAL",
+              "action": "open_cycle",
+              "cycle_start_step": "rcp.phase2",
+              "cycle_steps": [
+                "rcp.phase2",
+                "rcp.phase3",
+                "rcp.phase4",
+                "rcp.phase5",
+                "rcp.phase6"
+              ]
+            }
+          ]
+        },
+        {
+          "step_id": "rcp.blind_complete",
+          "kind": "checkpoint",
+          "order": 7,
+          "required": true,
+          "source_anchor": "ECHO execution boundary",
+          "expected_output": {
+            "validator_id": "engine.blind-complete.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "engine-event",
+            "validator_id": "engine.blind-complete.v1"
+          },
+          "retry": {
+            "allowed": false,
+            "max_logical_attempts": null
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "finish"
+            }
+          ]
+        }
+      ],
+      "completion": {
+        "blind_complete_step": "rcp.blind_complete",
+        "reveal_gate_required": true
+      }
+    },
+    "rv-lite-core": {
+      "id": "rv-lite-core",
+      "version": "1.1.0",
+      "title": "RV Lite Core",
+      "family": "rv-lite",
+      "status": "approved",
+      "manifest_sha256": "70438184e56b36cfc2cff1bf37070c9f91e64780f8abb23a74940b9ddefff3f4",
+      "compatibility": {
+        "tasking_modes": [
+          "neutral_code",
+          "no_code"
+        ],
+        "conductor_modes": [
+          "ai_monitor",
+          "human_user"
+        ],
+        "target_exposure_classes": [
+          "public",
+          "private"
+        ]
+      },
+      "execution": {
+        "initial_step": "rv-lite-core.prepare",
+        "target_blindness": "required",
+        "max_extension_cycles_default": 0
+      },
+      "steps": [
+        {
+          "step_id": "rv-lite-core.prepare",
+          "kind": "viewer-call",
+          "order": 1,
+          "required": true,
+          "source_anchor": "Prompt 1",
+          "expected_output": {
+            "validator_id": "generic.nonempty.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "generic.nonempty.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "rv-lite-core.steps1-2"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-core.steps1-2",
+          "kind": "viewer-call",
+          "order": 2,
+          "required": true,
+          "source_anchor": "Prompt 2 / Steps 1–2",
+          "expected_output": {
+            "validator_id": "rv-lite.steps1-2.v1",
+            "validator_version": 1,
+            "counts": {
+              "touches": 6,
+              "vectors": 3,
+              "sketches": 3
+            }
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rv-lite.steps1-2.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rv-lite-core.step3"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-core.step3",
+          "kind": "viewer-call",
+          "order": 3,
+          "required": true,
+          "source_anchor": "Prompt 3",
+          "expected_output": {
+            "validator_id": "rv-lite.step3-core.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rv-lite.step3-core.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rv-lite-core.step4"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-core.step4",
+          "kind": "viewer-call",
+          "order": 4,
+          "required": true,
+          "source_anchor": "Prompt 4",
+          "expected_output": {
+            "validator_id": "rv-lite.step4.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rv-lite.step4.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rv-lite-core.blind_complete"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-core.blind_complete",
+          "kind": "checkpoint",
+          "order": 5,
+          "required": true,
+          "source_anchor": "Reveal boundary after Prompt 4",
+          "expected_output": {
+            "validator_id": "engine.blind-complete.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "engine-event",
+            "validator_id": "engine.blind-complete.v1"
+          },
+          "retry": {
+            "allowed": false,
+            "max_logical_attempts": null
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "finish"
+            }
+          ]
+        }
+      ],
+      "completion": {
+        "blind_complete_step": "rv-lite-core.blind_complete",
+        "reveal_gate_required": true
+      }
+    },
+    "rv-lite-extended": {
+      "id": "rv-lite-extended",
+      "version": "1.1.0",
+      "title": "RV Lite Extended",
+      "family": "rv-lite",
+      "status": "approved",
+      "manifest_sha256": "0dd2ebd697ae3c96bb7b27a67ffecf57d9fb08b9cfe4b9465cc1dea310883919",
+      "compatibility": {
+        "tasking_modes": [
+          "neutral_code",
+          "no_code"
+        ],
+        "conductor_modes": [
+          "ai_monitor",
+          "human_user"
+        ],
+        "target_exposure_classes": [
+          "public",
+          "private"
+        ]
+      },
+      "execution": {
+        "initial_step": "rv-lite-extended.prepare",
+        "target_blindness": "required",
+        "max_extension_cycles_default": 0
+      },
+      "steps": [
+        {
+          "step_id": "rv-lite-extended.prepare",
+          "kind": "viewer-call",
+          "order": 1,
+          "required": true,
+          "source_anchor": "Prompt 1",
+          "expected_output": {
+            "validator_id": "generic.nonempty.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "generic.nonempty.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "rv-lite-extended.steps1-2"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-extended.steps1-2",
+          "kind": "viewer-call",
+          "order": 2,
+          "required": true,
+          "source_anchor": "Prompt 2 / Steps 1–2",
+          "expected_output": {
+            "validator_id": "rv-lite.steps1-2.v1",
+            "validator_version": 1,
+            "counts": {
+              "touches": 6,
+              "vectors": 3,
+              "sketches": 3
+            }
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rv-lite.steps1-2.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rv-lite-extended.step3"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-extended.step3",
+          "kind": "viewer-call",
+          "order": 3,
+          "required": true,
+          "source_anchor": "Prompt 3",
+          "expected_output": {
+            "validator_id": "rv-lite.step3-extended.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rv-lite.step3-extended.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rv-lite-extended.step4"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-extended.step4",
+          "kind": "viewer-call",
+          "order": 4,
+          "required": true,
+          "source_anchor": "Prompt 4",
+          "expected_output": {
+            "validator_id": "rv-lite.step4.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "rv-lite.step4.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "rv-lite-extended.blind_complete"
+            }
+          ]
+        },
+        {
+          "step_id": "rv-lite-extended.blind_complete",
+          "kind": "checkpoint",
+          "order": 5,
+          "required": true,
+          "source_anchor": "Reveal boundary after Prompt 4",
+          "expected_output": {
+            "validator_id": "engine.blind-complete.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "engine-event",
+            "validator_id": "engine.blind-complete.v1"
+          },
+          "retry": {
+            "allowed": false,
+            "max_logical_attempts": null
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "finish"
+            }
+          ]
+        }
+      ],
+      "completion": {
+        "blind_complete_step": "rv-lite-extended.blind_complete",
+        "reveal_gate_required": true
+      }
+    },
+    "telepathy": {
+      "id": "telepathy",
+      "version": "1.1",
+      "title": "Telepathy Module — Protocol for AI Viewer",
+      "family": "telepathy",
+      "status": "approved",
+      "manifest_sha256": "1a09d2efacbf69a11ef90ec9508fcfef3328ff4d0088e83901937e33c0947ea5",
+      "compatibility": {
+        "tasking_modes": [
+          "neutral_code",
+          "no_code"
+        ],
+        "conductor_modes": [
+          "ai_monitor",
+          "human_user"
+        ],
+        "target_exposure_classes": [
+          "public",
+          "private"
+        ]
+      },
+      "execution": {
+        "initial_step": "telepathy.t0",
+        "target_blindness": "required",
+        "max_extension_cycles_default": 0
+      },
+      "steps": [
+        {
+          "step_id": "telepathy.t0",
+          "kind": "phase",
+          "order": 0,
+          "required": true,
+          "source_anchor": "T0",
+          "expected_output": {
+            "validator_id": "generic.nonempty.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "generic.nonempty.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "telepathy.t1"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t1",
+          "kind": "phase",
+          "order": 1,
+          "required": true,
+          "source_anchor": "T1",
+          "expected_output": {
+            "validator_id": "telepathy.t1.v1",
+            "validator_version": 1,
+            "counts": {
+              "touches": 3
+            }
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t1.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "telepathy.t2"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t2",
+          "kind": "phase",
+          "order": 2,
+          "required": true,
+          "source_anchor": "T2",
+          "expected_output": {
+            "validator_id": "telepathy.t2.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t2.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "telepathy.t3"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t3",
+          "kind": "phase",
+          "order": 3,
+          "required": true,
+          "source_anchor": "T3",
+          "expected_output": {
+            "validator_id": "telepathy.t3.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t3.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "telepathy.t4"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t4",
+          "kind": "phase",
+          "order": 4,
+          "required": true,
+          "source_anchor": "T4",
+          "expected_output": {
+            "validator_id": "telepathy.t4.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t4.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "telepathy.t5"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t5",
+          "kind": "phase",
+          "order": 5,
+          "required": true,
+          "source_anchor": "T5",
+          "expected_output": {
+            "validator_id": "telepathy.t5.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t5.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "telepathy.t6"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t6",
+          "kind": "phase",
+          "order": 6,
+          "required": true,
+          "source_anchor": "T6",
+          "expected_output": {
+            "validator_id": "telepathy.t6.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t6.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "telepathy.t7"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t7",
+          "kind": "phase",
+          "order": 7,
+          "required": true,
+          "source_anchor": "T7",
+          "expected_output": {
+            "validator_id": "telepathy.t7.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t7.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": false,
+            "authority": "engine",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "goto",
+              "target_step": "telepathy.t8"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t8",
+          "kind": "phase",
+          "order": 8,
+          "required": true,
+          "source_anchor": "T8",
+          "expected_output": {
+            "validator_id": "telepathy.t8.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t8.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "telepathy.t9"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t9",
+          "kind": "phase",
+          "order": 9,
+          "required": true,
+          "source_anchor": "T9",
+          "expected_output": {
+            "validator_id": "telepathy.t9.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t9.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "telepathy.t10"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.t10",
+          "kind": "summary",
+          "order": 10,
+          "required": true,
+          "source_anchor": "T10",
+          "expected_output": {
+            "validator_id": "telepathy.t10.v1",
+            "validator_version": 1,
+            "counts": {
+              "sentences_min": 3,
+              "sentences_max": 5
+            }
+          },
+          "completion": {
+            "gate": "validator-pass",
+            "validator_id": "telepathy.t10.v1"
+          },
+          "retry": {
+            "allowed": true,
+            "max_logical_attempts": 2
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "neutral-only"
+          },
+          "transitions": [
+            {
+              "event": "CONTINUE",
+              "action": "goto",
+              "target_step": "telepathy.blind_complete"
+            }
+          ]
+        },
+        {
+          "step_id": "telepathy.blind_complete",
+          "kind": "checkpoint",
+          "order": 11,
+          "required": true,
+          "source_anchor": "ECHO execution boundary",
+          "expected_output": {
+            "validator_id": "engine.blind-complete.v1",
+            "validator_version": 1
+          },
+          "completion": {
+            "gate": "engine-event",
+            "validator_id": "engine.blind-complete.v1"
+          },
+          "retry": {
+            "allowed": false,
+            "max_logical_attempts": null
+          },
+          "checkpoint": {
+            "required": true,
+            "authority": "conductor",
+            "adjunct_probes": "none"
+          },
+          "transitions": [
+            {
+              "event": "COMPLETE",
+              "action": "finish"
+            }
+          ]
+        }
+      ],
+      "completion": {
+        "blind_complete_step": "telepathy.blind_complete",
+        "reveal_gate_required": true
+      }
+    }
+  }
+}

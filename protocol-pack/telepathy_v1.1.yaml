@@ -1,0 +1,298 @@
+schema_version: 1
+protocol:
+  id: telepathy
+  version: '1.1'
+  title: Telepathy Module — Protocol for AI Viewer
+  family: telepathy
+  status: approved
+  sources:
+  - path: sources/echo/telepathy_module_v1.1.md
+    sha256: e02817dbe80f4bbcd907d6a26d14c6d5e6a9a301e023cc5f90fbc4831f5644d5
+    role: canonical
+    language: en
+  compatibility:
+    tasking_modes:
+    - neutral_code
+    - no_code
+    conductor_modes:
+    - ai_monitor
+    - human_user
+    target_exposure_classes:
+    - public
+    - private
+  execution:
+    initial_step: telepathy.t0
+    target_blindness: required
+    max_extension_cycles_default: 0
+  steps:
+  - step_id: telepathy.t0
+    kind: phase
+    order: 0
+    required: true
+    source_anchor: T0
+    expected_output:
+      validator_id: generic.nonempty.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: generic.nonempty.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: telepathy.t1
+  - step_id: telepathy.t1
+    kind: phase
+    order: 1
+    required: true
+    source_anchor: T1
+    expected_output:
+      validator_id: telepathy.t1.v1
+      validator_version: 1
+      counts:
+        touches: 3
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t1.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: telepathy.t2
+  - step_id: telepathy.t2
+    kind: phase
+    order: 2
+    required: true
+    source_anchor: T2
+    expected_output:
+      validator_id: telepathy.t2.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t2.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: telepathy.t3
+  - step_id: telepathy.t3
+    kind: phase
+    order: 3
+    required: true
+    source_anchor: T3
+    expected_output:
+      validator_id: telepathy.t3.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t3.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: telepathy.t4
+  - step_id: telepathy.t4
+    kind: phase
+    order: 4
+    required: true
+    source_anchor: T4
+    expected_output:
+      validator_id: telepathy.t4.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t4.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: telepathy.t5
+  - step_id: telepathy.t5
+    kind: phase
+    order: 5
+    required: true
+    source_anchor: T5
+    expected_output:
+      validator_id: telepathy.t5.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t5.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: telepathy.t6
+  - step_id: telepathy.t6
+    kind: phase
+    order: 6
+    required: true
+    source_anchor: T6
+    expected_output:
+      validator_id: telepathy.t6.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t6.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: telepathy.t7
+  - step_id: telepathy.t7
+    kind: phase
+    order: 7
+    required: true
+    source_anchor: T7
+    expected_output:
+      validator_id: telepathy.t7.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t7.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: false
+      authority: engine
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: goto
+      target_step: telepathy.t8
+  - step_id: telepathy.t8
+    kind: phase
+    order: 8
+    required: true
+    source_anchor: T8
+    expected_output:
+      validator_id: telepathy.t8.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t8.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: telepathy.t9
+  - step_id: telepathy.t9
+    kind: phase
+    order: 9
+    required: true
+    source_anchor: T9
+    expected_output:
+      validator_id: telepathy.t9.v1
+      validator_version: 1
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t9.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: telepathy.t10
+  - step_id: telepathy.t10
+    kind: summary
+    order: 10
+    required: true
+    source_anchor: T10
+    expected_output:
+      validator_id: telepathy.t10.v1
+      validator_version: 1
+      counts:
+        sentences_min: 3
+        sentences_max: 5
+    completion:
+      gate: validator-pass
+      validator_id: telepathy.t10.v1
+    retry:
+      allowed: true
+      max_logical_attempts: 2
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: neutral-only
+    transitions:
+    - event: CONTINUE
+      action: goto
+      target_step: telepathy.blind_complete
+  - step_id: telepathy.blind_complete
+    kind: checkpoint
+    order: 11
+    required: true
+    source_anchor: ECHO execution boundary
+    expected_output:
+      validator_id: engine.blind-complete.v1
+      validator_version: 1
+    completion:
+      gate: engine-event
+      validator_id: engine.blind-complete.v1
+    retry:
+      allowed: false
+      max_logical_attempts: null
+    checkpoint:
+      required: true
+      authority: conductor
+      adjunct_probes: none
+    transitions:
+    - event: COMPLETE
+      action: finish
+  completion:
+    blind_complete_step: telepathy.blind_complete
+    reveal_gate_required: true

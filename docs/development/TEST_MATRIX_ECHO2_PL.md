@@ -1,0 +1,81 @@
+# ECHO-2 test matrix
+
+Łącznie: **75** wykonywalnych testów.
+
+- `E2-T01` bundled target catalog is 126 and bytes match catalog hashes
+- `E2-T02` approved protocol pins resolve exactly
+- `E2-T03` unknown protocol/version fails closed before session creation
+- `E2-T04` trusted caller identity is capability-bound to the engine authority, not model-authored
+- `E2-T05` no-code exposes no substitute code; neutral-code is independent and stable
+- `E2-T06` target commit is immutable through legal API
+- `E2-T07` Viewer and Monitor cannot read full target before Reveal
+- `E2-T08` human conductor cannot be silently replaced by AI Monitor
+- `E2-T09` logical step acceptance advances atomically when no checkpoint exists
+- `E2-T10` checkpoint cannot be bypassed by creating next attempt
+- `E2-T11` physical transport receipt is persisted before dispatch
+- `E2-T12` failed receipt persistence blocks physical dispatch authorization
+- `E2-T13` multiple physical provider retries remain under one logical attempt
+- `E2-T14` interrupted/failed logical attempt does not complete a step
+- `E2-T15` invalid response is REJECTED and retry can be accepted only once for the same step instance
+- `E2-T16` complete RV Lite Core reaches BLIND_COMPLETE only after final checkpoint
+- `E2-T17` Reveal before formal BLIND_COMPLETE is denied
+- `E2-T18` unresolved physical/logical attempt blocks Reveal authorization
+- `E2-T19` Reveal is idempotent and returns exactly committed target
+- `E2-T20` crash after durable Reveal commit recovers same Reveal without second disclosure state
+- `E2-T21` Reveal persistence failure exposes nothing and leaves authorization retryable
+- `E2-T22` after Reveal bound Viewer receives durable feedback
+- `E2-T23` revealed target becomes KNOWN_TO_VIEWER and is excluded from future blind session
+- `E2-T24` known-target training may deliberately reuse a revealed target
+- `E2-T25` same target remains eligible for a different Viewer without recorded exposure
+- `E2-T26` pause/resume keeps accepted progress and current step
+- `E2-T27` viewer context loss enters RECOVERING only from trusted runtime evidence and Resume never changes target commit
+- `E2-T28` Cancel is terminal for Resume
+- `E2-T29` RCP Phase 6 NEW_SIGNAL opens independent cycle and preserves parent step instance
+- `E2-T30` RCP extension limit pauses for explicit decision instead of auto-Reveal
+- `E2-T31` RCP extension-limit conductor may finish blind explicitly, with reason recorded
+- `E2-T32` adjunct neutrality is verified, never declared by model/caller params
+- `E2-T33` audit trail is hash chained and tampering is detectable
+- `E2-T34` durable restart restores current step, accepted result and target commit
+- `E2-T35` target revision collision with different bytes fails closed
+- `E2-T36` post-Reveal lifecycle closes only through REVEALED -> POST_REVEAL -> CLOSED
+- `E2-T37` pre-Reveal session views redact target identity from Monitor, Viewer and blind human owner
+- `E2-T38` blind AI Monitor cannot choose a specific target and reservation response never discloses selected identity
+- `E2-T39` full audit payload is sealed from conductors pre-Reveal but audit integrity may still be checked
+- `E2-T40` Reveal authorization is idempotent, target-redacted for conductor and rejects a second key
+- `E2-T41` restart recovery marks dispatched physical outcome UNKNOWN, preserves logical attempt and resumes same step
+- `E2-T42` recovery treats persisted pre-dispatch authorization as UNKNOWN when external dispatch cannot be proven absent
+- `E2-T43` Viewer cannot inspect a session bound to a different Viewer identity
+- `E2-T44` Reveal is the first point where target identity becomes visible to Monitor and bound Viewer
+- `E2-T45` RV Lite Extended executes its distinct Step 3 deepening and reaches BLIND_COMPLETE
+- `E2-T46` Telepathy T0-T10 runs end-to-end with durable neutral T9 tasking and reaches BLIND_COMPLETE
+- `E2-T47` Telepathy cannot enter T9 until at least one neutral tasking question is durably frozen
+- `E2-T48` Telepathy T9 validation uses durable frozen question count, not caller-supplied runtime count
+- `E2-T49` Telepathy tasking neutrality is fail-closed and the frozen set is immutable
+- `E2-T50` RCP Phase 6 NO_NEW_SIGNAL closes blind phase without opening another cycle
+- `E2-T51` full audit becomes available to Monitor only after Reveal
+- `E2-T52` Reveal execution rejects an idempotency key that does not match its authorization
+- `E2-T53` duplicate target import with identical bytes is idempotent and does not duplicate library rows
+- `E2-T54` human USER_KNOWN target selection remains explicitly marked and Monitor stays target-redacted before Reveal
+- `E2-T55` private unpublished target pool is supported while target identity remains sealed from Monitor and Viewer
+- `E2-T56` committed target identity is protected by a database trigger, not only by public API checks
+- `E2-T57` execution overlay and language are pinned in durable session state and invalid language fails closed
+- `E2-T58` Reveal authorization and Reveal result are idempotent across two database connections
+- `E2-T59` Viewer cannot read revealed feedback from a session bound to another Viewer
+- `E2-T60` exact execution-overlay pin is durable and target commit timestamp is database-immutable
+- `E2-T61` runtime protocol pins match the exact packaged ECHO-1 manifest bytes
+- `E2-T62` the same blind Viewer cannot have the same target active in two concurrent sessions
+- `E2-T63` session creation rejects a Viewer identity not mapped by the bound authority
+- `E2-T64` an accepted model response is provenance-bound to one completed physical transport
+- `E2-T65` only one physical transport may be in flight and a completed call cannot be silently retried under the same logical attempt
+- `E2-T66` Pause blocks both new physical authorization and dispatch of a receipt that has not yet left the host
+- `E2-T67` human BLIND session cannot manually select a concrete target_id
+- `E2-T68` Reveal execution rechecks the session conductor even with a valid authorization
+- `E2-T69` neutrality verifier receives authoritative durable blind context, never caller-supplied target context
+- `E2-T70` session owner principal prevents another human user from reading, cancelling, resuming or revealing the session
+- `E2-T71` VIEWER_CONTEXT_LOST requires a trusted host runtime event bound to the exact session and Viewer session
+- `E2-T72` same Monitor and Viewer agent IDs cannot cross owner-principal boundaries
+- `E2-T73` owner binding is durable across restart and remains redacted from non-internal session views
+- `E2-T74` owner contexts require a trusted principalId and runtime events require host evidence fields
+- `E2-T75` owner principal is protected by SQLite immutability and schema is version 4
+
+- `E2-T76` unbound legacy sessions fail closed for ordinary actors and new sessions require an explicit owner principal
