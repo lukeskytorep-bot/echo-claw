@@ -40,7 +40,7 @@ function slice(text, startRe, endRe = null) {
 
 function rvPrompt(text, n) {
   const start = new RegExp(`^## PROMPT ${n}\\b`, 'mu');
-  const end = n < 4 ? new RegExp(`^## PROMPT ${n + 1}\\b`, 'mu') : /^## Granica Reveal\b/mu;
+  const end = n < 4 ? new RegExp(`^## PROMPT ${n + 1}\\b`, 'mu') : /^## (?:Granica Reveal|Reveal boundary)\b/mu;
   return slice(text, start, end);
 }
 

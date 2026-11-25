@@ -420,6 +420,20 @@ test('E3-FIX-A7 Viewer prompt contains canonical methodology, not only ECHO mark
   for(const [session,re] of cases){ const text=renderViewerPrompt({session,tasking:{tasking_mode:'neutral_code',neutral_code:'AB12'}}); assert.match(text,/CANONICAL METHODOLOGY/u); assert.match(text,re); }
 });
 
+test('E3-FIX-A7b RV Lite Prompt 4 excludes the Reveal boundary section in both PL and EN',()=>{
+  for (const protocol_id of ['rv-lite-core', 'rv-lite-extended']) {
+    for (const language of ['pl', 'en']) {
+      const text = renderViewerPrompt({
+        session: { protocol_id, protocol_version: '1.1.0', current_step_id: `${protocol_id}.step4`, language },
+        tasking: { tasking_mode: 'no_code', neutral_code: null },
+      });
+      assert.match(text, /## PROMPT 4/u);
+      assert.doesNotMatch(text, /^## (?:Granica Reveal|Reveal boundary)\b/mu);
+      assert.doesNotMatch(text, /AI RV Harness/u);
+    }
+  }
+});
+
 async function driveFullSession({protocol_id,protocol_version,conductor_mode,tasking_mode}) {
   const api=makeMockApi(); register(api); const owner=toolFor(api,'echo_owner_session',ownerCtx('A')); const monitor=toolFor(api,'echo_monitor_session',monitorCtx('A'));
   const created=await call(owner,createParams({protocol_id,protocol_version,conductor_mode,tasking_mode})); const conductor=conductor_mode==='ai_monitor'?monitor:owner;
